@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Bichamp Calc"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta id="themeColorMeta" name="theme-color" content="#0D1117"/>
+<link rel="apple-touch-icon" href="data:image/png;base64,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"/>
+<link rel="icon" type="image/png" href="data:image/png;base64,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"/>
+<title>Bichamp Calc v10.0</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+*{-webkit-tap-highlight-color:transparent}
+html{height:100%}
+body{font-family:-apple-system,'SF Pro Text','Segoe UI',Roboto,system-ui,sans-serif;background:#0D1117;color:#F0F2F5;min-height:100%;-webkit-font-smoothing:antialiased;overscroll-behavior:none;-webkit-text-size-adjust:100%}
+:root{--accent:#F97316;--accent-dim:rgba(249,115,22,.15);--accent-mid:rgba(249,115,22,.35);--green:#22C55E;--red:#EF4444;--yellow:#F59E0B;--blue:#3B82F6;--cyan:#22D3EE;--bg:#0D1117;--bg2:#161B22;--bg3:#1C2333;--bg4:#21262D;--border:#30363D;--border-light:#3D444D;--text:#F0F2F5;--text2:#8B949E;--text3:#6E7681;--card:#161B22;--card2:#1C2333;--tab-h:64px;--header-h:56px;--safe-bot:env(safe-area-inset-bottom,0px);--safe-top:env(safe-area-inset-top,0px);--radius:14px;--radius-sm:8px;--radius-xs:6px;--mono:'SF Mono',ui-monospace,Menlo,Consolas,monospace}
+#app{display:flex;flex-direction:column;min-height:100vh;min-height:100dvh}
+.app-header{flex-shrink:0;height:calc(var(--header-h) + var(--safe-top));padding-top:var(--safe-top);background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding-left:18px;padding-right:14px;position:sticky;top:0;z-index:80}
+.app-header .logo{display:flex;align-items:center;gap:10px}
+.logo-text{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
+#modeLabel{font-size:15px;font-weight:700;color:var(--accent);letter-spacing:.02em}
+.header-right{display:flex;align-items:center;gap:8px}
+.ver-chip{font-size:10px;font-weight:700;color:var(--green);border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:20px;padding:3px 9px;letter-spacing:.04em}
+#resetBtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+#resetBtn:active{background:var(--border);transform:scale(.92)}
+.app-main{flex:1;padding:16px 16px calc(var(--tab-h) + var(--safe-bot) + 20px);scroll-behavior:smooth}
+.cols{display:flex;flex-direction:column;gap:0}
+.col-inputs{min-width:0}.col-results{min-width:0}
+.section-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;margin-top:18px}
+.section-label:first-child{margin-top:0}
+.section-label .hint{font-weight:500;text-transform:none;letter-spacing:0;color:var(--text3);opacity:.8}
+#matTrigger{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:border-color .15s,background .15s;min-height:56px}
+#matTrigger:active{background:var(--bg3);border-color:var(--border-light)}
+#matTrigger.selected{border-color:var(--accent)}
+#matTrigger .mat-icon{width:36px;height:36px;border-radius:10px;background:var(--bg3);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+#matTrigger.selected .mat-icon{background:var(--accent-dim)}
+.mat-trigger-text{flex:1;min-width:0}
+.mat-trigger-name{font-size:15px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text)}
+.mat-trigger-name.placeholder{color:var(--text3);font-weight:400}
+.mat-trigger-group{font-size:12px;color:var(--text3);margin-top:2px}
+.mat-trigger-chevron{color:var(--text3);flex-shrink:0}
+.seg-wrap{display:grid;grid-template-columns:1fr 1fr;background:var(--bg3);border-radius:var(--radius-sm);padding:3px;gap:3px}
+.seg-btn{border:none;background:transparent;border-radius:6px;color:var(--text2);font-family:inherit;font-size:14px;font-weight:600;padding:9px 10px;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px}
+.seg-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(249,115,22,.35)}
+.seg-btn:active{opacity:.8;transform:scale(.97)}
+.seg-btn:disabled{cursor:not-allowed}
+.inputs-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.inputs-row.single{grid-template-columns:1fr}
+.input-box{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;transition:border-color .15s}
+.input-box:focus-within{border-color:var(--accent)}
+.input-box label{display:block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
+.input-box label.warn{color:#fca5a5}
+.input-box input,.input-box select{width:100%;background:transparent;border:none;outline:none;font-family:var(--mono);font-size:22px;font-weight:600;color:var(--text);-webkit-appearance:none;appearance:none;padding:0;line-height:1.2}
+.input-box input[type=number]::-webkit-inner-spin-button,.input-box input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none}
+.opt-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 14px;margin-top:10px}
+.opt-row{display:flex;align-items:center;gap:12px;cursor:pointer;user-select:none}
+.opt-row .opt-check{width:22px;height:22px;border-radius:6px;border:1px solid var(--border-light);background:var(--bg3);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s}
+.opt-row.on .opt-check{background:var(--accent);border-color:var(--accent)}
+.opt-row .opt-check svg{opacity:0;transition:opacity .15s}
+.opt-row.on .opt-check svg{opacity:1}
+.opt-row .opt-body{flex:1;min-width:0}
+.opt-title{font-size:14px;font-weight:600;color:var(--text)}
+.opt-sub{font-size:11px;color:var(--text3);margin-top:2px}
+.corr-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.corr-head .corr-title{font-size:13px;font-weight:600;color:var(--text2)}
+.corr-val{font-family:var(--mono);font-size:15px;font-weight:700;color:var(--accent)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--accent) 50%,var(--bg4) 50%);outline:none;margin:4px 0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#fff;border:3px solid var(--accent);cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--accent);cursor:pointer}
+.range-ends{display:flex;justify-content:space-between;font-size:10px;color:var(--text3);margin-top:2px}
+#calcBtn{width:100%;margin-top:18px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);font-family:inherit;font-size:16px;font-weight:700;letter-spacing:.03em;padding:16px;cursor:pointer;box-shadow:0 4px 20px rgba(249,115,22,.4);transition:all .15s;display:flex;align-items:center;justify-content:center;gap:10px;touch-action:manipulation}
+#calcBtn:active{transform:scale(.97)}
+.note{margin-top:14px;font-size:12px;color:var(--text3);line-height:1.55;background:var(--card);border:1px solid var(--border);border-left:3px solid var(--yellow);border-radius:var(--radius-sm);padding:10px 12px}
+.note strong{color:var(--text2)}
+#results{margin-top:20px;opacity:0;transform:translateY(14px);transition:opacity .35s,transform .35s;pointer-events:none}
+#results.visible{opacity:1;transform:translateY(0);pointer-events:auto}
+#emptyState{margin-top:20px;border:2px dashed var(--border);border-radius:var(--radius);background:var(--card);padding:40px 20px;text-align:center;color:var(--text3)}
+#emptyState svg{opacity:.5;margin-bottom:10px}
+#emptyState h5{font-size:15px;font-weight:600;color:var(--text2)}
+.series-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;position:relative;overflow:hidden}
+.series-card::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent);border-radius:2px 0 0 2px}
+.series-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
+.series-tech{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.series-name{font-size:20px;font-weight:800;color:var(--text);line-height:1.15}
+.series-desc{font-size:13px;color:var(--text2);margin-top:3px}
+.series-family{font-size:12px;color:var(--text3);margin-top:6px}
+.series-family b{color:var(--text2);font-weight:600}
+.tpi-badge{flex-shrink:0;text-align:center;background:var(--accent-dim);border:1px solid var(--accent-mid);border-radius:10px;padding:8px 12px;min-width:76px}
+.tpi-val{font-family:var(--mono);font-size:19px;font-weight:700;color:var(--accent);line-height:1;display:block}
+.tpi-lbl{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-top:3px;display:block}
+.coating-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.badge-pill{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid var(--border);color:var(--text2);background:var(--bg3)}
+.metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+@media(min-width:600px){.metrics-grid{grid-template-columns:1fr 1fr 1fr 1fr}}
+.metric-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px 10px;text-align:center}
+.metric-card.time-card{border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.05)}
+.metric-card.fz-card{border-color:rgba(34,211,238,.35);background:rgba(34,211,238,.05)}
+.metric-card.fz-card .metric-val{color:var(--cyan)}
+.metric-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
+.metric-val{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--text);line-height:1;display:block}
+.time-card .metric-val{color:var(--green)}
+.metric-unit{font-size:10px;color:var(--text3);margin-top:3px}
+.metric-sub{font-size:10px;color:var(--text3);margin-top:4px}
+.mini-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.mini-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 8px;text-align:center}
+.mini-card.hidden{display:none}
+.mini-label{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.mini-val{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--cyan);line-height:1;display:block}
+.mini-unit{font-size:9px;color:var(--text3);margin-top:2px}
+.status-bar{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden}
+.status-main{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.status-main:active{opacity:.85}
+.status-bar.single .status-main{cursor:default}
+.status-icon{font-size:16px;flex-shrink:0;line-height:1;width:18px;text-align:center}
+.status-text{flex:1;font-size:13px;font-weight:600;line-height:1.4;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.status-chevron{font-size:12px;color:var(--text3);transition:transform .2s;flex-shrink:0}
+.status-bar.expanded .status-chevron{transform:rotate(180deg)}
+.status-bar.single .status-chevron{display:none}
+.status-details{border-top:1px solid var(--border);padding:10px 14px 12px}
+.status-details .alert{margin-bottom:8px;font-size:12px;padding:8px 10px}
+.status-details .alert:last-child{margin-bottom:0}
+.status-bar.level-success{border-color:rgba(34,197,94,.35);background:rgba(34,197,94,.06)}
+.status-bar.level-success .status-icon{color:#86efac}
+.status-bar.level-warning{border-color:rgba(245,158,11,.35);background:rgba(245,158,11,.06)}
+.status-bar.level-warning .status-icon{color:#fcd34d}
+.status-bar.level-danger{border-color:rgba(239,68,68,.4);background:rgba(239,68,68,.08)}
+.status-bar.level-danger .status-icon{color:#fca5a5}
+.status-bar.level-info{border-color:rgba(59,130,246,.3);background:rgba(59,130,246,.05)}
+.status-bar.level-info .status-icon{color:#93c5fd}
+.status-bar.level-secondary{border-color:var(--border);background:var(--card)}
+.status-bar.level-secondary .status-icon{color:var(--text3)}
+.alert{border-radius:var(--radius-sm);padding:10px 12px;font-size:13px;margin-bottom:8px;line-height:1.45}
+.alert-success{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.25);color:#86efac}
+.alert-warning{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);color:#fcd34d}
+.alert-danger{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.25);color:#fca5a5}
+.alert-info{background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.25);color:#93c5fd}
+.alert-secondary{background:rgba(139,148,158,.1);border:1px solid rgba(139,148,158,.2);color:#8b949e}
+#resRationale{font-size:11px;color:var(--text3);line-height:1.5;margin-top:4px}
+.variants-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:12px;margin-bottom:12px;overflow-x:auto}
+.variants-wrap.hidden{display:none}
+.variants-title{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:10px}
+table.variants{width:100%;border-collapse:collapse;font-size:13px}
+table.variants th{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text3);text-align:right;padding:4px 6px;border-bottom:1px solid var(--border)}
+table.variants th:first-child{text-align:left}
+table.variants td{padding:8px 6px;border-bottom:1px solid var(--border);font-family:var(--mono);text-align:right;color:var(--text2)}
+table.variants td:first-child{text-align:left;font-family:inherit;color:var(--text)}
+table.variants tr:last-child td{border-bottom:none}
+table.variants tr.opt td{color:var(--accent);font-weight:700}
+table.variants tr.opt td:first-child{color:var(--accent)}
+.ref-toggle{width:100%;margin-top:6px;background:var(--card);border:1px solid var(--border);color:var(--text2);border-radius:var(--radius-sm);padding:11px;font-family:inherit;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .15s}
+.ref-toggle:active{background:var(--bg3)}
+#refTableWrap{margin-top:10px}
+#refTableWrap.hidden{display:none}
+.ref-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px;overflow-x:auto}
+table.ref{width:100%;border-collapse:collapse;font-size:12px}
+table.ref th{text-align:left;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:10px;padding:6px 8px;border-bottom:1px solid var(--border)}
+table.ref td{padding:6px 8px;border-bottom:1px solid var(--border);color:var(--text2)}
+table.ref td:last-child{font-family:var(--mono);color:var(--accent);font-weight:600}
+table.ref tr:last-child td{border-bottom:none}
+.tab-bar{flex-shrink:0;position:fixed;bottom:0;left:0;right:0;height:calc(var(--tab-h) + var(--safe-bot));padding-bottom:var(--safe-bot);background:rgba(22,27,34,.92);border-top:1px solid var(--border);display:grid;grid-template-columns:repeat(4,1fr);z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.tab{border:none;background:transparent;color:var(--text3);font-family:inherit;font-size:10px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;touch-action:manipulation;user-select:none;transition:color .15s}
+.tab.active{color:var(--accent)}
+.tab:active{opacity:.7}
+.tab svg{transition:transform .15s}
+.tab.active svg{transform:scale(1.1)}
+.tab-label{font-size:9px;line-height:1}
+.brand-footer{flex-shrink:0;background:var(--bg2);border-top:2px solid var(--accent);padding:16px 18px calc(16px + var(--tab-h) + var(--safe-bot));display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.brand-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--text)}
+.brand-logo svg{color:var(--accent);flex-shrink:0}
+.brand-contacts{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.82rem;color:var(--text2)}
+.brand-contacts a{color:var(--text2);text-decoration:none;transition:color .15s;display:inline-flex;align-items:center;gap:6px}
+.brand-contacts a:hover{color:var(--accent)}
+.brand-devs{font-size:.75rem;color:var(--text3);width:100%;border-top:1px solid var(--border);padding-top:10px}
+.brand-devs b{color:var(--text2);font-weight:600}
+.sheet-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:900;opacity:0;transition:opacity .3s;pointer-events:none}
+.sheet-overlay.visible{opacity:1;pointer-events:auto}
+#matSheet{position:fixed;bottom:0;left:0;right:0;z-index:950;background:var(--bg2);border-radius:20px 20px 0 0;border-top:1px solid var(--border);max-height:88vh;max-height:88dvh;display:flex;flex-direction:column;transform:translateY(100%);transition:transform .35s cubic-bezier(.32,0,.67,0);will-change:transform;padding-bottom:var(--safe-bot)}
+#matSheet.open{transform:translateY(0);transition-timing-function:cubic-bezier(.33,1,.68,1)}
+.sheet-handle{width:40px;height:4px;background:var(--border-light);border-radius:2px;margin:12px auto 0;flex-shrink:0}
+.sheet-header{padding:14px 16px 12px;flex-shrink:0;border-bottom:1px solid var(--border)}
+.sheet-header h3{font-size:16px;font-weight:700;margin-bottom:12px}
+.sheet-search{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:10px 14px;display:flex;align-items:center;gap:10px}
+.sheet-search svg{flex-shrink:0;color:var(--text3)}
+#matSearchInput{flex:1;background:transparent;border:none;outline:none;font-family:inherit;font-size:16px;color:var(--text)}
+#matSearchInput::placeholder{color:var(--text3)}
+#matListContainer{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mat-group-header{padding:9px 16px 4px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);background:var(--bg2);position:sticky;top:0;z-index:1;border-bottom:1px solid var(--border)}
+.mat-item{padding:12px 16px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);transition:background .1s;min-height:50px;gap:10px}
+.mat-item:active{background:var(--bg3)}
+.mat-item.selected{background:var(--accent-dim)}
+.mat-item-name{font-size:15px;font-weight:600;color:var(--text)}
+.mat-item-group{font-size:11px;color:var(--text3);margin-top:2px}
+.mat-item-kv{font-family:var(--mono);font-size:11px;color:var(--text3);text-align:right;flex-shrink:0}
+.mat-empty{padding:24px 16px;text-align:center;color:var(--text3);font-size:14px}
+.hidden{display:none!important}
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px}
+@media(min-width:900px){
+.app-header{order:1;padding-left:28px;padding-right:24px}
+.tab-bar{order:2;position:static;height:auto;padding:0;background:var(--bg2);border-top:none;border-bottom:1px solid var(--border);backdrop-filter:none;-webkit-backdrop-filter:none;grid-template-columns:repeat(4,auto);justify-content:center;gap:6px;padding:8px 0}
+.tab{flex-direction:row;gap:8px;padding:9px 20px;border-radius:10px;font-size:12px}
+.tab.active{background:var(--accent-dim)}
+.tab-label{font-size:12px}
+.app-main{order:3;padding:24px;max-width:1160px;margin:0 auto;width:100%}
+.brand-footer{order:4;padding:18px 28px;max-width:1160px;margin:0 auto;width:100%;border-radius:0}
+.cols{flex-direction:row;align-items:flex-start;gap:26px}
+.col-inputs{flex:0 0 380px;position:sticky;top:88px;margin-top:-6px}
+.col-results{flex:1}
+#results{margin-top:0}
+#emptyState{margin-top:0;padding:64px 24px}
+.mini-grid{grid-template-columns:repeat(4,1fr)}
+#matSheet{max-width:560px;left:50%;transform:translateX(-50%) translateY(100%)}
+#matSheet.open{transform:translateX(-50%) translateY(0)}
+.brand-devs{width:auto;border-top:none;border-left:1px solid var(--border);padding-top:0;padding-left:16px}
+body{background:var(--bg)}
+}
+
+/* ═══ iOS ═══ */
+button,.tab,.seg-btn,.opt-row,.status-main,.mat-item,#matTrigger,.ref-toggle,input[type=range]{touch-action:manipulation}
+button,.tab,.seg-btn,.opt-row,.status-main,#matTrigger,.ref-toggle,.tab-bar,.app-header{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea{-webkit-user-select:text;user-select:text;border-radius:0}
+input[type=search]{-webkit-appearance:none;appearance:none}
+input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+#matListContainer{overscroll-behavior:contain}
+body.sheet-open{overflow:hidden}
+#results{scroll-margin-top:calc(var(--header-h) + var(--safe-top) + 12px)}
+body.kb-open .tab-bar{display:none}
+@media (max-width:899px){.app-main{padding-left:calc(16px + env(safe-area-inset-left,0px));padding-right:calc(16px + env(safe-area-inset-right,0px))}.tab-bar{padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}}
+
+/* ═══ v10: тема, справочник, новые блоки ═══ */
+body{background:var(--bg);color:var(--text)}
+html[data-theme=light]{--accent:#EA580C;--accent-dim:rgba(234,88,12,.12);--accent-mid:rgba(234,88,12,.4);--green:#15803D;--cyan:#0E7490;--bg:#EEF0F3;--bg2:#FFFFFF;--bg3:#E9ECF0;--bg4:#DDE1E7;--border:#CBD1DA;--border-light:#AEB6C2;--text:#0F172A;--text2:#475569;--text3:#64748B;--card:#FFFFFF;--card2:#F3F4F6}
+html[data-theme=light] .tab-bar{background:rgba(255,255,255,.94)}
+html[data-theme=light] .alert-success,html[data-theme=light] .status-bar.level-success .status-icon{color:#166534}
+html[data-theme=light] .alert-warning,html[data-theme=light] .status-bar.level-warning .status-icon{color:#92400E}
+html[data-theme=light] .alert-danger,html[data-theme=light] .status-bar.level-danger .status-icon,html[data-theme=light] .input-box label.warn{color:#B91C1C}
+html[data-theme=light] .alert-info,html[data-theme=light] .status-bar.level-info .status-icon{color:#1D4ED8}
+html[data-theme=light] .ver-chip{color:#166534}
+html[data-theme=light] input[type=range]::-webkit-slider-thumb{box-shadow:0 1px 4px rgba(0,0,0,.3)}
+.hdr-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.hdr-btn:active{background:var(--border);transform:scale(.92)}
+.input-box input::placeholder{color:var(--text3);opacity:.55;font-weight:500}
+.input-box .ib-hint{font-size:10px;color:var(--text3);margin-top:4px;line-height:1.3}
+.tip-card{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:var(--radius-sm);padding:10px 12px;margin:10px 0 0;font-size:12.5px;line-height:1.5;color:var(--text2)}
+.tip-card b{color:var(--text);display:block;margin-bottom:2px;font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.act-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.act-btn{background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:var(--radius-sm);padding:12px 10px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;touch-action:manipulation;-webkit-user-select:none;user-select:none;min-height:46px}
+.act-btn:active{background:var(--bg3);transform:scale(.98)}
+.act-btn.primary{border-color:var(--accent-mid);color:var(--accent)}
+#kb{margin-top:18px}
+#kb details{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden}
+#kb summary{list-style:none;cursor:pointer;padding:13px 14px;font-size:14px;font-weight:600;color:var(--text);display:flex;align-items:center;justify-content:space-between;gap:10px;touch-action:manipulation;-webkit-user-select:none;user-select:none;min-height:46px}
+#kb summary::-webkit-details-marker{display:none}
+#kb summary::after{content:"▾";color:var(--text3);font-size:12px;transition:transform .2s;flex-shrink:0}
+#kb details[open] summary::after{transform:rotate(180deg)}
+#kb details[open] summary{border-bottom:1px solid var(--border)}
+.kb-body{padding:12px 14px;font-size:13px;line-height:1.55;color:var(--text2);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.kb-body p{margin-bottom:8px}.kb-body p:last-child{margin-bottom:0}
+.kb-body b{color:var(--text)}
+.kb-body ul{margin:0 0 8px 18px}.kb-body li{margin-bottom:4px}
+.kb-body .src{font-size:11px;color:var(--text3);margin-top:8px}
+.kb-body code{font-family:var(--mono);font-size:12.5px;color:var(--text);background:var(--bg3);border-radius:4px;padding:1px 5px;white-space:nowrap}
+.kb-prob{border-top:1px solid var(--border);padding:10px 0}
+.kb-prob:first-child{border-top:none;padding-top:0}.kb-prob:last-child{padding-bottom:0}
+.kb-prob .p{font-weight:700;color:var(--text);margin-bottom:3px}
+.kb-prob .c{margin-bottom:3px}
+.kb-prob .f{color:var(--text)}
+.kb-prob .lbl{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-right:4px}
+table.ref.tight{font-size:11px}table.ref.tight td,table.ref.tight th{padding:6px 3px}table.ref.tight td:last-child{color:var(--text2);font-weight:400}table.ref.tight td:first-child{color:var(--text);font-weight:600}table.ref.tight th{font-size:9px;letter-spacing:0}
+table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white-space:nowrap}
+.hist-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-top:1px solid var(--border);cursor:pointer;touch-action:manipulation}
+.hist-item:first-child{border-top:none;padding-top:0}
+.hist-item:active{opacity:.6}
+.hist-t{font-weight:600;color:var(--text);font-size:13px}
+.hist-s{font-size:11.5px;color:var(--text3);margin-top:2px}
+.hist-r{font-family:var(--mono);font-size:12px;color:var(--accent);text-align:right;flex-shrink:0;white-space:nowrap}
+.kb-link{background:none;border:none;color:var(--accent);font:inherit;font-size:12px;font-weight:600;padding:8px 0 0;cursor:pointer}
+#toast{position:fixed;left:50%;bottom:calc(var(--tab-h) + var(--safe-bot) + 18px);transform:translate(-50%,20px);background:var(--text);color:var(--bg);font-size:13px;font-weight:600;padding:10px 16px;border-radius:22px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:1000;max-width:86vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.mat-item-fav{font-size:10px;color:var(--accent);font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-left:6px}
+@media(min-width:900px){#toast{bottom:30px}}
+@media print{.tab-bar,.app-header,.col-inputs,#kb,.act-row,.brand-footer{display:none!important}body{background:#fff;color:#000}#results{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div id="toast"></div>
+<div id="sheetOverlay" class="sheet-overlay"></div>
+<div id="matSheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-header">
+    <h3>Выбор материала</h3>
+    <div class="sheet-search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <input id="matSearchInput" type="search" inputmode="search" enterkeyhint="search" autocapitalize="off" placeholder="Марка, аналог (AISI/EN) или группа…" autocomplete="off" autocorrect="off" spellcheck="false"/>
+    </div>
+  </div>
+  <div id="matListContainer"></div>
+</div>
+
+<div id="app">
+  <header class="app-header">
+    <div class="logo">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <rect width="28" height="28" rx="8" fill="#F97316" fill-opacity=".15"/>
+        <path d="M6 14 L22 14 M14 6 L22 14 L14 22" stroke="#F97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div class="logo-text">Bichamp</div>
+        <div id="modeLabel">Bi-Metal</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="ver-chip">v10.0</span>
+      <button id="themeBtn" class="hdr-btn" title="Светлая / тёмная тема" aria-label="Тема">☀</button>
+      <button id="resetBtn" title="Сброс">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <nav class="tab-bar">
+    <button class="tab active" data-mode="bimetal">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <span class="tab-label">Bi-Metal</span>
+    </button>
+    <button class="tab" data-mode="carbide">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 L2 7 L12 12 L22 7 Z"/><path d="M2 17 L12 22 L22 17"/><path d="M2 12 L12 17 L22 12"/></svg>
+      <span class="tab-label">Carbide</span>
+    </button>
+    <button class="tab" data-mode="circular">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+      <span class="tab-label">TCT диск</span>
+    </button>
+    <button class="tab" data-mode="hss">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M8.46 8.46l1.42 1.42M14.12 14.12l1.42 1.42M8.46 15.54l1.42-1.42M14.12 9.88l1.42-1.42"/></svg>
+      <span class="tab-label">HSS диск</span>
+    </button>
+  </nav>
+
+  <main class="app-main">
+    <div class="cols">
+      <div class="col-inputs">
+
+        <div id="bladeDiaSection" class="hidden">
+          <div class="section-label">Диаметр диска</div>
+          <div class="input-box">
+            <label>ДИАМЕТР ДИСКА (мм)</label>
+            <input id="bladeDiaInput" type="text" inputmode="numeric" pattern="[0-9]*" enterkeyhint="done" value="350" autocomplete="off"/>
+          </div>
+          <div class="inputs-row" style="margin-top:10px">
+            <div class="input-box">
+              <label>ЗУБЬЕВ Z</label>
+              <input id="zManualInput" type="text" inputmode="numeric" pattern="[0-9]*" enterkeyhint="done" placeholder="авто" autocomplete="off"/>
+              <div class="ib-hint">если диск уже есть</div>
+            </div>
+            <div class="input-box">
+              <label>ОБОРОТЫ, об/мин</label>
+              <input id="rpmManualInput" type="text" inputmode="decimal" enterkeyhint="done" placeholder="авто" autocomplete="off"/>
+              <div class="ib-hint">если у станка фикс. скорость</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-label">Материал <span class="hint" id="matCountHint">· AISI / EN / DIN</span></div>
+        <div id="matTrigger">
+          <div class="mat-icon">⚙</div>
+          <div class="mat-trigger-text">
+            <div class="mat-trigger-name placeholder" id="matTriggerName">Выберите материал…</div>
+            <div class="mat-trigger-group" id="matTriggerGroup"></div>
+          </div>
+          <svg class="mat-trigger-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+
+        <div class="section-label">Форма заготовки</div>
+        <div class="seg-wrap">
+          <button class="seg-btn active" id="btnShapeSolid">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="8"/></svg>Сплошная
+          </button>
+          <button class="seg-btn" id="btnShapePipe">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg>Профиль / труба
+          </button>
+        </div>
+
+        <div class="section-label" id="sizeSectionLabel">Размеры (мм)</div>
+        <div class="inputs-row single" id="sizeRow">
+          <div class="input-box">
+            <label id="sizeInputLabel">РАЗМЕР СЕЧЕНИЯ</label>
+            <input id="sizeInput" type="text" inputmode="decimal" enterkeyhint="done" value="100" autocomplete="off"/>
+          </div>
+          <div class="input-box hidden" id="wallContainer">
+            <label class="warn">СТЕНКА</label>
+            <input id="wallInput" type="text" inputmode="decimal" enterkeyhint="done" value="10" autocomplete="off"/>
+          </div>
+        </div>
+
+        <div class="opt-card hidden" id="bundleCard">
+          <div class="opt-row" id="bundleRow">
+            <div class="opt-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div class="opt-body">
+              <div class="opt-title">Резка в пакете (2 трубы)</div>
+              <div class="opt-sub">Размер = ширина пакета, стенка удваивается</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card hidden" id="customPitchCard">
+          <div class="opt-row" id="customPitchToggle">
+            <div class="opt-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div class="opt-body">
+              <div class="opt-title">Задать шаг зуба вручную</div>
+              <div class="opt-sub">Если рекомендуемой пилы нет в наличии — используйте любую из имеющихся</div>
+            </div>
+          </div>
+          <input id="customPitchInput" class="hidden" type="text" placeholder="напр. 3/4 или 4/6" autocomplete="off" autocorrect="off" autocapitalize="off" enterkeyhint="done" spellcheck="false" style="width:100%;margin-top:10px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-family:var(--mono);font-size:16px;font-weight:600;color:var(--text);outline:none"/>
+        </div>
+
+        <div class="section-label" id="corrSectionLabel">Коррекции режимов</div>
+
+        <div class="opt-card" id="runInCard">
+          <div class="opt-row" id="runInRow">
+            <div class="opt-check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <div class="opt-body">
+              <div class="opt-title">Обкатка (притирка новой пилы)</div>
+              <div class="opt-sub" id="runInSub">Bi-Metal: скорость 80%, подача 60%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="opt-card" id="corrCard">
+          <div class="corr-head">
+            <span class="corr-title">Ручная корректировка</span>
+            <span class="corr-val" id="corrValueDisplay">0%</span>
+          </div>
+          <input type="range" id="corrRange" min="-20" max="20" value="0" step="1"/>
+          <div class="range-ends"><span>−20%</span><span>+20%</span></div>
+        </div>
+
+        <button id="calcBtn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Рассчитать
+        </button>
+
+        <div class="note">
+          <strong>Важно.</strong> Расчёты теоретические и дают базовые ориентиры. Реальные режимы зависят от состояния станка, инструмента и способа получения заготовки (литьё, прокат, поковка). Корректируйте в пределах ±15–20%.
+        </div>
+      </div>
+
+      <div class="col-results">
+        <div id="emptyState">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h8M8 14h4"/></svg>
+          <h5>Выберите материал и параметры</h5>
+        </div>
+
+        <div id="results">
+          <div class="series-card">
+            <div class="series-top">
+              <div>
+                <div class="series-tech" id="resBladeTech">Технология</div>
+                <div class="series-name" id="resBladeSeries">…</div>
+                <div class="series-desc" id="resBladeDesc">…</div>
+              </div>
+              <div class="tpi-badge">
+                <span class="tpi-val" id="resTpiVal">—</span>
+                <span class="tpi-lbl" id="resTpiLbl">Z / шаг</span>
+              </div>
+            </div>
+            <div id="resTpiSub" style="font-size:12px;color:var(--text3);margin-bottom:2px"></div>
+            <div class="series-family" id="resFamily"></div>
+            <div class="coating-row">
+              <span id="resCoating" class="badge-pill hidden"></span>
+              <span id="resCarbideClass" class="badge-pill hidden"></span>
+            </div>
+          </div>
+
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-label">Скорость Vc</div>
+              <span class="metric-val" id="resSpeed">—</span>
+              <div class="metric-unit">м/мин</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Подача Vf</div>
+              <span class="metric-val" id="resFeed">—</span>
+              <div class="metric-unit">мм/мин</div>
+            </div>
+            <div class="metric-card fz-card">
+              <div class="metric-label">Подача на зуб fz</div>
+              <span class="metric-val" id="resFz">—</span>
+              <div class="metric-unit">мм/зуб</div>
+            </div>
+            <div class="metric-card time-card">
+              <div class="metric-label">Время реза</div>
+              <span class="metric-val" id="resTime">—</span>
+              <div class="metric-unit">мин : сек</div>
+              <div class="metric-sub" id="resRPM"></div>
+            </div>
+          </div>
+
+          <div class="mini-grid">
+            <div class="mini-card" id="miniTeeth">
+              <div class="mini-label">Зубьев в резе</div>
+              <span class="mini-val" id="resTeeth">—</span>
+              <div class="mini-unit">шт</div>
+            </div>
+            <div class="mini-card" id="miniTeethWall">
+              <div class="mini-label">Зубьев в стенке</div>
+              <span class="mini-val" id="resTeethWall">—</span>
+              <div class="mini-unit">шт</div>
+            </div>
+            <div class="mini-card" id="miniChip">
+              <div class="mini-label">Стружка</div>
+              <span class="mini-val" id="resChip">—</span>
+              <div class="mini-unit">мкм</div>
+            </div>
+            <div class="mini-card" id="miniProd">
+              <div class="mini-label">Производ.</div>
+              <span class="mini-val" id="resProd">—</span>
+              <div class="mini-unit">см²/мин</div>
+            </div>
+          </div>
+
+          <div class="variants-wrap hidden" id="variantsWrap">
+            <div class="variants-title">Варианты режима</div>
+            <table class="variants">
+              <thead>
+                <tr>
+                  <th>Зубьев<br>в резе</th>
+                  <th>Шаг зуба,<br>мм</th>
+                  <th>Зубьев<br>на диске</th>
+                  <th>Подача,<br>мм/мин</th>
+                  <th>Время,<br>сек</th>
+                </tr>
+              </thead>
+              <tbody id="variantsBody"></tbody>
+            </table>
+          </div>
+
+          <div id="statusBar" class="status-bar hidden">
+            <div class="status-main" id="statusMain">
+              <span class="status-icon" id="statusIcon">●</span>
+              <span class="status-text" id="statusText">—</span>
+              <span class="status-chevron" id="statusChevron">▾</span>
+            </div>
+            <div class="status-details hidden" id="statusDetails"></div>
+          </div>
+          <div id="resRationale"></div>
+          <div id="matTip" class="tip-card hidden"></div>
+          <div class="act-row">
+            <button class="act-btn primary" id="shareBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3M8 7l4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg>Поделиться</button>
+            <button class="act-btn" id="copyBtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>Скопировать</button>
+          </div>
+        </div>
+
+        <div id="kb">
+          <div class="section-label">Справочник</div>
+          <details id="kbHist"><summary>История расчётов</summary><div class="kb-body" id="histBody"></div></details>
+          <details id="kbPitch"><summary>Шаг зуба ленточной пилы</summary><div class="kb-body"><div id="refCard"></div></div></details>
+          <details><summary>Режимы дисковых пил TCT / HSS</summary><div class="kb-body" id="kbDisk"></div></details>
+          <details><summary>Формулы и обозначения</summary><div class="kb-body" id="kbFormulas"></div></details>
+          <details><summary>Стружка: как читать режим</summary><div class="kb-body" id="kbChip"></div></details>
+          <details><summary>Неисправности: ленточная пила</summary><div class="kb-body" id="kbBand"></div></details>
+          <details><summary>Неисправности: дисковая пила</summary><div class="kb-body" id="kbDiskTr"></div></details>
+          <details><summary>СОЖ и смазка</summary><div class="kb-body" id="kbCool"></div></details>
+          <details><summary>Обкатка новой пилы</summary><div class="kb-body" id="kbRunIn"></div></details>
+          <details><summary>Установка на iPhone</summary><div class="kb-body" id="kbIos"></div></details>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="brand-footer">
+    <div class="brand-logo">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20h20M4 20V8l4-3 4 3 4-3 4 3v12M9 20v-5h6v5"/></svg>
+      <span>Р‑СТАЛЬ</span>
+    </div>
+    <div class="brand-contacts">
+      <a href="tel:88007002764"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>8 800 700-27-64</a>
+      <a href="tel:78123362713"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(812) 336-27-13</a>
+      <a href="mailto:stanok@rosmark.ru"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg>stanok@rosmark.ru</a>
+      <a href="https://www.rosmark.ru" target="_blank" rel="noopener"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20"/></svg>www.rosmark.ru</a>
+    </div>
+    <div class="brand-devs">Разработчики: <b>Киволя В.В.</b> &amp; <b>Новосёлов И.О.</b></div>
+  </div>
+</div>
+
+<script>
+/* ═══ Bichamp Calc v10.0 ═══ */
+
+const materialList = [
+{name:"А12",group:"Автоматная",key:"LowCarbon"},{name:"А20",group:"Автоматная",key:"LowCarbon"},{name:"А30",group:"Автоматная",key:"LowCarbon"},{name:"А40Г",group:"Автоматная",key:"LowCarbon"},{name:"АС11",group:"Автоматная",key:"LowCarbon"},{name:"АС14",group:"Автоматная",key:"LowCarbon"},{name:"АС35Г2",group:"Автоматная",key:"LowCarbon"},{name:"АС40",group:"Автоматная",key:"LowCarbon"},{name:"АЦ40Х",group:"Автоматная",key:"LowCarbon"},
+{name:"11SMn30",group:"Автоматная (EN)",key:"LowCarbon"},{name:"11SMn37",group:"Автоматная (EN)",key:"LowCarbon"},{name:"10S20",group:"Автоматная (EN)",key:"LowCarbon"},{name:"15S10",group:"Автоматная (EN)",key:"LowCarbon"},{name:"35S20",group:"Автоматная (EN)",key:"LowCarbon"},{name:"46S20",group:"Автоматная (EN)",key:"LowCarbon"},{name:"12L14",group:"Автоматная (AISI)",key:"LowCarbon"},{name:"1117",group:"Автоматная (AISI)",key:"LowCarbon"},{name:"1141",group:"Автоматная (AISI)",key:"LowCarbon"},{name:"1144",group:"Автоматная (AISI)",key:"LowCarbon"},
+{name:"Ст0",group:"Низкоуглеродистая строительная",key:"LowCarbon"},{name:"Ст1кп",group:"Низкоуглеродистая строительная",key:"LowCarbon"},{name:"Ст2сп",group:"Низкоуглеродистая строительная",key:"LowCarbon"},{name:"Ст3сп",group:"Низкоуглеродистая строительная",key:"LowCarbon"},{name:"Ст3пс",group:"Низкоуглеродистая строительная",key:"LowCarbon"},{name:"Ст4",group:"Низкоуглеродистая строительная",key:"LowCarbon"},{name:"Ст5",group:"Низкоуглеродистая строительная",key:"LowCarbon"},
+{name:"08кп",group:"Низкоуглеродистая качественная",key:"LowCarbon"},{name:"08",group:"Низкоуглеродистая качественная",key:"LowCarbon"},{name:"08Ю",group:"Низкоуглеродистая качественная",key:"LowCarbon"},{name:"10кп",group:"Низкоуглеродистая качественная",key:"LowCarbon"},{name:"10",group:"Низкоуглеродистая качественная",key:"LowCarbon"},{name:"15кп",group:"Низкоуглеродистая качественная",key:"LowCarbon"},{name:"15",group:"Низкоуглеродистая качественная",key:"LowCarbon"},{name:"20",group:"Низкоуглеродистая качественная",key:"LowCarbon"},
+{name:"09Г2",group:"Низколегированная",key:"LowCarbon"},{name:"09Г2С",group:"Низколегированная",key:"LowCarbon"},{name:"10Г2",group:"Низколегированная",key:"LowCarbon"},{name:"15ГС",group:"Низколегированная",key:"LowCarbon"},{name:"16ГС",group:"Низколегированная",key:"LowCarbon"},{name:"17ГС",group:"Низколегированная",key:"LowCarbon"},{name:"17Г1С",group:"Низколегированная",key:"LowCarbon"},{name:"20ГС",group:"Низколегированная",key:"LowCarbon"},{name:"25ГС",group:"Низколегированная",key:"LowCarbon"},{name:"10Г2С1",group:"Низколегированная",key:"LowCarbon"},{name:"18Г2С",group:"Низколегированная",key:"LowCarbon"},{name:"18ГФпс",group:"Низколегированная",key:"LowCarbon"},{name:"10ХСНД",group:"Низколегированная",key:"LowCarbon"},{name:"14ХГС",group:"Низколегированная",key:"LowCarbon"},{name:"15ХСНД",group:"Низколегированная",key:"LowCarbon"},{name:"15Г2БМ",group:"Низколегированная",key:"LowCarbon"},{name:"18Г2АФпс",group:"Низколегированная",key:"LowCarbon"},{name:"16ГНМА",group:"Низколегированная",key:"LowCarbon"},{name:"14Х2ГМР",group:"Низколегированная",key:"LowCarbon"},{name:"14ХМНДФР",group:"Низколегированная",key:"LowCarbon"},
+{name:"S235JR",group:"Низкоуглеродистая (EN)",key:"LowCarbon"},{name:"S275JR",group:"Низкоуглеродистая (EN)",key:"LowCarbon"},{name:"S355J2",group:"Низкоуглеродистая (EN)",key:"LowCarbon"},{name:"S420N",group:"Низкоуглеродистая (EN)",key:"LowCarbon"},{name:"P235GH",group:"Низкоуглеродистая (EN)",key:"LowCarbon"},{name:"P265GH",group:"Низкоуглеродистая (EN)",key:"LowCarbon"},{name:"16MnCr5",group:"Легированная (EN)",key:"LowAlloyTool"},{name:"20MnCr5",group:"Легированная (EN)",key:"LowAlloyTool"},{name:"C10E",group:"Углеродистая (EN)",key:"LowCarbon"},{name:"C15E",group:"Углеродистая (EN)",key:"LowCarbon"},{name:"DD11",group:"Низкоуглеродистая (EN)",key:"LowCarbon"},{name:"C1006",group:"Низкоуглеродистая (AISI)",key:"LowCarbon"},{name:"AISI 1008",group:"Низкоуглеродистая (AISI)",key:"LowCarbon"},{name:"AISI 1010",group:"Низкоуглеродистая (AISI)",key:"LowCarbon"},{name:"AISI 1015",group:"Низкоуглеродистая (AISI)",key:"LowCarbon"},{name:"AISI 1018",group:"Низкоуглеродистая (AISI)",key:"LowCarbon"},{name:"AISI 1020",group:"Низкоуглеродистая (AISI)",key:"LowCarbon"},{name:"AISI 8620",group:"Легированная (AISI)",key:"LowAlloyTool"},{name:"ASTM A36",group:"Низкоуглеродистая (ASTM)",key:"LowCarbon"},{name:"ASTM A516",group:"Низкоуглеродистая (ASTM)",key:"LowCarbon"},
+{name:"25",group:"Углеродистая качественная",key:"Carbon"},{name:"30",group:"Углеродистая качественная",key:"Carbon"},{name:"35",group:"Углеродистая качественная",key:"Carbon"},{name:"40",group:"Углеродистая качественная",key:"Carbon"},{name:"45",group:"Углеродистая качественная",key:"Carbon"},{name:"50",group:"Углеродистая качественная",key:"Carbon"},{name:"55",group:"Углеродистая качественная",key:"Carbon"},{name:"60",group:"Углеродистая качественная",key:"Carbon"},
+{name:"15Х",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"20Х",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"30Х",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"35Х",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"38ХА",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"40Х",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"45Х",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"50Х",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"30ХМА",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"35ХМ",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"40ХМ",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"42ХМ",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"38Х2МЮА",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"30ХГСА",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"25ХГТ",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"40ХФА",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"40ХН",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"45ХН",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"50ХН",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"40ХН2МА",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"38Х2Н2МА",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"34ХН1М",group:"Легированная конструкционная",key:"LowAlloyTool"},{name:"18Х2Н4МА",group:"Легированная конструкционная",key:"LowAlloyTool"},
+{name:"65Г",group:"Рессорно-пружинная",key:"Carbon"},{name:"55С2",group:"Рессорно-пружинная",key:"Carbon"},{name:"60С2А",group:"Рессорно-пружинная",key:"Carbon"},{name:"70С3А",group:"Рессорно-пружинная",key:"Carbon"},{name:"50ХГА",group:"Рессорно-пружинная",key:"Carbon"},{name:"60ХФА",group:"Рессорно-пружинная",key:"Carbon"},{name:"50ХФА",group:"Рессорно-пружинная",key:"Carbon"},{name:"C35E",group:"Углеродистая (EN)",key:"Carbon"},{name:"C45E",group:"Углеродистая (EN)",key:"Carbon"},{name:"C55E",group:"Углеродистая (EN)",key:"Carbon"},{name:"C60E",group:"Углеродистая (EN)",key:"Carbon"},{name:"41Cr4",group:"Легированная (EN)",key:"LowAlloyTool"},{name:"42CrMo4",group:"Легированная (EN)",key:"LowAlloyTool"},{name:"34CrNiMo6",group:"Легированная (EN)",key:"LowAlloyTool"},{name:"30CrNiMo8",group:"Легированная (EN)",key:"LowAlloyTool"},{name:"51CrV4",group:"Рессорно-пружинная (EN)",key:"Carbon"},{name:"56Si7",group:"Рессорно-пружинная (EN)",key:"Carbon"},{name:"AISI 1035",group:"Углеродистая (AISI)",key:"Carbon"},{name:"AISI 1045",group:"Углеродистая (AISI)",key:"Carbon"},{name:"AISI 1060",group:"Углеродистая (AISI)",key:"Carbon"},{name:"AISI 4140",group:"Легированная (AISI)",key:"LowAlloyTool"},{name:"AISI 4142",group:"Легированная (AISI)",key:"LowAlloyTool"},{name:"AISI 4340",group:"Легированная (AISI)",key:"LowAlloyTool"},{name:"AISI 5140",group:"Легированная (AISI)",key:"LowAlloyTool"},{name:"AISI 6150",group:"Рессорно-пружинная (AISI)",key:"Carbon"},{name:"AISI 9260",group:"Рессорно-пружинная (AISI)",key:"Carbon"},
+{name:"70",group:"Углеродистая качественная",key:"Carbon"},{name:"75",group:"Углеродистая качественная",key:"Carbon"},{name:"80",group:"Углеродистая качественная",key:"Carbon"},{name:"85",group:"Углеродистая качественная",key:"Carbon"},
+{name:"У7",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У7А",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У8",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У8А",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У9",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У9А",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У10",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У10А",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У11",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У11А",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У12",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У12А",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У13",group:"Углеродистая инструментальная",key:"BearingTool"},{name:"У13А",group:"Углеродистая инструментальная",key:"BearingTool"},
+{name:"ШХ4",group:"Подшипниковая",key:"BearingTool"},{name:"ШХ15",group:"Подшипниковая",key:"BearingTool"},{name:"ШХ15СГ",group:"Подшипниковая",key:"BearingTool"},{name:"ШХ20СГ",group:"Подшипниковая",key:"BearingTool"},
+{name:"9ХС",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"ХВГ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"Х12",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"Х12Ф1",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"Х12МФ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"Х12ВМФ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"7Х3",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"5ХГМ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"5ХНМ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"5ХНМ2",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"4ХМФС",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"7ХГ2ВМФ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"4Х5В2ФС",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"4Х4ВМФС",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"5Х3В3МФС",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"4Х5МФС",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"3Х2МНФ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"5Х2МНФ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"27Х2Н2М1Ф",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"27Х2Н2МВФ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"3Х2Н2МВФ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"3Х3М3Ф",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"4Х3ВМФ",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"4Х5МФ1С",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"6Х6В3МФС",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"8Х4В2МФС2",group:"Инструментальная легированная",key:"ToolAlloy"},{name:"11Х4В2МФ3С2",group:"Инструментальная легированная",key:"ToolAlloy"},
+{name:"C70W",group:"Углеродистая инструментальная (EN)",key:"BearingTool"},{name:"C80W",group:"Углеродистая инструментальная (EN)",key:"BearingTool"},{name:"C105W",group:"Углеродистая инструментальная (EN)",key:"BearingTool"},{name:"100Cr6",group:"Подшипниковая (EN)",key:"BearingTool"},{name:"100CrMnSi6-4",group:"Подшипниковая (EN)",key:"BearingTool"},{name:"90MnCrV8",group:"Инструментальная (EN)",key:"ToolAlloy"},{name:"102Cr6",group:"Подшипниковая (EN)",key:"BearingTool"},{name:"60WCrV7",group:"Инструментальная (EN)",key:"ToolAlloy"},{name:"55NiCrMoV7",group:"Инструментальная (EN)",key:"ToolAlloy"},{name:"48CrMoV6-7",group:"Инструментальная (EN)",key:"ToolAlloy"},{name:"X210Cr12",group:"Инструментальная (EN)",key:"ToolAlloy"},{name:"X153CrMoV12",group:"Инструментальная (EN)",key:"ToolAlloy"},
+{name:"AISI 1080",group:"Углеродистая (AISI)",key:"Carbon"},{name:"AISI 1095",group:"Углеродистая (AISI)",key:"Carbon"},{name:"AISI W1",group:"Углеродистая инструментальная (AISI)",key:"BearingTool"},{name:"AISI O1",group:"Инструментальная (AISI)",key:"ToolAlloy"},{name:"AISI A2",group:"Инструментальная (AISI)",key:"ToolAlloy"},{name:"AISI D2",group:"Инструментальная (AISI)",key:"ToolAlloy"},{name:"AISI D3",group:"Инструментальная (AISI)",key:"ToolAlloy"},{name:"AISI D5",group:"Инструментальная (AISI)",key:"ToolAlloy"},{name:"AISI H11",group:"Инструментальная (AISI)",key:"ToolAlloy"},{name:"AISI H13",group:"Инструментальная (AISI)",key:"ToolAlloy"},{name:"AISI S7",group:"Инструментальная (AISI)",key:"ToolAlloy"},{name:"AISI L6",group:"Инструментальная (AISI)",key:"ToolAlloy"},
+{name:"Р9",group:"Быстрорежущая",key:"HSS"},{name:"Р18",group:"Быстрорежущая",key:"HSS"},{name:"Р6М5",group:"Быстрорежущая",key:"HSS"},{name:"Р6М5К5",group:"Быстрорежущая",key:"HSS"},{name:"Р6М5Ф3",group:"Быстрорежущая",key:"HSS"},{name:"Р9К5",group:"Быстрорежущая",key:"HSS"},{name:"Р12Ф3",group:"Быстрорежущая",key:"HSS"},{name:"Р18К5Ф2",group:"Быстрорежущая",key:"HSS"},{name:"Р2AM3",group:"Быстрорежущая",key:"HSS"},
+{name:"HS18-0-1",group:"Быстрорежущая (EN)",key:"HSS"},{name:"HS6-5-2",group:"Быстрорежущая (EN)",key:"HSS"},{name:"HS6-5-2C",group:"Быстрорежущая (EN)",key:"HSS"},{name:"HS6-5-3",group:"Быстрорежущая (EN)",key:"HSS"},{name:"HS2-9-2",group:"Быстрорежущая (EN)",key:"HSS"},{name:"HS6-5-2-5",group:"Быстрорежущая (EN)",key:"HSS"},{name:"HS10-4-3-10",group:"Быстрорежущая (EN)",key:"HSS"},
+{name:"AISI M1",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI M2",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI M3",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI M4",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI M7",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI M35",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI M42",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI T1",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI T4",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"AISI T15",group:"Быстрорежущая (AISI)",key:"HSS"},{name:"PM M4",group:"Быстрорежущая (порошковая)",key:"HSS"},{name:"CPM Rex 76",group:"Быстрорежущая (порошковая)",key:"HSS"},
+{name:"08Х13",group:"Коррозионно-стойкая ферритная",key:"CorrosionResistant"},{name:"12Х13",group:"Коррозионно-стойкая ферритная",key:"CorrosionResistant"},{name:"20Х13",group:"Коррозионно-стойкая мартенситная",key:"CorrosionResistant"},{name:"30Х13",group:"Коррозионно-стойкая мартенситная",key:"CorrosionResistant"},{name:"40Х13",group:"Коррозионно-стойкая мартенситная",key:"CorrosionResistant"},{name:"95Х18",group:"Коррозионно-стойкая мартенситная",key:"CorrosionResistant"},{name:"15Х25Т",group:"Коррозионно-стойкая ферритная",key:"CorrosionResistant"},{name:"15Х28",group:"Коррозионно-стойкая ферритная",key:"CorrosionResistant"},{name:"08Х17Т",group:"Коррозионно-стойкая ферритная",key:"CorrosionResistant"},{name:"14Х17Н2",group:"Коррозионно-стойкая мартенситно-ферритная",key:"CorrosionResistant"},{name:"08Х14МФ",group:"Коррозионно-стойкая ферритная",key:"CorrosionResistant"},{name:"10Х13СЮ",group:"Коррозионно-стойкая ферритная",key:"CorrosionResistant"},
+{name:"X12Cr13",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X20Cr13",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X30Cr13",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X46Cr13",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X90CrMoV18",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X6Cr17",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X6CrMo17-1",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X17CrNi16-2",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},
+{name:"AISI 403",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 409",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 410",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 416",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 420",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 430",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 431",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 440A",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 440B",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 440C",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 446",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},
+{name:"08Х18Н10",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"08Х18Н10Т",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"12Х18Н10Т",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"03Х18Н11",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"03Х17Н14М3",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"08Х17Н13М2Т",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"10Х17Н13М3Т",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"12Х18Н9",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"17Х18Н9",group:"Коррозионно-стойкая аустенитная",key:"CorrosionResistant"},{name:"20Х23Н13",group:"Жаростойкая аустенитная",key:"HeatResistant"},{name:"20Х25Н20С2",group:"Жаростойкая аустенитная",key:"HeatResistant"},{name:"10Х11Н20Т2Р",group:"Жаропрочная аустенитная",key:"HeatResistant"},{name:"03Х16Н15М3Б",group:"Жаропрочная аустенитная",key:"HeatResistant"},
+{name:"X5CrNi18-10",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X6CrNiTi18-10",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X2CrNi19-11",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X5CrNiMo17-12-2",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X6CrNiMoTi17-12-2",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X2CrNiMo17-12-2",group:"Коррозионно-стойкая (EN)",key:"CorrosionResistant"},{name:"X15CrNiSi25-21",group:"Жаростойкая (EN)",key:"HeatResistant"},
+{name:"AISI 301",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 302",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 303",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 304",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 304L",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 316",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 316L",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 316Ti",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 321",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},{name:"AISI 309",group:"Жаростойкая (AISI)",key:"HeatResistant"},{name:"AISI 310",group:"Жаростойкая (AISI)",key:"HeatResistant"},{name:"AISI 310S",group:"Жаростойкая (AISI)",key:"HeatResistant"},{name:"AISI 347",group:"Коррозионно-стойкая (AISI)",key:"CorrosionResistant"},
+{name:"08Х22Н6Т",group:"Дуплексная",key:"HighAlloy"},{name:"08Х21Н6М2Т",group:"Дуплексная",key:"HighAlloy"},{name:"03Х22Н6М2",group:"Дуплексная",key:"HighAlloy"},{name:"03Х23Н6",group:"Дуплексная",key:"HighAlloy"},{name:"03Х24Н6М3",group:"Дуплексная",key:"HighAlloy"},{name:"12Х21Н5Т",group:"Дуплексная",key:"HighAlloy"},{name:"07Х16Н6",group:"Дуплексная",key:"HighAlloy"},{name:"09Х15Н8Ю",group:"Дуплексная",key:"HighAlloy"},{name:"09Х17Н7Ю",group:"Дуплексная",key:"HighAlloy"},
+{name:"X2CrNiN23-4",group:"Дуплексная (EN)",key:"HighAlloy"},{name:"X2CrNiMoN22-5-3",group:"Дуплексная (EN)",key:"HighAlloy"},{name:"X2CrNiMoN25-7-4",group:"Дуплексная (EN)",key:"HighAlloy"},
+{name:"AISI S31803",group:"Дуплексная (AISI)",key:"HighAlloy"},{name:"AISI S32205",group:"Дуплексная (AISI)",key:"HighAlloy"},{name:"AISI S32750",group:"Дуплексная (AISI)",key:"HighAlloy"},{name:"AISI S32304",group:"Дуплексная (AISI)",key:"HighAlloy"},{name:"AISI S32760",group:"Дуплексная (AISI)",key:"HighAlloy"},{name:"AISI 630",group:"Высокопрочная (AISI)",key:"HighAlloy"},{name:"AISI 631",group:"Высокопрочная (AISI)",key:"HighAlloy"},
+{name:"СЧ10",group:"Чугун серый",key:"CastIron"},{name:"СЧ15",group:"Чугун серый",key:"CastIron"},{name:"СЧ20",group:"Чугун серый",key:"CastIron"},{name:"СЧ25",group:"Чугун серый",key:"CastIron"},{name:"СЧ30",group:"Чугун серый",key:"CastIron"},{name:"СЧ35",group:"Чугун серый",key:"CastIron"},{name:"ВЧ40",group:"Чугун высокопрочный",key:"CastIron"},{name:"ВЧ45",group:"Чугун высокопрочный",key:"CastIron"},{name:"ВЧ50",group:"Чугун высокопрочный",key:"CastIron"},{name:"ВЧ60",group:"Чугун высокопрочный",key:"CastIron"},{name:"ВЧ70",group:"Чугун высокопрочный",key:"CastIron"},{name:"ВЧ80",group:"Чугун высокопрочный",key:"CastIron"},{name:"ВЧ100",group:"Чугун высокопрочный",key:"CastIron"},{name:"КЧ30-6",group:"Чугун ковкий",key:"CastIron"},{name:"КЧ33-8",group:"Чугун ковкий",key:"CastIron"},{name:"КЧ35-10",group:"Чугун ковкий",key:"CastIron"},{name:"КЧ37-12",group:"Чугун ковкий",key:"CastIron"},{name:"КЧ45-7",group:"Чугун ковкий",key:"CastIron"},{name:"КЧ50-5",group:"Чугун ковкий",key:"CastIron"},{name:"КЧ55-4",group:"Чугун ковкий",key:"CastIron"},{name:"КЧ60-3",group:"Чугун ковкий",key:"CastIron"},{name:"КЧ65-2",group:"Чугун ковкий",key:"CastIron"},{name:"ЧВГ30",group:"Чугун с вермикулярным графитом",key:"CastIron"},{name:"ЧВГ35",group:"Чугун с вермикулярным графитом",key:"CastIron"},{name:"ЧВГ40",group:"Чугун с вермикулярным графитом",key:"CastIron"},{name:"ЧВГ45",group:"Чугун с вермикулярным графитом",key:"CastIron"},{name:"ЧХ1",group:"Чугун специальный",key:"CastIron"},{name:"ЧХ2",group:"Чугун специальный",key:"CastIron"},{name:"ЧХ3",group:"Чугун специальный",key:"CastIron"},{name:"ЧХ16",group:"Чугун специальный",key:"CastIron"},{name:"ЧХ28",group:"Чугун специальный",key:"CastIron"},{name:"ЧН15Д7Х2",group:"Чугун нирезист",key:"CastIron"},{name:"ЧС15",group:"Чугун кремнистый",key:"CastIron"},
+{name:"EN-GJL-150",group:"Чугун серый (EN)",key:"CastIron"},{name:"EN-GJL-200",group:"Чугун серый (EN)",key:"CastIron"},{name:"EN-GJL-250",group:"Чугун серый (EN)",key:"CastIron"},{name:"EN-GJL-300",group:"Чугун серый (EN)",key:"CastIron"},{name:"EN-GJL-350",group:"Чугун серый (EN)",key:"CastIron"},{name:"EN-GJS-400-15",group:"Чугун высокопрочный (EN)",key:"CastIron"},{name:"EN-GJS-500-7",group:"Чугун высокопрочный (EN)",key:"CastIron"},{name:"EN-GJS-600-3",group:"Чугун высокопрочный (EN)",key:"CastIron"},{name:"EN-GJS-700-2",group:"Чугун высокопрочный (EN)",key:"CastIron"},{name:"EN-GJS-800-8",group:"Чугун высокопрочный (EN)",key:"CastIron"},{name:"EN-GJMB-350-10",group:"Чугун ковкий (EN)",key:"CastIron"},{name:"EN-GJMW-400-5",group:"Чугун ковкий (EN)",key:"CastIron"},{name:"EN-GJV-300",group:"Чугун (EN)",key:"CastIron"},{name:"EN-GJV-400",group:"Чугун (EN)",key:"CastIron"},{name:"EN-GJV-450",group:"Чугун (EN)",key:"CastIron"},
+{name:"ASTM Class 20",group:"Чугун серый (ASTM)",key:"CastIron"},{name:"ASTM Class 30",group:"Чугун серый (ASTM)",key:"CastIron"},{name:"ASTM Class 35",group:"Чугун серый (ASTM)",key:"CastIron"},{name:"ASTM Class 40",group:"Чугун серый (ASTM)",key:"CastIron"},{name:"ASTM Class 50",group:"Чугун серый (ASTM)",key:"CastIron"},{name:"ASTM Grade 60-40-18",group:"Чугун высокопрочный (ASTM)",key:"CastIron"},{name:"ASTM Grade 65-45-12",group:"Чугун высокопрочный (ASTM)",key:"CastIron"},{name:"ASTM Grade 80-55-06",group:"Чугун высокопрочный (ASTM)",key:"CastIron"},{name:"ASTM Grade 100-70-03",group:"Чугун высокопрочный (ASTM)",key:"CastIron"},{name:"ASTM A47",group:"Чугун ковкий (ASTM)",key:"CastIron"},{name:"ASTM A220",group:"Чугун ковкий (ASTM)",key:"CastIron"},
+{name:"А0",group:"Алюминий",key:"AlHard"},{name:"А5",group:"Алюминий",key:"AlHard"},{name:"А7",group:"Алюминий",key:"AlHard"},{name:"АД0",group:"Алюминий деформируемый",key:"AlHard"},{name:"АД1",group:"Алюминий деформируемый",key:"AlHard"},{name:"АМц",group:"Алюминиевый сплав",key:"AlHard"},{name:"АМг1",group:"Алюминиевый сплав",key:"AlHard"},{name:"АМг2",group:"Алюминиевый сплав",key:"AlHard"},{name:"АМг3",group:"Алюминиевый сплав",key:"AlHard"},{name:"АМг5",group:"Алюминиевый сплав",key:"AlHard"},{name:"АМг6",group:"Алюминиевый сплав",key:"AlHard"},{name:"Д1",group:"Алюминиевый сплав",key:"AlHard"},{name:"Д16",group:"Алюминиевый сплав",key:"AlHard"},{name:"Д16Т",group:"Алюминиевый сплав",key:"AlHard"},{name:"Д19",group:"Алюминиевый сплав",key:"AlHard"},{name:"В95",group:"Алюминиевый сплав",key:"AlHard"},{name:"В95Т",group:"Алюминиевый сплав",key:"AlHard"},{name:"АК4",group:"Алюминиевый сплав",key:"AlHard"},{name:"АК4-1",group:"Алюминиевый сплав",key:"AlHard"},{name:"АД31",group:"Алюминиевый сплав",key:"AlHard"},{name:"АД33",group:"Алюминиевый сплав",key:"AlHard"},{name:"АД35",group:"Алюминиевый сплав",key:"AlHard"},
+{name:"АК7",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК7ч",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК9",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК9ч",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК12",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК12ч",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК12М2",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК5М",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК5М2",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},{name:"АК21М2",group:"Алюминиевый литейный (силумин)",key:"AlSoft"},
+{name:"1050",group:"Алюминий (зарубежный)",key:"AlHard"},{name:"1100",group:"Алюминий (зарубежный)",key:"AlHard"},{name:"2024",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},{name:"3003",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},{name:"5052",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},{name:"5083",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},{name:"6060",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},{name:"6061",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},{name:"6063",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},{name:"6082",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},{name:"7075",group:"Алюминиевый сплав (зарубежный)",key:"AlHard"},
+{name:"EN AC-43000",group:"Алюминиевый литейный (EN)",key:"AlSoft"},{name:"EN AC-44300",group:"Алюминиевый литейный (EN)",key:"AlSoft"},{name:"EN AC-46000",group:"Алюминиевый литейный (EN)",key:"AlSoft"},{name:"A356",group:"Алюминиевый литейный (AISI)",key:"AlSoft"},{name:"A360",group:"Алюминиевый литейный (AISI)",key:"AlSoft"},{name:"A380",group:"Алюминиевый литейный (AISI)",key:"AlSoft"},
+{name:"М0",group:"Медь",key:"TitaniumBronze"},{name:"М1",group:"Медь",key:"TitaniumBronze"},{name:"М2",group:"Медь",key:"TitaniumBronze"},{name:"М3",group:"Медь",key:"TitaniumBronze"},{name:"М1р",group:"Медь",key:"TitaniumBronze"},{name:"М2р",group:"Медь",key:"TitaniumBronze"},{name:"М3р",group:"Медь",key:"TitaniumBronze"},{name:"МФ10",group:"Медь",key:"TitaniumBronze"},
+{name:"Cu-ETP",group:"Медь (зарубежная)",key:"TitaniumBronze"},{name:"Cu-OF",group:"Медь (зарубежная)",key:"TitaniumBronze"},{name:"Cu-DHP",group:"Медь (зарубежная)",key:"TitaniumBronze"},{name:"C11000",group:"Медь (UNS)",key:"TitaniumBronze"},{name:"C12200",group:"Медь (UNS)",key:"TitaniumBronze"},
+{name:"Л62",group:"Латунь",key:"TitaniumBronze"},{name:"Л63",group:"Латунь",key:"TitaniumBronze"},{name:"Л68",group:"Латунь",key:"TitaniumBronze"},{name:"Л70",group:"Латунь",key:"TitaniumBronze"},{name:"Л80",group:"Латунь",key:"TitaniumBronze"},{name:"Л90",group:"Латунь",key:"TitaniumBronze"},{name:"ЛС59-1",group:"Латунь свинцовая",key:"TitaniumBronze"},{name:"ЛС63-3",group:"Латунь свинцовая",key:"TitaniumBronze"},{name:"ЛЖМц59-1-1",group:"Латунь",key:"TitaniumBronze"},{name:"ЛАНКМц75-2-2.5-0.5-0.5",group:"Латунь",key:"TitaniumBronze"},{name:"ЛК80-3",group:"Латунь",key:"TitaniumBronze"},{name:"ЛЦ16К4",group:"Латунь литейная",key:"TitaniumBronze"},{name:"ЛЦ40С",group:"Латунь литейная",key:"TitaniumBronze"},{name:"ЛЦ38Мц2С2",group:"Латунь литейная",key:"TitaniumBronze"},
+{name:"CuZn37",group:"Латунь (EN)",key:"TitaniumBronze"},{name:"CuZn40",group:"Латунь (EN)",key:"TitaniumBronze"},{name:"CuZn39Pb3",group:"Латунь (EN)",key:"TitaniumBronze"},{name:"CuZn36Pb3",group:"Латунь (EN)",key:"TitaniumBronze"},{name:"C26000",group:"Латунь (UNS)",key:"TitaniumBronze"},{name:"C36000",group:"Латунь (UNS)",key:"TitaniumBronze"},{name:"C37700",group:"Латунь (UNS)",key:"TitaniumBronze"},{name:"C46400",group:"Латунь (UNS)",key:"TitaniumBronze"},
+{name:"БрОФ10-1",group:"Бронза",key:"TitaniumBronze"},{name:"БрОФ7-0.2",group:"Бронза",key:"TitaniumBronze"},{name:"БрОЦ4-3",group:"Бронза",key:"TitaniumBronze"},{name:"БрОЦС5-5-5",group:"Бронза",key:"TitaniumBronze"},{name:"БрОЦС4-4-17",group:"Бронза",key:"TitaniumBronze"},{name:"БрАЖ9-4",group:"Бронза",key:"TitaniumBronze"},{name:"БрАЖМц10-3-1.5",group:"Бронза",key:"TitaniumBronze"},{name:"БрАЖН10-4-4",group:"Бронза",key:"TitaniumBronze"},{name:"БрКМц3-1",group:"Бронза",key:"TitaniumBronze"},{name:"БрКН1-3",group:"Бронза",key:"TitaniumBronze"},{name:"БрБ2",group:"Бронза",key:"TitaniumBronze"},{name:"БрБНТ1.9",group:"Бронза",key:"TitaniumBronze"},{name:"БрХ1",group:"Бронза",key:"TitaniumBronze"},{name:"БрХЦр",group:"Бронза",key:"TitaniumBronze"},
+{name:"CuSn10",group:"Бронза (EN)",key:"TitaniumBronze"},{name:"CuSn6",group:"Бронза (EN)",key:"TitaniumBronze"},{name:"CuSn5Zn5Pb5",group:"Бронза (EN)",key:"TitaniumBronze"},{name:"CuAl10Fe3Mn2",group:"Бронза (EN)",key:"TitaniumBronze"},{name:"CuBe2",group:"Бронза (EN)",key:"TitaniumBronze"},{name:"C51000",group:"Бронза (UNS)",key:"TitaniumBronze"},{name:"C63000",group:"Бронза (UNS)",key:"TitaniumBronze"},{name:"C83600",group:"Бронза (UNS)",key:"TitaniumBronze"},{name:"C95400",group:"Бронза (UNS)",key:"TitaniumBronze"},
+{name:"МА1",group:"Магниевый сплав",key:"MagnesiumZinc"},{name:"МА2",group:"Магниевый сплав",key:"MagnesiumZinc"},{name:"МА2-1",group:"Магниевый сплав",key:"MagnesiumZinc"},{name:"МА8",group:"Магниевый сплав",key:"MagnesiumZinc"},{name:"МА14",group:"Магниевый сплав",key:"MagnesiumZinc"},{name:"МЛ5",group:"Магниевый сплав",key:"MagnesiumZinc"},{name:"МЛ6",group:"Магниевый сплав",key:"MagnesiumZinc"},{name:"AZ31B",group:"Магниевый сплав (зарубежный)",key:"MagnesiumZinc"},{name:"AZ91D",group:"Магниевый сплав (зарубежный)",key:"MagnesiumZinc"},
+{name:"ЦА4",group:"Цинковый сплав",key:"MagnesiumZinc"},{name:"ЦАМ4-1",group:"Цинковый сплав",key:"MagnesiumZinc"},{name:"ЦАМ10-5",group:"Цинковый сплав",key:"MagnesiumZinc"},{name:"ZAMAK 3",group:"Цинковый сплав (зарубежный)",key:"MagnesiumZinc"},{name:"ZAMAK 5",group:"Цинковый сплав (зарубежный)",key:"MagnesiumZinc"},
+{name:"ХН35ВТ",group:"Жаропрочный на железоникелевой основе",key:"HeatResistant"},{name:"ХН35ВТЮ",group:"Жаропрочный на железоникелевой основе",key:"HeatResistant"},{name:"ХН38ВТ",group:"Жаропрочный на железоникелевой основе",key:"HeatResistant"},{name:"10Х11Н23Т3МР",group:"Жаропрочный на железоникелевой основе",key:"HeatResistant"},{name:"ХН32Т",group:"Жаропрочный на железоникелевой основе",key:"HeatResistant"},
+{name:"ЭИ268",group:"Жаропрочный",key:"HeatResistant"},{name:"ЭИ448",group:"Жаропрочный",key:"HeatResistant"},
+{name:"Incoloy 800",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Incoloy 800H",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Incoloy 825",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"A286",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"UNS N08800",group:"Жаропрочный (UNS)",key:"HeatResistant"},{name:"UNS S66286",group:"Жаропрочный (UNS)",key:"HeatResistant"},
+{name:"ХН78Т",group:"Жаропрочный на никелевой основе",key:"HeatResistant"},{name:"ХН77ТЮРУ",group:"Жаропрочный на никелевой основе",key:"HeatResistant"},{name:"ХН73МБТЮ",group:"Жаропрочный на никелевой основе",key:"HeatResistant"},{name:"ХН62МВКЮ",group:"Жаропрочный на никелевой основе",key:"HeatResistant"},{name:"ХН65ВМТЮ",group:"Жаропрочный на никелевой основе",key:"HeatResistant"},{name:"ХН60ВТ",group:"Жаропрочный на никелевой основе",key:"HeatResistant"},{name:"ХН70ВМТЮ",group:"Жаропрочный на никелевой основе",key:"HeatResistant"},{name:"ХН50ВМТЮБ",group:"Жаропрочный на никелевой основе",key:"HeatResistant"},
+{name:"Inconel 600",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Inconel 625",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Inconel 718",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Inconel X-750",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Nimonic 75",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Nimonic 80A",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Nimonic 90",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},
+{name:"Hastelloy B2",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Hastelloy C22",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Hastelloy C276",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Hastelloy X",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Haynes 25",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Haynes 188",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Stellite 6",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Stellite 21",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Waspaloy",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"René 41",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Monel 400",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},{name:"Monel K500",group:"Жаропрочный (зарубежный)",key:"HeatResistant"},
+{name:"ВТ1-00",group:"Титан",key:"TitaniumBronze"},{name:"ВТ1-0",group:"Титан",key:"TitaniumBronze"},{name:"ВТ3-1",group:"Титан",key:"TitaniumBronze"},{name:"ВТ5",group:"Титан",key:"TitaniumBronze"},{name:"ВТ5-1",group:"Титан",key:"TitaniumBronze"},{name:"ВТ6",group:"Титан",key:"TitaniumBronze"},{name:"ВТ6С",group:"Титан",key:"TitaniumBronze"},{name:"ВТ8",group:"Титан",key:"TitaniumBronze"},{name:"ВТ9",group:"Титан",key:"TitaniumBronze"},{name:"ВТ14",group:"Титан",key:"TitaniumBronze"},{name:"ВТ16",group:"Титан",key:"TitaniumBronze"},{name:"ВТ20",group:"Титан",key:"TitaniumBronze"},{name:"ВТ22",group:"Титан",key:"TitaniumBronze"},{name:"ВТ23",group:"Титан",key:"TitaniumBronze"},{name:"ОТ4",group:"Титан",key:"TitaniumBronze"},{name:"ОТ4-0",group:"Титан",key:"TitaniumBronze"},{name:"ОТ4-1",group:"Титан",key:"TitaniumBronze"},{name:"ПТ-3V",group:"Титан",key:"TitaniumBronze"},
+{name:"Titanium Grade 1",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Titanium Grade 2",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Titanium Grade 3",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Titanium Grade 4",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Titanium Grade 5",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Titanium Grade 7",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Titanium Grade 9",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Titanium Grade 12",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Titanium Grade 23",group:"Титан (зарубежный)",key:"TitaniumBronze"},{name:"Ti-10V-2Fe-3Al",group:"Титан (зарубежный)",key:"TitaniumBronze"},
+{name:"ШХ15 (60-64 HRC)",group:"Закалённая подшипниковая",key:"Hardened"},{name:"ШХ15СГ (закалённая)",group:"Закалённая подшипниковая",key:"Hardened"},{name:"Сталь 45 (закалка ТВЧ)",group:"Закалённая конструкционная",key:"Hardened"},{name:"40Х (закалённая)",group:"Закалённая конструкционная",key:"Hardened"},{name:"40ХН2МА (закалённая)",group:"Закалённая конструкционная",key:"Hardened"},{name:"30ХГСА (закалённая)",group:"Закалённая конструкционная",key:"Hardened"},{name:"100Cr6 (закалённая)",group:"Закалённая подшипниковая (EN)",key:"Hardened"},{name:"Х12МФ (60-62 HRC)",group:"Закалённая инструментальная",key:"Hardened"},{name:"Х12Ф1 (закалённая)",group:"Закалённая инструментальная",key:"Hardened"},{name:"У10А (закалённая)",group:"Закалённая инструментальная",key:"Hardened"},{name:"Р6М5 (закалённая)",group:"Закалённая быстрорежущая",key:"Hardened"},{name:"Р18 (закалённая)",group:"Закалённая быстрорежущая",key:"Hardened"},
+{name:"AISI D2 (Hardened)",group:"Закалённая инструментальная (AISI)",key:"Hardened"},{name:"AISI H13 (Hardened)",group:"Закалённая инструментальная (AISI)",key:"Hardened"},{name:"AISI M2 (Hardened)",group:"Закалённая быстрорежущая (AISI)",key:"Hardened"},
+{name:"110Г13Л",group:"Высокомарганцовистая износостойкая",key:"Hardened"},{name:"110Г13Х2БРЛ",group:"Высокомарганцовистая износостойкая",key:"Hardened"},{name:"G120Mn12",group:"Высокомарганцовистая (зарубежная)",key:"Hardened"},{name:"X120Mn12",group:"Высокомарганцовистая (зарубежная)",key:"Hardened"},
+{name:"Hardox 400",group:"Износостойкая (зарубежная)",key:"Hardened"},{name:"Hardox 450",group:"Износостойкая (зарубежная)",key:"Hardened"},{name:"Hardox 500",group:"Износостойкая (зарубежная)",key:"Hardened"},{name:"Hardox 600",group:"Износостойкая (зарубежная)",key:"Hardened"},{name:"Dillidur 400",group:"Износостойкая (зарубежная)",key:"Hardened"},{name:"Dillidur 500",group:"Износостойкая (зарубежная)",key:"Hardened"},{name:"Raex 400",group:"Износостойкая (зарубежная)",key:"Hardened"},{name:"Raex 500",group:"Износостойкая (зарубежная)",key:"Hardened"}
+];
+
+const KV_COEFF = {
+"LowCarbon":{bimetal:1.1,carbide:1.0},"Carbon":{bimetal:1.0,carbide:1.0},"LowAlloyTool":{bimetal:0.85,carbide:0.9},"BearingTool":{bimetal:0.8,carbide:0.85},"HSS":{bimetal:0.7,carbide:0.75},"ToolAlloy":{bimetal:0.55,carbide:0.6},"HeatResistant":{bimetal:0.5,carbide:0.55},"CorrosionResistant":{bimetal:0.5,carbide:0.6},"HighAlloy":{bimetal:0.4,carbide:0.45},"CastIron":{bimetal:0.9,carbide:1.0},"TitaniumBronze":{bimetal:0.5,carbide:0.55},"AlHard":{bimetal:2.5,carbide:3.0},"AlSoft":{bimetal:4.0,carbide:5.0},"MagnesiumZinc":{bimetal:2.0,carbide:2.5},"Hardened":{bimetal:0.4,carbide:0.5}
+};
+
+const Z_PER_METER = {"24":945,"18":709,"14":551,"10":394,"8":315,"6":236,"4":157,"3":118,"2":79,"1.1":43,"1":39,"0.78":31,"14/18":630,"10/14":472,"8/12":394,"6/10":315,"6/8":276,"5/8":256,"4/6":197,"3/4":138,"2.5/3.4":116,"2/3":98,"1.8/2.0":75,"1.5/2.3":75,"1.5/2.0":69,"1.4/2.0":67};
+
+const CHIP_RANGE = {"LowCarbon":{min:6,max:8},"Carbon":{min:5,max:6},"LowAlloyTool":{min:4.5,max:5},"BearingTool":{min:3.5,max:4},"HSS":{min:3.5,max:4},"ToolAlloy":{min:3,max:3.5},"HeatResistant":{min:2.5,max:3},"CorrosionResistant":{min:2.5,max:3},"HighAlloy":{min:2,max:3},"CastIron":{min:2,max:3.5},"TitaniumBronze":{min:2,max:3},"AlHard":{min:10,max:12},"AlSoft":{min:8,max:10},"MagnesiumZinc":{min:6,max:8},"Hardened":{min:1,max:2}};
+
+const BASE_SPEED = {
+bimetal:{12:100,10:90,8:80,6.5:70,5:60,3.5:53.5,2.5:49,1.7:47,1.125:38.5,1.25:36.5,0.875:30},
+carbide:{12:110,10:100,8:88,6.5:75,5:65,3.5:63,2.5:60,1.7:52.5,1.125:43.5,1.25:52.5,0.875:43.5}
+};
+
+const pipePitchMatrix = {
+2:{15:'14/18',20:'14/18',40:'14/18',60:'10/14',80:'10/14',100:'10/14',120:'10/14',150:'10/14',200:'8/12',300:'8/12',400:'8/12',500:'6/10',600:'6/10',700:'5/8'},
+3:{15:'14/18',20:'14/18',40:'10/14',60:'10/14',80:'10/14',100:'8/12',120:'8/12',150:'8/12',200:'8/12',300:'6/10',400:'6/10',500:'6/10',600:'5/8',700:'5/8'},
+4:{15:'14/18',20:'10/14',40:'10/14',60:'10/14',80:'8/12',100:'8/12',120:'6/10',150:'6/10',200:'6/10',300:'5/8',400:'5/8',500:'4/6',600:'4/6',700:'4/6'},
+5:{15:'10/14',20:'10/14',40:'8/12',60:'8/12',80:'8/12',100:'6/10',120:'6/10',150:'5/8',200:'5/8',300:'5/8',400:'4/6',500:'4/6',600:'4/6',700:'4/6'},
+6:{15:'10/14',20:'10/14',40:'8/12',60:'8/12',80:'6/10',100:'5/8',120:'5/8',150:'5/8',200:'4/6',300:'4/6',400:'4/6',500:'4/6',600:'4/6',700:'3/4'},
+8:{15:'10/14',20:'8/12',40:'6/10',60:'6/10',80:'5/8',100:'5/8',120:'4/6',150:'4/6',200:'4/6',300:'4/6',400:'4/6',500:'4/6',600:'4/6',700:'3/4'},
+10:{15:'6/10',20:'6/10',40:'5/8',60:'5/8',80:'5/8',100:'4/6',120:'4/6',150:'4/6',200:'4/6',300:'3/4',400:'3/4',500:'3/4',600:'3/4',700:'3/4'},
+12:{15:'6/10',20:'5/8',40:'5/8',60:'4/6',80:'4/6',100:'4/6',120:'4/6',150:'4/6',200:'3/4',300:'3/4',400:'3/4',500:'3/4',600:'3/4',700:'2/3'},
+15:{15:'6/10',20:'4/6',40:'4/6',60:'4/6',80:'4/6',100:'4/6',120:'3/4',150:'3/4',200:'3/4',300:'3/4',400:'3/4',500:'2/3',600:'2/3',700:'2/3'},
+20:{15:'4/6',20:'4/6',40:'3/4',60:'3/4',80:'3/4',100:'2/3',120:'2/3',150:'2/3',200:'2/3',300:'2/3',400:'2/3',500:'2/3',600:'1.4/2.0',700:'1.4/2.0'},
+30:{15:'3/4',20:'3/4',40:'3/4',60:'3/4',80:'2/3',100:'2/3',120:'2/3',150:'2/3',200:'2/3',300:'2/3',400:'2/3',500:'2/3',600:'1.4/2.0',700:'1.4/2.0'},
+50:{15:'2/3',20:'2/3',40:'2/3',60:'2/3',80:'2/3',100:'2/3',120:'2/3',150:'2/3',200:'1.4/2.0',300:'1.4/2.0',400:'1.4/2.0',500:'1.4/2.0',600:'1.4/2.0',700:'1.4/2.0'},
+75:{15:'2/3',20:'2/3',40:'2/3',60:'1.4/2.0',80:'1.4/2.0',100:'1.4/2.0',120:'1.4/2.0',150:'1.4/2.0',200:'1.4/2.0',300:'1.4/2.0',400:'1.4/2.0',500:'1.4/2.0',600:'1.4/2.0',700:'1.4/2.0'},
+100:{15:'1.4/2.0',20:'1.4/2.0',40:'1.4/2.0',60:'1.4/2.0',80:'1.4/2.0',100:'1.4/2.0',120:'1.4/2.0',150:'1.4/2.0',200:'1.4/2.0',300:'1.4/2.0',400:'1.4/2.0',500:'1.4/2.0',600:'1.0/1.5',700:'1.0/1.25'},
+150:{15:'1.4/2.0',20:'1.4/2.0',40:'1.4/2.0',60:'1.4/2.0',80:'1.4/2.0',100:'1.4/2.0',120:'1.4/2.0',150:'1.4/2.0',200:'1.4/2.0',300:'1.4/2.0',400:'1.4/2.0',500:'1.4/2.0',600:'1.0/1.5',700:'1.0/1.25'},
+200:{15:'1.0/1.5',20:'1.0/1.5',40:'1.0/1.5',60:'1.0/1.5',80:'1.0/1.5',100:'1.0/1.5',120:'1.0/1.5',150:'1.0/1.5',200:'1.0/1.5',300:'1.0/1.5',400:'1.0/1.5',500:'1.0/1.5',600:'0.75/1.25',700:'0.75/1.0'},
+250:{15:'0.75/1.25',20:'0.75/1.25',40:'0.75/1.25',60:'0.75/1.25',80:'0.75/1.25',100:'0.75/1.25',120:'0.75/1.25',150:'0.75/1.25',200:'0.75/1.25',300:'0.75/1.25',400:'0.75/1.25',500:'0.75/1.25',600:'0.75/1.0',700:'0.75/1.0'},
+300:{15:'0.75/1.0',20:'0.75/1.0',40:'0.75/1.0',60:'0.75/1.0',80:'0.75/1.0',100:'0.75/1.0',120:'0.75/1.0',150:'0.75/1.0',200:'0.75/1.0',300:'0.75/1.0',400:'0.75/1.0',500:'0.75/1.0',600:'0.75/1.0',700:'0.75/1.0'}
+};
+
+const SOLID_PITCH_TABLE = [{min:0,max:15,pitch:"14/18"},{min:15,max:30,pitch:"8/12"},{min:20,max:40,pitch:"6/10"},{min:40,max:60,pitch:"5/8"},{min:60,max:80,pitch:"4/6"},{min:80,max:150,pitch:"3/4"},{min:150,max:300,pitch:"2/3"},{min:300,max:600,pitch:"1.4/2.0"},{min:500,max:1000,pitch:"1.0/1.5"},{min:1000,max:Infinity,pitch:"0.75/1.0"}];
+
+const allPitches = [{label:'14/18',tpi:8,zMetr:Z_PER_METER['14/18']},{label:'10/14',tpi:12,zMetr:Z_PER_METER['10/14']},{label:'8/12',tpi:10,zMetr:Z_PER_METER['8/12']},{label:'6/10',tpi:8,zMetr:Z_PER_METER['6/10']},{label:'5/8',tpi:6.5,zMetr:Z_PER_METER['5/8']},{label:'4/6',tpi:5,zMetr:Z_PER_METER['4/6']},{label:'3/4',tpi:3.5,zMetr:Z_PER_METER['3/4']},{label:'2/3',tpi:2.5,zMetr:Z_PER_METER['2/3']},{label:'1.4/2.0',tpi:1.7,zMetr:Z_PER_METER['1.4/2.0']},{label:'1.0/1.5',tpi:1.25,zMetr:Z_PER_METER['1.0/1.5']||69},{label:'1.0/1.25',tpi:1.125,zMetr:Z_PER_METER['1.0/1.25']||79},{label:'0.75/1.25',tpi:0.9,zMetr:Z_PER_METER['0.75/1.25']||67},{label:'0.75/1.0',tpi:0.875,zMetr:Z_PER_METER['0.75/1.0']||67}];
+
+KV_COEFF.Titan={bimetal:0.50,carbide:0.55};
+KV_COEFF.Copper={bimetal:1.10,carbide:1.20};
+CHIP_RANGE.Titan={min:2,max:3};
+CHIP_RANGE.Copper={min:5,max:7};
+
+const GULLET_DEPTH = {'0.75/1.0':11.45,'1.0/1.25':9.10,'1.0/1.5':9.10,'1.4/2.0':5.95,'2/3':4.25,'3/4':2.95,'4/6':2.10,'5/8':1.50,'6/10':1.25,'8/12':1.00,'10/14':0.85,'14/18':0.85};
+
+const CUSTOM_PITCH_CONST = {K_RIP:3, FILL_LIMIT:0.15, ZI_MIN:3, ZI_MAX:40};
+const CUSTOM_PITCH_SAFETY = 0.8;
+const CARBIDE_MIN_TPI = 3.5;
+const CARBIDE_MIN_PITCH = '3/4';
+
+const CIRCULAR_PARAMS = {
+"Низкоуглеродистая":{vc:90,fz:0.060,vr:[70,140],fr:[0.04,0.10],coat:"TiAlN"},"Конструкционная":{vc:90,fz:0.060,vr:[70,140],fr:[0.04,0.10],coat:"TiAlN"},"Углеродистая":{vc:80,fz:0.055,vr:[60,140],fr:[0.04,0.10],coat:"TiAlN"},"Легированная":{vc:70,fz:0.050,vr:[60,150],fr:[0.04,0.10],coat:"TiAlN"},"Инструментальная":{vc:60,fz:0.040,coat:"TiAlN"},"Нержавейка":{vc:50,fz:0.040,vr:[50,120],fr:[0.03,0.10],coat:"TiCN"},"Жаропрочная":{vc:35,fz:0.030,coat:"TiAlN"},"Титан":{vc:50,fz:0.040,vr:[50,120],fr:[0.03,0.10],coat:"TiAlN"},"Алюминий":{vc:700,fz:0.100,coat:"Bright"},"Медь/Латунь":{vc:350,fz:0.090,coat:"Bright"},"Чугун":{vc:100,fz:0.060,coat:"TiAlN"}
+};
+const HSS_PARAMS = {
+"Низкоуглеродистая":{vc:45,fz:0.040,vr:[35,80],fr:[0.04,0.08],coat:"без покрытия"},"Конструкционная":{vc:45,fz:0.040,vr:[35,80],fr:[0.04,0.08],coat:"без покрытия"},"Углеродистая":{vc:30,fz:0.035,vr:[22,50],fr:[0.03,0.07],coat:"без покрытия"},"Легированная":{vc:25,fz:0.030,vr:[20,50],fr:[0.03,0.07],coat:"без покрытия"},"Инструментальная":{vc:20,fz:0.025,vr:[17,30],fr:[0.02,0.06],coat:"без покрытия"},"Нержавейка":{vc:20,fz:0.025,vr:[17,30],fr:[0.02,0.06],coat:"без покрытия"},"Жаропрочная":{vc:15,fz:0.020,vr:[15,25],fr:[0.02,0.05],coat:"без покрытия"},"Титан":{vc:20,fz:0.025,vr:[15,25],fr:[0.02,0.05],coat:"без покрытия"},"Алюминий":{vc:500,fz:0.060,vr:[500,700],fr:[0.06,0.08],coat:"без покрытия"},"Медь/Латунь":{vc:300,fz:0.050,vr:[300,500],fr:[0.04,0.07],coat:"без покрытия"},"Чугун":{vc:30,fz:0.030,vr:[25,35],fr:[0.03,0.05],coat:"без покрытия"}
+};
+
+const DISK_MAX_DEPTH = {125:40,140:45,165:55,185:65,200:75,230:85,250:90,300:100,315:110,350:100,400:130,450:160,500:200,550:220,600:240,700:280,800:320,900:365,1000:400,1200:450,1500:560};
+
+const PIPE_PITCH_TABLE = [
+{dMax:20,sBound:1.0,tLow:3,tHigh:4},{dMax:30,sBound:1.5,tLow:5,tHigh:5.5},{dMax:40,sBound:2.0,tLow:6,tHigh:7},{dMax:50,sBound:4.0,tLow:6,tHigh:7},{dMax:60,sBound:4.0,tLow:7,tHigh:8},{dMax:70,sBound:3.0,tLow:7,tHigh:8},{dMax:80,sBound:4.0,tLow:8,tHigh:10},{dMax:90,sBound:4.0,tLow:8,tHigh:10},{dMax:100,sBound:7.0,tLow:10,tHigh:12},{dMax:120,sBound:5.0,tLow:10,tHigh:12},{dMax:140,sBound:4.0,tLow:10,tHigh:12},{dMax:Infinity,sBound:4.0,tLow:12,tHigh:14}
+];
+
+/* ═══ Хелперы ═══ */
+function resolveKey(mat){
+  if (mat.key === 'TitaniumBronze') return /Титан/.test(mat.group || '') ? 'Titan' : 'Copper';
+  return mat.key;
+}
+function engineGroupFor(mat){
+  const k = mat.key, g = mat.group || '';
+  if (k === 'TitaniumBronze') return /Титан/.test(g) ? 'Титан' : 'Медь/Латунь';
+  switch (k){
+    case 'LowCarbon': return 'Низкоуглеродистая';
+    case 'Carbon': return 'Углеродистая';
+    case 'LowAlloyTool': return 'Легированная';
+    case 'BearingTool': case 'HSS': case 'ToolAlloy': return 'Инструментальная';
+    case 'HeatResistant': return 'Жаропрочная';
+    case 'CorrosionResistant': case 'HighAlloy': return 'Нержавейка';
+    case 'CastIron': return 'Чугун';
+    case 'AlHard': case 'AlSoft': return 'Алюминий';
+    case 'MagnesiumZinc': return 'Алюминий';
+    case 'Hardened': return 'Инструментальная';
+    default: return 'Легированная';
+  }
+}
+const HARD_GROUPS = new Set(["Нержавейка","Жаропрочная","Титан","Инструментальная"]);
+
+const BIMETAL_SERIES_MAP = {
+"Низкоуглеродистая":["FICUT","AA"],"Углеродистая":["FICUT","PROCUT","AA"],
+"Легированная":["PROCUT","TANCUT","AA"],"Конструкционная":["FICUT","PROCUT","AA"],
+"Нержавейка":["TANCUT","DTCUT","AA","FICUT"],"Жаропрочная":["TANCUT","DTCUT","FICUT"],
+"Титан":["TANCUT","DTCUT","FICUT"],"Алюминий":["AA"],"Медь/Латунь":["AA","FICUT"],"Чугун":["FICUT","AA"]
+};
+const BIMETAL_SERIES_TPI_MAP = {
+"FICUT":["1.0/1.5","1.4/2.0","2/3","3/4","4/6","5/8","6/10","8/12","10/14","14/18"],
+"AA":["0.75/1.25","1.0/1.5","1.4/2.0","2/3","3/4","4/6","5/8"],
+"TANCUT":["0.75/1.25","1.0/1.5","1.4/2.0","2/3","3/4","4/6"],
+"DTCUT":["1.0/1.5","1.4/2.0","2/3","3/4"],
+"PROCUT":["2/3","3/4","4/6","5/7","8/11","12/16"]
+};
+const CARBIDE_SERIES = {
+"CB-MP":["0.75/1.0","1.0/1.25","1.4/2.0","2/3","3/4"],
+"CB-PRO":["0.75/1.0","1.0/1.25","1.4/2.0","2/3","3/4"],
+"TCB-MP":["2/3","3/4"],"TCB-PRO AL":["1.4/2.0","2/3"],
+"CB-PRO NF":["2/3","3/4"],"CB-X925":["0.75/1.0","1.0/1.25","1.4/2.0","2/3"]
+};
+const CARBIDE_APPLICABILITY = {
+"Низкоуглеродистая":["CB-MP","TCB-MP"],"Углеродистая":["CB-MP","TCB-MP"],
+"Легированная":["CB-MP","TCB-MP","CB-PRO","CB-PRO NF"],
+"Нержавейка":["CB-MP","CB-PRO","TCB-MP","CB-PRO NF"],
+"Жаропрочная":["CB-PRO","CB-X925","CB-MP"],
+"Титан":["CB-MP","CB-PRO","TCB-MP"],
+"Алюминий":["TCB-PRO AL","CB-MP"],"Медь/Латунь":["TCB-PRO AL","CB-MP"],
+"Чугун":["TCB-MP","CB-MP"],"Инструментальная":["CB-MP","TCB-MP","CB-PRO","CB-PRO NF"]
+};
+const CARBIDE_PRIORITY = ["CB-MP","CB-PRO","TCB-MP","CB-PRO NF","CB-X925","TCB-PRO AL"];
+function carbideMinTeeth(g){
+  if (g==="Алюминий"||g==="Медь/Латунь") return 3;
+  if (g==="Нержавейка"||g==="Жаропрочная"||g==="Титан") return 6;
+  return 5;
+}
+
+function parsePitchToken(token){
+  const parts = String(token).split('/').map(s=>s.trim());
+  const a = parseFloat(parts[0])||0, b = parseFloat(parts[1])||a;
+  const avg_tpi = (a+b)/2.0;
+  return { avg_tpi, pitch_mm: avg_tpi>0 ? 25.4/avg_tpi : null };
+}
+function getGulletDepth(label){
+  if (GULLET_DEPTH[label] != null) return GULLET_DEPTH[label];
+  const parsed = parsePitchToken(label);
+  if (!parsed || !parsed.pitch_mm) return 1.5;
+  const keys = Object.keys(GULLET_DEPTH);
+  let bestK = keys[0], bd = Infinity;
+  for (const k of keys){
+    const kp = parsePitchToken(k);
+    if (!kp.pitch_mm) continue;
+    const d = Math.abs(kp.pitch_mm - parsed.pitch_mm);
+    if (d < bd){ bd = d; bestK = k; }
+  }
+  return GULLET_DEPTH[bestK];
+}
+/* Нормализация метки шага: "1.4/2" и "1.4/2.0" → одинаковый вид */
+function normPitchLabel(str){
+  return String(str).trim().replace(',', '.').split('/').map(x => {
+    const n = parseFloat(x);
+    if (isNaN(n)) return x;
+    return String(Number(n.toFixed(2)));
+  }).join('/');
+}
+function parseCustomPitch(str){
+  if (!str) return null;
+  const s = String(str).trim().replace(',', '.');
+  const norm = normPitchLabel(s);
+  let found = allPitches.find(p => normPitchLabel(p.label) === norm);
+  if (found) return found;
+  const parts = s.split('/').map(x => parseFloat(x.trim()));
+  if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])){
+    const tpi = (parts[0] + parts[1]) / 2;
+    return { label: s, tpi, zMetr: tpi * 39.37, custom: true };
+  }
+  const mm = parseFloat(s);
+  if (!isNaN(mm) && mm > 0){
+    const tpi = 25.4 / mm;
+    return { label: mm.toFixed(2) + ' мм', tpi, zMetr: tpi * 39.37, custom: true };
+  }
+  return null;
+}
+function evenCeil(x){ return Math.ceil(x/2)*2; }
+function roundZ(x){ return x <= 110 ? evenCeil(x) : Math.ceil(x/10)*10; }
+function floorTo4(x){ return Math.floor(x/4)*4; }
+function ceilTo4(x){ return Math.ceil(x/4)*4; }
+
+function formatTime(minutes){
+  if (isNaN(minutes) || minutes<=0) return "0:00";
+  const m = Math.floor(minutes), s = Math.round((minutes-m)*60);
+  return m + ":" + (s<10?'0':'') + s;
+}
+function baseSpeedFor(sawType, tpi){
+  const tbl = BASE_SPEED[sawType]; if (!tbl) return 60;
+  if (tbl[tpi] != null) return tbl[tpi];
+  const keys = Object.keys(tbl).map(Number);
+  let best = keys[0], bd = Infinity;
+  for (const k of keys){ const d = Math.abs(k - tpi); if (d < bd){ bd = d; best = k; } }
+  return tbl[best];
+}
+function findPitchForPipe(s, d){
+  const sKeys = Object.keys(pipePitchMatrix).map(Number).sort((a,b)=>a-b);
+  let sKey = sKeys.find(k=>k>=s); if (!sKey) sKey = sKeys[sKeys.length-1];
+  const row = pipePitchMatrix[sKey]; if (!row) return null;
+  const dKeys = Object.keys(row).map(Number).sort((a,b)=>a-b);
+  let dKey = dKeys.find(k=>k>=d); if (!dKey) dKey = dKeys[dKeys.length-1];
+  return row[dKey] || null;
+}
+function findPitch(value, isPipe, wall){
+  if (isPipe){
+    const p = findPitchForPipe(wall, value);
+    if (p) return p;
+    if (wall<2) return "14/18"; if (wall<3) return "8/12"; if (wall<5) return "6/10";
+    if (wall<8) return "5/8"; if (wall<15) return "4/6"; if (wall<25) return "3/4"; return "2/3";
+  }
+  for (const row of SOLID_PITCH_TABLE){ if (value>=row.min && value<row.max) return row.pitch; }
+  return "3/4";
+}
+function shiftPitchForStainless(cur){
+  const idx = allPitches.findIndex(p=>p.label===cur);
+  if (idx===-1) return cur;
+  const t = allPitches[idx].tpi;
+  if (t<=5) return cur;
+  let next=null;
+  for (let i=idx+1;i<allPitches.length;i++){
+    if (allPitches[i].tpi<=5){ next=allPitches[i]; break; }
+    if (allPitches[i].tpi<t){ next=allPitches[i]; break; }
+  }
+  return next ? next.label : cur;
+}
+function pickBimetalSeries(group, tpi, size, isPipe, wall){
+  const supports = (s,p)=>(BIMETAL_SERIES_TPI_MAP[s]||[]).includes(p);
+  let cand = BIMETAL_SERIES_MAP[group] ? [...BIMETAL_SERIES_MAP[group]] : ["FICUT"];
+  /* PROCUT — только для труб и профиля */
+  if (!isPipe) cand = cand.filter(s=>s!=="PROCUT");
+  if (!cand.length) cand = ["FICUT"];
+
+  let chosen = cand[0];
+
+  /* Для труб/профиля приоритет: PROCUT (если шаг позволяет) → FICUT */
+  if (isPipe && cand.includes("PROCUT") && supports("PROCUT", tpi)){
+    chosen = "PROCUT";
+  }
+
+  if (size>200 && cand.includes("TANCUT") && cand.includes("DTCUT")) chosen="DTCUT";
+  if (group==="Титан") chosen = isPipe ? (wall>8?"DTCUT":"TANCUT") : (size>300?"DTCUT":"TANCUT");
+
+  if (chosen==="TANCUT" && !supports("TANCUT",tpi)) chosen = (!isPipe && size<=55) ? "FICUT" : "AA";
+
+  if (!supports(chosen,tpi)){
+    let found=null;
+    for (const s of cand){ if (supports(s,tpi)){ found=s; break; } }
+    if (found) chosen=found;
+    else for (const f of ["FICUT","AA","TANCUT","DTCUT","PROCUT"]){ if (supports(f,tpi)){ chosen=f; break; } }
+  }
+  return { series: chosen, supported: supports(chosen,tpi), candidates: cand };
+}
+function pickCarbideSeries(group, tpiLabel, teethInCut){
+  const applicable = CARBIDE_APPLICABILITY[group] || CARBIDE_PRIORITY;
+  const prio = CARBIDE_PRIORITY.filter(s=>applicable.includes(s));
+  const exact = prio.find(s=>(CARBIDE_SERIES[s]||[]).includes(tpiLabel));
+  const chosen = exact || prio[0] || "CB-MP";
+  const minTeeth = carbideMinTeeth(group);
+  return { series: chosen, minTeeth, enoughTeeth: teethInCut >= minTeeth, pitchSupported: !!exact, availablePitches: CARBIDE_SERIES[chosen] || [] };
+}
+function toolFamily(effKey, sawType){
+  if (sawType==='bimetal'){
+    switch(effKey){
+      case 'LowCarbon': case 'Carbon': case 'LowAlloyTool': return 'FICUT / AA';
+      case 'BearingTool': case 'ToolAlloy': return 'FICUT / AA / TANCUT';
+      case 'HSS': case 'HighAlloy': return 'TANCUT / DTCUT';
+      case 'HeatResistant': case 'CorrosionResistant': return 'TANCUT';
+      case 'Titan': return 'TANCUT / DTCUT';
+      case 'Copper': return 'AA / FICUT';
+      case 'CastIron': return 'FICUT / AA';
+      case 'AlHard': case 'AlSoft': case 'MagnesiumZinc': return 'AA / PROCUT AL';
+      case 'Hardened': return 'TANCUT / DTCUT';
+      default: return 'FICUT';
+    }
+  } else {
+    switch(effKey){
+      case 'LowCarbon': case 'Carbon': return 'CB-MP / CB-PRO';
+      case 'LowAlloyTool': case 'BearingTool': case 'ToolAlloy': return 'CB-PRO';
+      case 'HSS': case 'HighAlloy': return 'CB-PRO NF / CB-X925';
+      case 'HeatResistant': case 'CorrosionResistant': return 'CB-PRO / CB-X925';
+      case 'Titan': return 'CB-PRO';
+      case 'Copper': return 'CB-MP / TCB-PRO';
+      case 'CastIron': return 'CB-MP / CB-PRO';
+      case 'AlHard': case 'AlSoft': case 'MagnesiumZinc': return 'TCB-PRO AL';
+      case 'Hardened': return 'CB-X925';
+      default: return 'CB-PRO';
+    }
+  }
+}
+
+/* ═════════ ЛЕНТОЧНАЯ ═════════ */
+function calcBand(ctx){
+  const { mat, sawType, isPipe, size } = ctx;
+  let wall = ctx.wall;
+  const effKey = resolveKey(mat);
+  const group = engineGroupFor(mat);
+  const alerts = [];
+
+  if (isPipe && (isNaN(wall) || wall <= 0)) wall = 3;
+  if (isPipe && wall >= size/2){
+    return { error:true, tech:"Ошибка ввода", series:"—", desc:`Труба Ø${size}×${wall} мм`, family:'', toolParamVal:'!', toolParamLbl:'TPI / шаг', toolParamSub:'проверьте размеры', vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null, chip_um:null, prod:null, kv:null, coating:null, carbideClass:null, alerts:[{type:'danger', text:`Стенка ${wall} мм ≥ радиуса трубы ${(size/2).toFixed(1)} мм.`}], rationale:'', variants:null, fz:null };
+  }
+
+  const chip = CHIP_RANGE[effKey] || {min:4, max:5};
+  const h_avg = (chip.min + chip.max)/2, h_mm = h_avg/1000;
+
+  let wallVal = isPipe ? wall : 0;
+  if (isPipe && ctx.bundle) wallVal *= 2;
+  const effWidth = size;
+
+  /* авто-шаг */
+  let pitchAutoLabel = isPipe ? findPitch(effWidth, true, wallVal) : findPitch(size, false, 0);
+  let stainlessShift = false;
+  if (isPipe && (effKey === 'CorrosionResistant' || effKey === 'HighAlloy')){
+    const np = shiftPitchForStainless(pitchAutoLabel);
+    if (np !== pitchAutoLabel){ pitchAutoLabel = np; stainlessShift = true; }
+  }
+  /* Карбид: минимальный шаг 3/4 (TPI ≤ 3.5), всё что мельче — поднимаем до 3/4 */
+  let carbideAutoClamped = false;
+  if (sawType === 'carbide'){
+    const po = allPitches.find(p => p.label === pitchAutoLabel);
+    if (po && po.tpi > CARBIDE_MIN_TPI){
+      pitchAutoLabel = CARBIDE_MIN_PITCH;
+      carbideAutoClamped = true;
+    }
+  }
+  const pitchAutoObj = allPitches.find(p => p.label === pitchAutoLabel) || allPitches.find(p => p.label === '3/4');
+  const recommendedPitch = pitchAutoObj.label;
+
+  /* ручной шаг */
+  let pitchObj = pitchAutoObj;
+  let customPitchUsed = false;
+  if (ctx.customPitch && String(ctx.customPitch).trim()){
+    const cp = parseCustomPitch(ctx.customPitch);
+    if (cp){ pitchObj = cp; customPitchUsed = true; }
+  }
+
+  const tpi = pitchObj.tpi, tpiLabel = pitchObj.label;
+  const pitchMm = 25.4 / tpi;
+  const Z_metr = pitchObj.zMetr || (tpi * 39.37);
+
+  /* Карбид + ручной мельче 3/4 (TPI > 3.5) → отказ */
+  if (customPitchUsed && sawType === 'carbide' && tpi > CARBIDE_MIN_TPI){
+    return { error:true, tech:"Недопустимый шаг", series:"—",
+      desc:`Шаг ${tpiLabel} · заготовка ${size} мм`, family:'',
+      toolParamVal: tpiLabel, toolParamLbl:'TPI / шаг', toolParamSub:`карбид мин. 3/4`,
+      vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null,
+      chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+      alerts:[{type:'danger', text:`Карбидные ленточные пилы не выпускаются с шагом мельче 3/4 TPI. Введён «${tpiLabel}». Возьмите биметаллическую пилу или карбид 3/4 и крупнее.`}],
+      rationale:'', variants:null, fz:null };
+  }
+
+  /* Границы zi для ручного */
+  if (customPitchUsed){
+    const zi = effWidth / pitchMm;
+    if (zi < CUSTOM_PITCH_CONST.ZI_MIN){
+      return { error:true, tech:"Недопустимый шаг", series:"—",
+        desc:`Шаг ${tpiLabel} · заготовка ${size} мм`, family:'',
+        toolParamVal: tpiLabel, toolParamLbl:'TPI / шаг', toolParamSub:`zi = ${zi.toFixed(1)}`,
+        vc:null, vf:null, timeMin:0, teethInCut:zi, teethWall:null,
+        chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+        alerts:[{type:'danger', text:`Шаг «${tpiLabel}» слишком крупный: ${zi.toFixed(1)} зуба в резе (минимум ${CUSTOM_PITCH_CONST.ZI_MIN}). Возьмите более мелкий шаг. Рекомендуемый: «${recommendedPitch}».`}],
+        rationale:'', variants:null, fz:null };
+    }
+    if (zi > CUSTOM_PITCH_CONST.ZI_MAX){
+      return { error:true, tech:"Недопустимый шаг", series:"—",
+        desc:`Шаг ${tpiLabel} · заготовка ${size} мм`, family:'',
+        toolParamVal: tpiLabel, toolParamLbl:'TPI / шаг', toolParamSub:`zi = ${zi.toFixed(1)}`,
+        vc:null, vf:null, timeMin:0, teethInCut:zi, teethWall:null,
+        chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+        alerts:[{type:'danger', text:`Шаг «${tpiLabel}» слишком мелкий: ${zi.toFixed(1)} зуба в резе (максимум ${CUSTOM_PITCH_CONST.ZI_MAX}). Возьмите более крупный шаг. Рекомендуемый: «${recommendedPitch}».`}],
+        rationale:'', variants:null, fz:null };
+    }
+  }
+
+  let Vnom = baseSpeedFor(sawType, tpi);
+  const kv = KV_COEFF[effKey] ? (sawType === 'bimetal' ? KV_COEFF[effKey].bimetal : KV_COEFF[effKey].carbide) : 1.0;
+  Vnom *= kv;
+  if (effKey === 'Hardened') Vnom *= 0.7;
+  if (effKey === 'MagnesiumZinc') Vnom *= 0.9;
+  if (effKey === 'AlHard' || effKey === 'AlSoft'){ }
+  else if (effKey === 'Copper'){ Vnom = Math.max(30, Math.min(130, Vnom)); }
+  else { Vnom = Math.max(20, Math.min(80, Vnom)); }
+
+  const Fnom = h_mm * Vnom * Z_metr;
+
+  let riS = 1, riF = 1;
+  if (ctx.runIn){ if (sawType === 'bimetal'){ riS = 0.8; riF = 0.6; } else { riS = 0.7; riF = 0.4; } }
+  const corr = 1 + (ctx.corrPercent || 0)/100;
+
+  /* ×0.8 для ручного неоптимального шага — для ВСЕХ ленточных */
+  let pitchSafetyApplied = false;
+  let pitchSafety = 1;
+  if (customPitchUsed && recommendedPitch !== tpiLabel){
+    pitchSafety = CUSTOM_PITCH_SAFETY;
+    pitchSafetyApplied = true;
+  }
+
+  const V = Vnom * riS * corr * pitchSafety;
+  let F = Fnom * riF * corr * pitchSafety;
+
+  let feedLimited = false;
+  if (isPipe){ if (F > 60){ F = 60; feedLimited = true; } }
+  else if (!(effKey === 'AlHard' || effKey === 'AlSoft' || effKey === 'Copper')){ if (F > 50){ F = 50; feedLimited = true; } }
+
+  /* Правило 15% для ручного шага */
+  let gulletLimited = false;
+  let fillPct = null;
+  if (customPitchUsed){
+    const K = CUSTOM_PITCH_CONST.K_RIP;
+    const LIM = CUSTOM_PITCH_CONST.FILL_LIMIT;
+    const hG = getGulletDepth(pitchObj.label);
+    const t_mm = 25.4 / tpi;
+    const S_g = 0.5 * t_mm * hG;
+    const B = size;
+    const hMax = LIM * S_g / (B * K);
+    const hNow = F / (V * Z_metr);
+    fillPct = hNow * K / (S_g / B) * 100;
+    if (hNow > hMax){
+      F = hMax * V * Z_metr;
+      gulletLimited = true;
+      F = Math.max(1, F);
+    }
+  }
+
+  const safeF = Math.max(1, F);
+  const timeMin = effWidth / safeF;
+  const teethInCut = effWidth / pitchMm;
+  const teethWall = isPipe ? (2*wallVal)/pitchMm : null;
+  const chip_um = (F / (V * Z_metr)) * 1000;
+  const Rout = effWidth/10/2;
+  const Rin = isPipe ? Math.max(0, (effWidth - 2*wallVal)/10/2) : 0;
+  const area = Math.PI*(Rout*Rout - Rin*Rin);
+  const prod = area / timeMin;
+
+  let seriesName, tech, rationale = '';
+  if (sawType === 'bimetal'){
+    const bs = pickBimetalSeries(group, tpiLabel, size, isPipe, wallVal || wall);
+    tech = "Ленточная Bi-Metal";
+    if (bs.supported){ seriesName = bs.series; rationale = `Кандидаты: ${bs.candidates.join(', ')} → ${bs.series}`; }
+    else { seriesName = "CB-PRO (карбид)"; alerts.push({type:'warning', text:`Шаг ${tpiLabel} не поддерживается биметаллическими сериями — рекомендуется Carbide (CB-PRO).`}); rationale = `Шаг ${tpiLabel} вне биметаллических серий`; }
+  } else {
+    const cs = pickCarbideSeries(group, tpiLabel, teethInCut);
+    tech = "Ленточная Carbide";
+    seriesName = cs.series;
+    if (!cs.pitchSupported && cs.availablePitches.length){
+      alerts.push({type:'warning', text:`Серия «${cs.series}» не производится с шагом ${tpiLabel}. Доступные шаги: ${cs.availablePitches.join(', ')}.`});
+    }
+    if (!cs.enoughTeeth) alerts.push({type:'warning', text:`${teethInCut.toFixed(1)} зуб. в резе — ниже нормы ≥${cs.minTeeth} для «${group}». Снизьте подачу на 10–15%.`});
+    else alerts.push({type:'success', text:`${teethInCut.toFixed(1)} зуб. в резе — норма ≥${cs.minTeeth} соблюдена.`});
+    if (tpi > 3.5) alerts.push({type:'info', text:`Шаг мельче 3/4 TPI — для карбида предпочтителен более крупный зуб.`});
+    rationale = `Серия ${cs.series} · норма ≥${cs.minTeeth} зуб.`;
+  }
+
+  if (customPitchUsed){
+    const isMatch = (recommendedPitch === tpiLabel);
+    const base = isMatch
+      ? `Шаг задан вручную: «${tpiLabel}» (совпадает с рекомендуемым).`
+      : `ВНИМАНИЕ: введён неоптимальный шаг «${tpiLabel}». Рекомендуется «${recommendedPitch}». Неверный шаг приводит к быстрому износу инструмента и преждевременному выходу станка из строя.`;
+    alerts.unshift({ type: isMatch ? 'warning' : 'danger', text: base });
+  }
+  if (carbideAutoClamped) alerts.push({type:'info', text:`Шаг поднят до 3/4 — карбидные ленточные пилы не выпускаются мельче 3/4 TPI.`});
+  if (stainlessShift) alerts.push({type:'info', text:`Шаг увеличен для нержавейки/дуплекса → ${tpiLabel}.`});
+  if (ctx.runIn) alerts.push({type:'secondary', text:`Режим обкатки: ${sawType==='bimetal'?'скорость 80% / подача 60%':'скорость 70% / подача 40%'}.`});
+  if (feedLimited) alerts.push({type:'warning', text:`Подача ограничена лимитом ${isPipe?'трубы (60':'сплошн. (50'} мм/мин) для защиты зуба.`});
+
+  const desc = isPipe
+    ? (ctx.bundle ? `Пакет ${size} мм · стенка 2×${(wallVal/2).toFixed(1)} мм` : `Труба Ø${size}×${wall} мм`)
+    : `Пруток ${size} мм`;
+
+  return {
+    mode: sawType, tech, series: seriesName, family: toolFamily(effKey, sawType), desc,
+    toolParamVal: tpiLabel, toolParamLbl: 'TPI / шаг',
+    toolParamSub: customPitchUsed
+      ? `рекомендуем ${recommendedPitch} · шаг ${pitchMm.toFixed(2)} мм`
+      : `шаг ${pitchMm.toFixed(2)} мм · Z_м ${Math.round(Z_metr)}`,
+    vc: Math.round(V), vf: Math.round(F), timeMin,
+    teethInCut, teethWall, chip_um, prod, kv,
+    coating: null, carbideClass: sawType === 'carbide' ? seriesName : null,
+    alerts, rationale, bandLike: true, variants: null, fz: (F/(V*Z_metr))
+  };
+}
+
+/* ═════════ ДИСКОВАЯ ═════════ */
+function calcDisk(kind, group, size, isPipe, wall, diskDia, corrPercent, opts){
+  const o = opts || {};
+  const isHSS = kind === 'hss';
+  const params = (isHSS ? HSS_PARAMS : CIRCULAR_PARAMS)[group]
+              || (isHSS ? HSS_PARAMS : CIRCULAR_PARAMS)["Легированная"];
+  const vcBase = params.vc, fzBase = params.fz;
+  const rangeTxt = params.vr ? ` · справочно: Vc ${params.vr[0]}–${params.vr[1]} м/мин, fz ${params.fr[0]}–${params.fr[1]} мм/зуб` : '';
+  const alerts = [];
+
+  const maxD = (function(d){
+    const keys = Object.keys(DISK_MAX_DEPTH).map(Number).sort((a,b)=>a-b);
+    if (d <= keys[0]) return DISK_MAX_DEPTH[keys[0]];
+    for (let i=1;i<keys.length;i++){
+      if (d <= keys[i]){
+        const d0=keys[i-1], d1=keys[i], v0=DISK_MAX_DEPTH[d0], v1=DISK_MAX_DEPTH[d1];
+        return Math.round(v0 + (v1-v0)*(d-d0)/(d1-d0));
+      }
+    }
+    return Math.round(keys[keys.length-1]*0.37);
+  })(diskDia);
+
+  if (maxD && size > maxD){
+    return { error:true, tech: isHSS?"Дисковая HSS":"Дисковая TCT",
+      series:"—", desc:`Диск Ø${diskDia} · заготовка ${size} мм`, family:'',
+      toolParamVal:'!', toolParamLbl:'Z', toolParamSub:`макс. габарит ${maxD} мм`,
+      vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null,
+      chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+      alerts:[{type:'danger', text:`Диск Ø${diskDia} режет максимум ${maxD} мм.`}],
+      rationale:'', bandLike:false, variants:null, fz:null };
+  }
+  if (isHSS && !isPipe){
+    return { error:true, tech:"Дисковая HSS", series:"—",
+      desc:`Диск Ø${diskDia} · сплошной ${size} мм`, family:'',
+      toolParamVal:'—', toolParamLbl:'Z', toolParamSub:'HSS — только трубы/профиль',
+      vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null,
+      chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+      alerts:[{type:'warning', text:'HSS-диски — только для труб и профиля.'}],
+      rationale:'', bandLike:false, variants:null, fz:null };
+  }
+  if (!isHSS && isPipe && wall < 7){
+    return { error:true, tech:"Дисковая TCT", series:"—",
+      desc:`Диск Ø${diskDia} · труба ${size}×${wall} мм`, family:'',
+      toolParamVal:'—', toolParamLbl:'Z', toolParamSub:'TCT тонкостенную трубу не режет',
+      vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null,
+      chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+      alerts:[{type:'danger', text:'TCT не применяется для труб со стенкой < 7 мм. Используйте HSS.'}],
+      rationale:'', bandLike:false, variants:null, fz:null };
+  }
+
+  const corr = 1 + (corrPercent || 0) / 100;
+  let vc = vcBase * corr;
+  const fz = fzBase * corr;
+  let rpm = Math.max(1, Math.round(1000 * vc / (Math.PI * diskDia)));
+  if (o.rpm > 0){
+    const rpmRec = rpm;
+    rpm = Math.round(o.rpm * 10) / 10;
+    vc = Math.PI * diskDia * rpm / 1000;
+    const lo = params.vr ? params.vr[0] : vcBase * 0.7, hi = params.vr ? params.vr[1] : vcBase * 1.3;
+    if (vc > hi * 1.02) alerts.push({type:'danger', text:`Обороты ${rpm} об/мин дают Vc ${vc.toFixed(0)} м/мин — выше допустимого (${Math.round(hi)} м/мин). Расчётные обороты: ${rpmRec} об/мин.`});
+    else if (vc < lo * 0.98) alerts.push({type:'warning', text:`Обороты ${rpm} об/мин дают Vc ${vc.toFixed(0)} м/мин — ниже рабочего диапазона (от ${Math.round(lo)} м/мин). Расчётные обороты: ${rpmRec} об/мин.`});
+    else alerts.push({type:'info', text:`Обороты станка заданы вручную: ${rpm} об/мин → Vc ${vc.toFixed(0)} м/мин (расчётные ${rpmRec} об/мин).`});
+  }
+  const zCheck = (Z, Zrec, tic) => {
+    if (!(o.z > 0)) return;
+    alerts.push({type:'info', text:`Число зубьев задано вручную: Z=${Z} (расчётное Z=${Zrec}).`});
+    if (tic < 2) alerts.push({type:'danger', text:`В резе ${tic.toFixed(1)} зуба — меньше 2. Удар и выкрашивание зубьев: нужен диск с большим Z.`});
+    else if (tic > 6) alerts.push({type:'warning', text:`В резе ${tic.toFixed(1)} зубьев — шаг мелкий, стружка может не помещаться во впадине. Снизьте подачу или возьмите диск с меньшим Z.`});
+  };
+
+  if (isHSS && isPipe && wall < 7){
+    let T = 12;
+    for (const r of PIPE_PITCH_TABLE){ if (size < r.dMax){ T = wall < r.sBound ? r.tLow : r.tHigh; break; } }
+    const Zrec = Math.ceil(Math.PI * diskDia / T / 10) * 10;
+    const Z = o.z > 0 ? o.z : Zrec;
+    const actualPitch = Math.PI * diskDia / Z;
+    const vf = Math.max(5, Math.round(fz * Z * rpm));
+    const timeMin = size / vf;
+    const chord = 2 * Math.sqrt(Math.max(0, wall * (size - wall)));
+    const teethInCut = chord / actualPitch;
+    zCheck(Z, Zrec, teethInCut);
+    alerts.push({type:'info', text:`Тонкостенная труба: шаг по таблице D×S = ${T} мм, Z изгот. = ${Z}`});
+    if (corrPercent) alerts.push({type:'secondary', text:`Коррекция ${corrPercent>0?'+':''}${corrPercent}%`});
+    return { mode:kind, tech:"Дисковая пила HSS", series:"HSS DMo5",
+      family:"HSS (быстрорежущий диск)", desc:`Диск Ø${diskDia} мм · труба ${size}×${wall} мм`,
+      toolParamVal: Z, toolParamLbl:'зубьев Z',
+      toolParamSub:`шаг ≈ ${actualPitch.toFixed(2)} мм · зубьев в стенке ≈ ${teethInCut.toFixed(1)}`,
+      vc:Math.round(vc), vf, rpm, fz:+fz.toFixed(4), timeMin, teethInCut, teethWall:teethInCut,
+      chip_um:null, prod:null, kv:null, coating:params.coat, carbideClass:null,
+      alerts, rationale:`fz ${fz.toFixed(3)} мм/зуб · n ${rpm} об/мин · Vc ${Math.round(vc)} м/мин${rangeTxt}`,
+      bandLike:true, variants:null };
+  }
+
+  const R = diskDia/2;
+  let L;
+  if (isPipe){
+    const r = size/2;
+    const b = R - r + wall;
+    const arg = (R*R + b*b - r*r) / (2*R*b);
+    const phi = 2 * Math.acos(Math.max(-1, Math.min(1, arg)));
+    L = phi * R;
+  } else {
+    L = R * 2 * Math.asin(Math.min(1, size / diskDia));
+  }
+
+  const variants = [3,4,5].map(zi => {
+    const T = L / zi;
+    const Z = roundZ(Math.PI * diskDia / T);
+    const vf = Math.max(5, Math.round(fz * Z * rpm));
+    const tSec = 60 * size / vf;
+    return { zi, T, Z, vf, tSec };
+  });
+
+  const Z3 = variants[0].Z, Z4 = variants[1].Z;
+  const avg = (Z3 + Z4) / 2;
+  const Zrec = isPipe ? floorTo4(avg) : ceilTo4(avg);
+  const Zopt = o.z > 0 ? o.z : Zrec;
+  const Topt = Math.PI * diskDia / Zopt;
+  const vfOpt = Math.max(5, Math.round(fz * Zopt * rpm));
+  const tOpt = 60 * size / vfOpt;
+  const actualPitch = Math.PI * diskDia / Zopt;
+  let teethInCut, teethWall = null;
+  if (isPipe){ teethWall = L / actualPitch; teethInCut = teethWall; }
+  else { teethInCut = L / actualPitch; }
+  zCheck(Zopt, Zrec, teethInCut);
+
+  if (isPipe && wall >= 7 && !isHSS){
+    alerts.push({type:'info', text:`Толстостенная труба: L=${L.toFixed(1)} мм, 3 варианта + оптимум Z=${Zrec}`});
+  } else if (!isPipe){
+    alerts.push({type:'info', text:`Сплошной прокат: L=${L.toFixed(1)} мм, оптимум Z=${Zrec}`});
+  }
+  if (corrPercent) alerts.push({type:'secondary', text:`Коррекция ${corrPercent>0?'+':''}${corrPercent}%`});
+
+  return { mode:kind, tech: isHSS?"Дисковая пила HSS":"Дисковая пила TCT",
+    series: isHSS?"HSS DMo5":"Carbide-Tipped",
+    family: isHSS?"HSS (быстрорежущий диск)":"TCT (твердосплавные напайки)",
+    desc:`Диск Ø${diskDia} мм · ${isPipe?`труба ${size}×${wall} мм`:`пруток ${size} мм`}`,
+    toolParamVal: Zopt, toolParamLbl:'зубьев Z',
+    toolParamSub:`шаг ≈ ${actualPitch.toFixed(2)} мм · зубьев в резе ≈ ${teethInCut.toFixed(1)}`,
+    vc:Math.round(vc), vf:vfOpt, rpm, fz:+fz.toFixed(4),
+    timeMin:tOpt/60, teethInCut, teethWall,
+    chip_um:null, prod:null, kv:null,
+    coating:params.coat, carbideClass:null,
+    alerts, rationale:`fz ${fz.toFixed(3)} мм/зуб · n ${rpm} об/мин · Vc ${Math.round(vc)} м/мин · L ${L.toFixed(1)} мм${rangeTxt}`,
+    bandLike:true,
+    variants:{ L, list:variants, opt:{ Z:Zopt, T:Topt, vf:vfOpt, tSec:tOpt } } };
+}
+
+/* ═══════════════════ КОНТРОЛЛЕР ═══════════════════ */
+const q = id => document.getElementById(id);
+/* ═══════════════════ БАЗА ЗНАНИЙ ═══════════════════ */
+const MAT_TIPS = {
+"Низкоуглеродистая":"Вязкая сталь: сливная стружка и наросты на зубе. Не занижайте подачу — пила должна резать, а не тереть. Прокат с окалиной тупит зуб быстрее.",
+"Углеродистая":"Режется стабильно. Поковки и прокат с окалиной быстро тупят зуб — на таких заготовках снижайте скорость на 10–20 %.",
+"Легированная":"Прочнее углеродистой. В термообработанном состоянии (после улучшения) снижайте скорость на 20–30 % и следите за износом.",
+"Инструментальная":"Высокая твёрдость и карбиды в структуре. Режьте в отожжённом состоянии на пониженной скорости. Закалённый материал биметаллом и HSS не режется — только твёрдый сплав.",
+"Нержавейка":"Склонна к наклёпу: зуб не должен скользить без съёма стружки. Не останавливайте подачу в резе и не занижайте её. Тепло отводится плохо — обильная СОЖ, сниженная скорость.",
+"Жаропрочная":"Самая тяжёлая группа: сильный наклёп и высокая температура в резе. Минимальные скорости, острая пила, обильная СОЖ. Затупившуюся пилу меняйте сразу — она упрочняет поверхность реза.",
+"Титан":"Плохо отводит тепло и налипает на зуб. Невысокая скорость, уверенная подача, обильная СОЖ. Мелкая титановая стружка горюча — не давайте ей накапливаться.",
+"Алюминий":"Мягкий, налипает на зуб и забивает впадину: нужен крупный шаг и смазка. Литейные сплавы с высоким кремнием (силумины) абразивны и снижают стойкость.",
+"Медь/Латунь":"Медь вязкая и налипает — нужен острый зуб и смазка. Латуни и оловянные бронзы режутся легко, стружка ломкая. Алюминиевые и бериллиевые бронзы твёрдые — снижайте скорость.",
+"Чугун":"Стружка — абразивная пыль. Серый чугун обычно режут всухую. Литейная корка быстро тупит зуб — проходите её на пониженной скорости."
+};
+const KB_BAND = [
+["Выкрашиваются или срываются зубья","Шаг слишком крупный (меньше 3 зубьев в резе), завышена подача, заготовка плохо зажата, не было обкатки, врезание в острую кромку.","Взять шаг мельче, снизить подачу, проверить зажим, обкатать новую пилу, начинать рез на пониженной подаче."],
+["Пила быстро тупится","Завышена скорость, мало или нет СОЖ, окалина или твёрдая корка, пропущена обкатка, слишком малая подача (зуб трёт, а не режет).","Снизить скорость, проверить подачу и концентрацию СОЖ, увеличить подачу до нормальной стружки."],
+["Рез уходит в сторону","Пила затупилась, слабое натяжение, направляющие разведены далеко от заготовки или изношены, завышена подача, шаг слишком мелкий.","Заменить пилу, проверить натяжение, подвести направляющие вплотную к заготовке, снизить подачу."],
+["Пила рвётся по спинке или во впадинах","Усталость от перегибов: избыточное натяжение, изношенные или не отрегулированные направляющие, износ шкивов, трение спинки об упорные ролики.","Проверить натяжение, направляющие и упорные ролики, состояние шкивов; снимать натяжение при простое."],
+["Обрыв по сварному шву","Дефект или перегрев шва, перекос пилы на шкивах, удар при врезании.","Проверить соосность шкивов и направляющих; при повторении — претензия по шву."],
+["Вибрация, визг","Резонанс при данной скорости, слишком малая подача, слабый зажим, равномерный шаг на этом сечении.","Изменить скорость на 10–15 %, увеличить подачу, проверить зажим, применить переменный шаг."],
+["Стружка приваривается к зубьям","Завышена подача или скорость, мало СОЖ, не работает щётка очистки.","Снизить подачу, проверить СОЖ, отрегулировать или заменить щётку."],
+["Впадины забиты стружкой","Шаг слишком мелкий для этого сечения, не работает щётка.","Взять шаг крупнее, проверить щётку и подачу СОЖ в зону реза."],
+["Большой заусенец, грубая поверхность","Пила затупилась, завышена подача, шаг слишком крупный.","Заменить пилу, снизить подачу, взять шаг мельче."]
+];
+const KB_DISK = [
+["Выкрашиваются зубья (TCT)","Вибрация, слабый зажим заготовки, меньше 2 зубьев в резе, резкое врезание, прерывистый рез, биение фланцев.","Проверить зажим и фланцы, взять диск с большим Z, снижать подачу на входе и выходе из реза."],
+["Диск быстро тупится","Завышена скорость резания, нет смазки, окалина, слишком малая подача на зуб (трение вместо резания).","Снизить обороты, проверить смазку, поднять подачу до рекомендованной."],
+["Нарост на зубьях","Нержавеющая сталь, алюминий, медь; мало смазки, низкая скорость, диск без покрытия.","Усилить смазку, применить диск с покрытием, скорректировать скорость."],
+["Рез уходит, диск «ведёт»","Диск затупился с одной стороны, биение или грязь на фланцах, перегрев корпуса, слишком много зубьев в резе.","Перезаточить или заменить диск, очистить фланцы, проверить биение, взять диск с меньшим Z."],
+["Трещины от впадин зубьев (HSS)","Забивание впадин стружкой при мелком шаге, завышенная подача, затупленный диск, перегрев.","Диск с меньшим Z, снизить подачу, вовремя перетачивать, проверить СОЖ."],
+["Диск клинит в резе","Заготовка зажимает диск (внутренние напряжения, плохой зажим), затупление, увод реза.","Зажимать заготовку с обеих сторон от реза, заменить диск."],
+["Большой заусенец","Диск затупился, завышена подача на выходе, неверный шаг для тонкой стенки.","Перезаточка, снизить подачу на выходе, для тонкой стенки — диск с мелким шагом."],
+["Визг, вибрация","Тонкая стенка, резонанс, слабый зажим, мало зубьев в резе.","Изменить обороты, усилить зажим, взять диск с большим Z."]
+];
+function kbProblems(list){
+  return list.map(r => `<div class="kb-prob"><div class="p">${r[0]}</div><div class="c"><span class="lbl">Причины</span>${r[1]}</div><div class="f"><span class="lbl">Что делать</span>${r[2]}</div></div>`).join('');
+}
+function buildKnowledge(){
+  const order = ["Низкоуглеродистая","Углеродистая","Легированная","Инструментальная","Нержавейка","Жаропрочная","Титан","Алюминий","Медь/Латунь","Чугун"];
+  const cell = (p) => p ? `<td class="num">${p.vc}${p.vr ? `<br><span style="color:var(--text3);font-size:10.5px">${p.vr[0]}–${p.vr[1]}</span>` : ''}</td><td class="num">${p.fz.toFixed(3)}${p.fr ? `<br><span style="color:var(--text3);font-size:10.5px">${p.fr[0]}–${p.fr[1]}</span>` : ''}</td>` : '<td></td><td></td>';
+  q('kbDisk').innerHTML =
+    `<table class="ref tight"><thead><tr><th>Группа</th><th class="num">TCT Vc</th><th class="num">TCT fz</th><th class="num">HSS Vc</th><th class="num">HSS fz</th></tr></thead><tbody>`
+    + order.map(g => `<tr><td>${g}</td>${cell(CIRCULAR_PARAMS[g])}${cell(HSS_PARAMS[g])}</tr>`).join('')
+    + `</tbody></table>`
+    + `<p class="src">Vc — м/мин, fz — мм/зуб. Крупно — стартовое значение калькулятора, мелко — диапазон из открытых каталогов. Где диапазона нет, значение оценочное.</p>`
+    + `<p class="src">Источники: Kinkelder (серия TCT CX, KINS' RED Stainless), Cutek Tools, The Blade Mfg (HSS DMo5 / Co5), Hoffmann Group, Cold Saw Blade Store.</p>`
+    + `<p><b>Выбор Z.</b> Сплошной прокат — 3–4 зуба в резе, толстостенная труба — 3–5, тонкостенная труба — шаг по таблице D×S. HSS — только трубы и профиль; TCT — сплошной прокат и трубы со стенкой от 7 мм.</p>`;
+  q('kbFormulas').innerHTML =
+    `<p><b>Дисковая пила</b></p><ul>`
+    + `<li><code>n = 1000·Vc / (π·D)</code> — обороты, об/мин</li>`
+    + `<li><code>Vf = fz·Z·n</code> — минутная подача, мм/мин</li>`
+    + `<li><code>шаг = π·D / Z</code> — шаг зуба, мм</li>`
+    + `<li><code>T = H / Vf</code> — время реза, мин (H — высота реза)</li></ul>`
+    + `<p><b>Ленточная пила</b></p><ul>`
+    + `<li><code>шаг, мм = 25,4 / TPI</code></li>`
+    + `<li><code>зубьев в резе = L / шаг</code> (L — длина контакта)</li>`
+    + `<li><code>fz = Vf / (Vc·Z_м)</code>, Z_м — зубьев на метр ленты</li></ul>`
+    + `<p><b>Обозначения.</b> Vc — скорость резания, м/мин. Vf — подача, мм/мин. fz — подача на зуб, мм. Z — число зубьев диска. TPI — зубьев на дюйм. Kv — коэффициент обрабатываемости материала.</p>`;
+  q('kbChip').innerHTML =
+    `<ul><li><b>Свободно завитая, светлая</b> — режим в норме.</li>`
+    + `<li><b>Тонкая, как пыль или фольга</b> — подача мала, зуб трёт. Увеличить подачу или снизить скорость.</li>`
+    + `<li><b>Толстая, тяжёлая, синяя или коричневая</b> — перегрузка и перегрев. Снизить подачу, затем скорость; проверить СОЖ.</li>`
+    + `<li><b>Спрессованная во впадине</b> — шаг слишком мелкий для этого сечения.</li></ul>`
+    + `<p>Чугун и латунь дают крошку — по ним режим оценивают по звуку, времени реза и износу, а не по форме стружки.</p>`;
+  q('kbBand').innerHTML = kbProblems(KB_BAND);
+  q('kbDiskTr').innerHTML = kbProblems(KB_DISK);
+  q('kbCool').innerHTML =
+    `<ul><li><b>Ленточные пилы, сталь</b> — водная эмульсия, обычно 5–10 %; для нержавеющих, жаропрочных и титана — гуще, 10–15 %. Точную концентрацию даёт производитель СОЖ.</li>`
+    + `<li><b>Струя</b> — в зону входа пилы в рез и на направляющие, а не просто на заготовку.</li>`
+    + `<li><b>Серый чугун</b> — обычно всухую: пыль с эмульсией даёт абразивную пасту.</li>`
+    + `<li><b>Алюминий, медь</b> — смазка обязательна, иначе налипание и забитые впадины.</li>`
+    + `<li><b>HSS-диски</b> — обильный полив эмульсией.</li>`
+    + `<li><b>TCT-диски по стали</b> — обычно минимальная смазка (масляный туман) или сухой рез по рекомендации производителя диска; обильный полив вызывает термоудар напаек.</li>`
+    + `<li><b>Магниевые сплавы</b> — водные СОЖ не применять, стружка горюча.</li></ul>`
+    + `<p>Раз в неделю проверяйте концентрацию рефрактометром: слабая эмульсия — быстрый износ и коррозия, слишком густая — пена и налипание.</p>`;
+  q('kbRunIn').innerHTML =
+    `<p>Новая пила имеет очень острую кромку зуба, которая под полной нагрузкой выкрашивается. Обкатка скругляет кромку и заметно продлевает ресурс.</p>`
+    + `<ul><li><b>Bi-Metal:</b> скорость 80 %, подача 60 % от расчётных.</li>`
+    + `<li><b>Carbide:</b> скорость 70 %, подача 40 %.</li>`
+    + `<li>Длительность — первые 300–500 см² реза (примерно 15 минут чистого реза), затем подачу плавно довести до расчётной.</li>`
+    + `<li>Не начинайте новой пилой рез, оставшийся от старой: пропил у́же, пилу зажмёт.</li></ul>`
+    + `<p>Включите галочку «Обкатка» — калькулятор сам пересчитает режимы.</p>`;
+  q('kbIos').innerHTML =
+    `<ul><li>Откройте калькулятор в Safari по ссылке → кнопка «Поделиться» → <b>На экран «Домой»</b>. Он запустится как приложение, без адресной строки.</li>`
+    + `<li>Последний расчёт, материал и история сохраняются на устройстве.</li>`
+    + `<li>Кнопка ☀ в шапке включает светлую тему — её лучше видно на ярком свету в цеху.</li>`
+    + `<li>Дробные размеры можно вводить и через запятую, и через точку.</li></ul>`
+    + `<p class="src">Для работы без сети файл должен быть сохранён на устройстве или страница уже открыта: одиночный HTML-файл не умеет сам кешироваться для офлайн-запуска.</p>`;
+}
+
+/* ═══ Хранилище (всё в try/catch: в приватном режиме Safari оно может быть недоступно) ═══ */
+const STORE_KEY = 'bichampCalc.v10';
+const store = {
+  get(){ try { return JSON.parse(localStorage.getItem(STORE_KEY) || '{}') || {}; } catch(_){ return {}; } },
+  set(patch){ try { const d = this.get(); Object.assign(d, patch); localStorage.setItem(STORE_KEY, JSON.stringify(d)); } catch(_){} }
+};
+/* Поиск: латиница ↔ кириллица (12X18H10T = 12Х18Н10Т), без пробелов и дефисов */
+const LOOKALIKE = {'а':'a','в':'b','е':'e','ё':'e','к':'k','м':'m','н':'h','о':'o','р':'p','с':'c','т':'t','у':'y','х':'x'};
+function normSearch(str){
+  return String(str).toLowerCase().replace(/[\s\-_.·,/()]/g,'').replace(/[авеёкмнорстух]/g, ch => LOOKALIKE[ch]);
+}
+function toast(msg){
+  const t = q('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 1800);
+}
+
+const numVal = id => parseFloat(String(q(id).value).replace(/\s/g,'').replace(/,/g,'.'));
+const IS_TOUCH = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+const app = {
+  mode:'bimetal', isPipe:false, runIn:false, bundle:false, selectedMat:null,
+  customPitch:'', customPitchEnabled:false, _t:null, _statusExpanded:false,
+
+  init(){
+    materialList.forEach(m => { m._n = normSearch(m.name); m._g = normSearch(m.group); });
+    q('matCountHint').textContent = `· ${materialList.length} марок, вкл. AISI / EN / DIN`;
+    this.applyTheme(store.get().theme || 'dark');
+    this.buildMatList(materialList); this.attachEvents(); this.applyModeUI(); this.buildRefTable();
+    buildKnowledge(); this.renderHistory(); this.restore();
+  },
+
+  applyTheme(th){
+    document.documentElement.setAttribute('data-theme', th);
+    q('themeBtn').textContent = th === 'light' ? '☾' : '☀';
+    q('themeColorMeta').setAttribute('content', th === 'light' ? '#FFFFFF' : '#0D1117');
+    this.theme = th;
+  },
+  snapshot(){
+    return { mode:this.mode, mat:this.selectedMat ? this.selectedMat.name : null, isPipe:this.isPipe,
+      size:q('sizeInput').value, wall:q('wallInput').value, dia:q('bladeDiaInput').value,
+      z:q('zManualInput').value, rpm:q('rpmManualInput').value, corr:q('corrRange').value,
+      runIn:this.runIn, bundle:this.bundle, cpOn:this.customPitchEnabled, cp:this.customPitch };
+  },
+  applySnapshot(st){
+    if (!st) return;
+    this._restoring = true;
+    if (st.size != null) q('sizeInput').value = st.size;
+    if (st.wall != null) q('wallInput').value = st.wall;
+    if (st.dia != null) q('bladeDiaInput').value = st.dia;
+    q('zManualInput').value = st.z || ''; q('rpmManualInput').value = st.rpm || '';
+    q('corrRange').value = st.corr || 0; this.paintRange();
+    this.runIn = !!st.runIn; q('runInRow').classList.toggle('on', this.runIn);
+    this.bundle = !!st.bundle; q('bundleRow').classList.toggle('on', this.bundle);
+    this.customPitchEnabled = !!st.cpOn; this.customPitch = st.cp || '';
+    q('customPitchToggle').classList.toggle('on', this.customPitchEnabled);
+    q('customPitchInput').classList.toggle('hidden', !this.customPitchEnabled);
+    q('customPitchInput').value = this.customPitch;
+    if (['bimetal','carbide','circular','hss'].indexOf(st.mode) >= 0) this.mode = st.mode;
+    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.mode === this.mode));
+    q('modeLabel').textContent = ({bimetal:'Bi-Metal', carbide:'Carbide', circular:'TCT диск', hss:'HSS диск'})[this.mode];
+    this.setShape(!!st.isPipe); this.applyModeUI();
+    const m = st.mat && materialList.find(x => x.name === st.mat);
+    if (m) this.selectMat(m, true);
+    this._restoring = false;
+    this.queueCalc();
+  },
+  restore(){ const d = store.get(); if (d.state) this.applySnapshot(d.state); },
+  save(){ if (!this._restoring) store.set({state: this.snapshot()}); },
+  paintRange(){
+    const r = q('corrRange'); const v = +r.value;
+    q('corrValueDisplay').textContent = (v > 0 ? '+' : '') + v + '%';
+    const pct = (v - (+r.min)) / ((+r.max) - (+r.min)) * 100;
+    r.style.background = `linear-gradient(90deg,var(--accent) ${pct}%,var(--bg4) ${pct}%)`;
+  },
+
+  /* ── текст расчёта для «Поделиться» ── */
+  resultText(){
+    const d = this._last; if (!d || d.error) return '';
+    const L = [];
+    L.push(`${d.tech}${d.series && d.series !== '—' ? ' · ' + d.series : ''}`);
+    L.push(`Материал: ${this.selectedMat.name} (${this.selectedMat.group})`);
+    L.push(d.desc);
+    L.push(`${d.toolParamLbl}: ${d.toolParamVal}${d.toolParamSub ? ' (' + d.toolParamSub + ')' : ''}`);
+    if (d.vc != null) L.push(`Скорость Vc: ${d.vc} м/мин${d.rpm ? ' · ' + d.rpm + ' об/мин' : ''}`);
+    if (d.vf != null) L.push(`Подача Vf: ${d.vf} мм/мин`);
+    if (d.fz) L.push(`Подача на зуб fz: ${Number(d.fz).toFixed(3)} мм`);
+    L.push(`Время реза: ${formatTime(d.timeMin)}`);
+    (d.alerts || []).filter(a => a.type === 'danger' || a.type === 'warning').forEach(a => L.push('! ' + String(a.text).replace(/<[^>]+>/g,'')));
+    L.push('— Bichamp Calc · Р-Сталь · rosmark.ru');
+    return L.join('\n');
+  },
+  copyText(txt){
+    const fallback = () => {
+      const ta = document.createElement('textarea'); ta.value = txt; ta.setAttribute('readonly','');
+      ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;font-size:16px';
+      document.body.appendChild(ta); ta.select(); ta.setSelectionRange(0, txt.length);
+      let ok = false; try { ok = document.execCommand('copy'); } catch(_){}
+      document.body.removeChild(ta); toast(ok ? 'Скопировано' : 'Не удалось скопировать');
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => toast('Скопировано'), fallback);
+    else fallback();
+  },
+  share(){
+    const txt = this.resultText(); if (!txt){ toast('Сначала выполните расчёт'); return; }
+    if (navigator.share) navigator.share({title:'Режимы резания', text:txt}).catch(e => { if (e && e.name !== 'AbortError') this.copyText(txt); });
+    else this.copyText(txt);
+  },
+
+  /* ── история ── */
+  pushHistory(d){
+    if (!d || d.error || !this.selectedMat) return;
+    const st = this.snapshot();
+    const item = { st, t: Date.now(),
+      title: `${this.selectedMat.name} · ${d.desc}`,
+      sub: `${({bimetal:'Bi-Metal', carbide:'Carbide', circular:'TCT', hss:'HSS'})[this.mode]} · ${d.toolParamVal} ${d.toolParamLbl}`,
+      res: `${d.vc} м/мин · ${d.vf} мм/мин` };
+    let h = store.get().hist || [];
+    h = h.filter(x => JSON.stringify(x.st) !== JSON.stringify(st));
+    h.unshift(item); store.set({hist: h.slice(0, 12)}); this.renderHistory();
+  },
+  renderHistory(){
+    const h = store.get().hist || [], c = q('histBody');
+    if (!h.length){ c.innerHTML = '<p>Пока пусто. Расчёт попадает сюда после нажатия «Рассчитать».</p>'; return; }
+    c.innerHTML = h.map((x, i) => `<div class="hist-item" data-i="${i}"><div style="min-width:0"><div class="hist-t">${x.title}</div><div class="hist-s">${x.sub}</div></div><div class="hist-r">${x.res.replace(' · ','<br>')}</div></div>`).join('')
+      + '<button class="kb-link" id="histClear">Очистить историю</button>';
+    c.querySelectorAll('.hist-item').forEach(el => el.addEventListener('click', () => {
+      const it = (store.get().hist || [])[+el.dataset.i]; if (!it) return;
+      this.applySnapshot(it.st); toast('Расчёт восстановлен');
+      window.scrollTo({top:0, behavior:'smooth'});
+    }));
+    q('histClear').addEventListener('click', () => { store.set({hist: []}); this.renderHistory(); });
+  },
+
+
+  openSheet(){ q('matSheet').classList.add('open'); q('sheetOverlay').classList.add('visible'); document.body.classList.add('sheet-open'); if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); if (!IS_TOUCH) setTimeout(()=>q('matSearchInput').focus(), 350); },
+  closeSheet(){ q('matSheet').classList.remove('open'); q('sheetOverlay').classList.remove('visible'); document.body.classList.remove('sheet-open'); q('matSearchInput').blur(); q('matSearchInput').value=''; this.buildMatList(materialList); },
+  buildMatList(mats){
+    const c = q('matListContainer'); c.innerHTML='';
+    if (!mats.length){ c.innerHTML='<div class="mat-empty">Ничего не найдено</div>'; return; }
+    const groups = {};
+    if (mats === materialList){
+      const rec = (store.get().recent || []).map(n => materialList.find(m => m.name === n)).filter(Boolean);
+      if (rec.length) groups['Недавние'] = rec;
+    }
+    mats.forEach(m => { (groups[m.group] = groups[m.group] || []).push(m); });
+    const frag = document.createDocumentFragment();
+    Object.entries(groups).forEach(([grp, items]) => {
+      const h = document.createElement('div'); h.className='mat-group-header'; h.textContent=grp;
+      frag.appendChild(h);
+      items.forEach(m => {
+        const eff = resolveKey(m);
+        const kvB = KV_COEFF[eff] ? KV_COEFF[eff].bimetal : 1;
+        const d = document.createElement('div');
+        d.className = 'mat-item' + (this.selectedMat && this.selectedMat.name === m.name ? ' selected' : '');
+        d.innerHTML = `<div><div class="mat-item-name">${m.name}</div><div class="mat-item-group">${m.group}</div></div><div class="mat-item-kv">Kv ${kvB.toFixed(2)}</div>`;
+        d.addEventListener('click', () => { this.selectMat(m); this.closeSheet(); });
+        frag.appendChild(d);
+      });
+    });
+    c.appendChild(frag);
+  },
+  selectMat(mat, silent){
+    this.selectedMat = mat;
+    if (!silent){
+      let r = (store.get().recent || []).filter(n => n !== mat.name); r.unshift(mat.name); store.set({recent: r.slice(0, 6)});
+    }
+    const t = q('matTrigger'); t.classList.add('selected');
+    t.querySelector('.mat-icon').textContent = this.groupEmoji(mat);
+    const n = q('matTriggerName'); n.textContent = mat.name; n.classList.remove('placeholder');
+    q('matTriggerGroup').textContent = mat.group;
+    this.queueCalc();
+  },
+  groupEmoji(mat){
+    const g = engineGroupFor(mat);
+    const m = {"Нержавейка":"🔩","Алюминий":"✦","Титан":"⬡","Жаропрочная":"🔥","Чугун":"⬛","Медь/Латунь":"🟠","Инструментальная":"🔧"};
+    return m[g] || "⚙";
+  },
+
+  setMode(mode){
+    this.mode = mode;
+    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.mode === mode));
+    const names = {bimetal:'Bi-Metal', carbide:'Carbide', circular:'TCT диск', hss:'HSS диск'};
+    q('modeLabel').textContent = names[mode] || mode;
+    this.applyModeUI();
+    this.queueCalc();
+  },
+  applyModeUI(){
+    const isDisk = this.mode === 'circular' || this.mode === 'hss';
+    const isHSS = this.mode === 'hss';
+    q('bladeDiaSection').classList.toggle('hidden', !isDisk);
+    q('corrSectionLabel').classList.remove('hidden');
+    q('corrCard').classList.remove('hidden');
+    q('runInCard').classList.toggle('hidden', isDisk);
+    q('bundleCard').classList.toggle('hidden', isDisk || !this.isPipe);
+    q('customPitchCard').classList.toggle('hidden', isDisk);
+    q('kbPitch').classList.toggle('hidden', isDisk);
+    q('runInSub').textContent = this.mode === 'carbide' ? 'Carbide: скорость 70%, подача 40%' : 'Bi-Metal: скорость 80%, подача 60%';
+
+    if (isHSS){
+      if (!this.isPipe) this.setShape(true);
+      q('btnShapeSolid').disabled = true;
+      q('btnShapeSolid').style.opacity = '0.4';
+    } else {
+      q('btnShapeSolid').disabled = false;
+      q('btnShapeSolid').style.opacity = '';
+    }
+  },
+
+  setShape(pipe){
+    this.isPipe = pipe;
+    q('btnShapeSolid').classList.toggle('active', !pipe);
+    q('btnShapePipe').classList.toggle('active', pipe);
+    q('wallContainer').classList.toggle('hidden', !pipe);
+    q('sizeRow').classList.toggle('single', !pipe);
+    q('sizeInputLabel').textContent = pipe ? 'НАРУЖНЫЙ Ø' : 'РАЗМЕР СЕЧЕНИЯ';
+    q('bundleCard').classList.toggle('hidden', (this.mode==='circular'||this.mode==='hss') || !pipe);
+    this.queueCalc();
+  },
+
+  attachEvents(){
+    q('matTrigger').addEventListener('click', () => this.openSheet());
+    q('sheetOverlay').addEventListener('click', () => this.closeSheet());
+    q('matSearchInput').addEventListener('input', e => {
+      const s = normSearch(e.target.value);
+      if (!s){ this.buildMatList(materialList); return; }
+      const starts = [], rest = [];
+      materialList.forEach(m => { if (m._n.startsWith(s)) starts.push(m); else if (m._n.includes(s) || m._g.includes(s)) rest.push(m); });
+      let found = starts.concat(rest);
+      if (!found.length){            // «Ст20», «сталь 45» → марка без приставки
+        const s2 = s.replace(/^(ctaль|ct)/, '');
+        if (s2 && s2 !== s) found = materialList.filter(m => m._n.startsWith(s2)).concat(materialList.filter(m => !m._n.startsWith(s2) && m._n.includes(s2)));
+      }
+      this.buildMatList(found);
+      q('matListContainer').scrollTop = 0;
+    });
+    q('btnShapeSolid').addEventListener('click', () => { if (!q('btnShapeSolid').disabled) this.setShape(false); });
+    q('btnShapePipe').addEventListener('click', () => this.setShape(true));
+    q('runInRow').addEventListener('click', () => { this.runIn = !this.runIn; q('runInRow').classList.toggle('on', this.runIn); this.queueCalc(); });
+    q('bundleRow').addEventListener('click', () => { this.bundle = !this.bundle; q('bundleRow').classList.toggle('on', this.bundle); this.queueCalc(); });
+    q('corrRange').addEventListener('input', () => { this.paintRange(); this.queueCalc(); });
+
+    q('customPitchToggle').addEventListener('click', () => {
+      this.customPitchEnabled = !this.customPitchEnabled;
+      q('customPitchToggle').classList.toggle('on', this.customPitchEnabled);
+      q('customPitchInput').classList.toggle('hidden', !this.customPitchEnabled);
+      if (!this.customPitchEnabled){ this.customPitch=''; q('customPitchInput').value=''; }
+      this.queueCalc();
+    });
+    q('customPitchInput').addEventListener('input', e => { this.customPitch = e.target.value.replace(/,/g,'.'); this.queueCalc(); });
+
+    q('statusMain').addEventListener('click', () => {
+      const bar = q('statusBar');
+      if (bar.classList.contains('single')) return;
+      this._statusExpanded = !this._statusExpanded;
+      bar.classList.toggle('expanded', this._statusExpanded);
+      q('statusDetails').classList.toggle('hidden', !this._statusExpanded);
+    });
+
+    document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => this.setMode(t.dataset.mode)));
+    ['sizeInput','wallInput','bladeDiaInput','zManualInput','rpmManualInput'].forEach(id => {
+      q(id).addEventListener('input', () => this.queueCalc());
+      q(id).addEventListener('change', () => this.queueCalc());
+    });
+
+    /* ── iOS ── */
+    document.addEventListener('touchstart', () => {}, {passive:true});            // включает :active в Safari
+    q('sheetOverlay').addEventListener('touchmove', e => e.preventDefault(), {passive:false});
+    ['sizeInput','wallInput','bladeDiaInput','zManualInput','rpmManualInput','customPitchInput','matSearchInput'].forEach(id => {
+      const el = q(id);
+      el.addEventListener('keydown', e => { if (e.key === 'Enter'){ e.preventDefault(); el.blur(); } });
+      if (id !== 'matSearchInput' && id !== 'customPitchInput')
+        el.addEventListener('focus', () => setTimeout(() => { try { el.setSelectionRange(0, el.value.length); } catch(_){} }, 0));
+    });
+    const vv = window.visualViewport;
+    if (vv){
+      const onVV = () => {
+        const kb = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
+        const sh = q('matSheet');
+        document.body.classList.toggle('kb-open', kb > 120);
+        const open = kb > 120 && sh.classList.contains('open');
+        sh.style.bottom = open ? kb + 'px' : '';
+        sh.style.maxHeight = open ? Math.round(vv.height * 0.94) + 'px' : '';
+        sh.style.paddingBottom = open ? '0px' : '';
+      };
+      vv.addEventListener('resize', onVV); vv.addEventListener('scroll', onVV);
+    }
+    q('resetBtn').addEventListener('click', () => this.reset());
+    q('calcBtn').addEventListener('click', () => this.calculate(true));
+    q('themeBtn').addEventListener('click', () => { const th = this.theme === 'light' ? 'dark' : 'light'; this.applyTheme(th); store.set({theme: th}); });
+    q('shareBtn').addEventListener('click', () => this.share());
+    q('copyBtn').addEventListener('click', () => { const t = this.resultText(); if (t) this.copyText(t); else toast('Сначала выполните расчёт'); });
+  },
+
+  queueCalc(){ clearTimeout(this._t); this._t = setTimeout(() => this.calculate(), 130); this.save(); },
+
+  reset(){
+    this.selectedMat=null; this.isPipe=false; this.runIn=false; this.bundle=false;
+    this.customPitch=''; q('customPitchInput').value='';
+    this.customPitchEnabled=false;
+    q('customPitchToggle').classList.remove('on');
+    q('customPitchInput').classList.add('hidden');
+    this._statusExpanded=false;
+    q('sizeInput').value='100'; q('wallInput').value='10'; q('bladeDiaInput').value='350';
+    q('zManualInput').value=''; q('rpmManualInput').value=''; this._last=null;
+    q('corrRange').value='0'; this.paintRange();
+    q('runInRow').classList.remove('on'); q('bundleRow').classList.remove('on');
+    const t = q('matTrigger'); t.classList.remove('selected');
+    t.querySelector('.mat-icon').textContent='⚙';
+    q('matTriggerName').textContent='Выберите материал…'; q('matTriggerName').classList.add('placeholder');
+    q('matTriggerGroup').textContent='';
+    q('results').classList.remove('visible'); q('emptyState').classList.remove('hidden');
+    this.setShape(false); this.applyModeUI(); this.save();
+  },
+
+  calculate(scroll){
+    const size = numVal('sizeInput');
+    let wall = numVal('wallInput');
+    if (!this.selectedMat || !(size > 0)) return;
+    const isPipe = this.isPipe;
+    if (isPipe && (isNaN(wall) || wall <= 0)){ wall = 3; q('wallInput').value = '3'; }
+    let data;
+    if (this.mode === 'circular' || this.mode === 'hss'){
+      let diskDia = numVal('bladeDiaInput') || 350;
+      if (diskDia < 100) diskDia = 100;
+      if (diskDia > 1500) diskDia = 1500;
+      const corrPercent = parseInt(q('corrRange').value, 10) || 0;
+      const zM = Math.round(numVal('zManualInput')), rpmM = numVal('rpmManualInput');
+      data = calcDisk(this.mode, engineGroupFor(this.selectedMat), size, isPipe, isPipe ? wall : 0, diskDia, corrPercent,
+        { z: zM >= 4 && zM <= 2000 ? zM : 0, rpm: rpmM > 0 && rpmM <= 20000 ? rpmM : 0 });
+    } else {
+      data = calcBand({
+        mat: this.selectedMat, sawType: this.mode, isPipe, size, wall,
+        bundle: this.isPipe && this.bundle, runIn: this.runIn,
+        corrPercent: parseInt(q('corrRange').value, 10) || 0,
+        customPitch: this.customPitchEnabled ? this.customPitch : ''
+      });
+    }
+    if (data){
+      this._last = data;
+      this.render(data);
+      if (scroll) this.pushHistory(data);
+      if (scroll && window.matchMedia('(max-width:899px)').matches){
+        setTimeout(() => q('results').scrollIntoView({behavior:'smooth', block:'start'}), 60);
+      }
+    }
+  },
+
+  render(d){
+    q('emptyState').classList.add('hidden');
+    q('results').classList.add('visible');
+    q('resBladeTech').textContent = d.tech || '';
+    q('resBladeSeries').textContent = d.series || '';
+    q('resBladeDesc').textContent = d.desc || '';
+    q('resTpiVal').textContent = d.toolParamVal != null ? d.toolParamVal : '—';
+    q('resTpiLbl').textContent = d.toolParamLbl || 'Z / шаг';
+    q('resTpiSub').textContent = d.toolParamSub || '';
+    q('resFamily').innerHTML = d.family ? `Семейство: <b>${d.family}</b>` : '';
+    this.badge('resCoating', d.coating ? '● ' + d.coating : null);
+    this.badge('resCarbideClass', d.carbideClass || null);
+    q('resSpeed').textContent = d.vc != null ? d.vc : '—';
+    q('resFeed').textContent = d.vf != null ? d.vf : '—';
+    q('resTime').textContent = formatTime(d.timeMin);
+    q('resRPM').textContent = d.rpm ? d.rpm + ' об/мин' : '';
+    q('resFz').textContent = d.fz ? Number(d.fz).toFixed(3) : '—';
+
+    const showMini = !!d.bandLike;
+    document.querySelector('.mini-grid').style.display = showMini ? '' : 'none';
+    if (showMini){
+      this.mini('miniTeeth', d.teethInCut != null, 'resTeeth', d.teethInCut != null ? d.teethInCut.toFixed(1) : '—');
+      this.mini('miniTeethWall', d.teethWall != null, 'resTeethWall', d.teethWall != null ? d.teethWall.toFixed(1) : '—');
+      this.mini('miniChip', d.chip_um != null, 'resChip', d.chip_um != null ? d.chip_um.toFixed(1) : '—');
+      this.mini('miniProd', d.prod != null, 'resProd', d.prod != null ? d.prod.toFixed(1) : '—');
+    }
+
+    const vw = q('variantsWrap'), vb = q('variantsBody');
+    if (d.variants && d.variants.list && d.variants.list.length){
+      vw.classList.remove('hidden');
+      const rows = d.variants.list.map(v => `<tr>
+        <td>${v.zi}</td><td>${v.T.toFixed(1)}</td><td>${v.Z}</td><td>${v.vf}</td><td>${v.tSec.toFixed(0)}</td>
+      </tr>`).join('');
+      const optRow = `<tr class="opt">
+        <td>Оптимально</td><td>${d.variants.opt.T.toFixed(1)}</td><td>${d.variants.opt.Z}</td><td>${d.variants.opt.vf}</td><td>${d.variants.opt.tSec.toFixed(0)}</td>
+      </tr>`;
+      vb.innerHTML = rows + optRow;
+    } else { vw.classList.add('hidden'); vb.innerHTML=''; }
+
+    this._statusExpanded = false;
+    this.renderStatus(d.alerts || []);
+    q('resRationale').textContent = (d.kv != null ? `Kv = ${d.kv.toFixed(2)} · ` : '') + (d.rationale || '');
+    const tipEl = q('matTip'), mat = this.selectedMat;
+    let tip = mat ? MAT_TIPS[engineGroupFor(mat)] : '';
+    if (mat && mat.key === 'MagnesiumZinc' && /Магни/.test(mat.group)) tip = 'Магниевый сплав: стружка и пыль горючи. Водные СОЖ не применять, стружку убирать сразу, тушить только сухими средствами (песок, порошок класса D).';
+    if (tip){ tipEl.innerHTML = `<b>Особенности материала</b>${tip}`; tipEl.classList.remove('hidden'); } else tipEl.classList.add('hidden');
+    document.querySelector('.act-row').style.display = d.error ? 'none' : '';
+  },
+
+  renderStatus(alerts){
+    const bar = q('statusBar');
+    if (!alerts || !alerts.length){ bar.classList.add('hidden'); return; }
+    bar.classList.remove('hidden','expanded','single','level-success','level-warning','level-danger','level-info','level-secondary');
+    const priority = ['danger','warning','success','info','secondary'];
+    let topLevel = 'secondary';
+    for (const p of priority){ if (alerts.some(a => a.type === p)){ topLevel = p; break; } }
+    bar.classList.add('level-' + topLevel);
+    const icons = {danger:'⚠', warning:'!', success:'✓', info:'ⓘ', secondary:'·'};
+    const topAlert = alerts.find(a => a.type === topLevel) || alerts[0];
+    q('statusIcon').textContent = icons[topLevel] || '·';
+    q('statusText').textContent = String(topAlert.text).replace(/^⚠\s*/, '');
+    if (alerts.length === 1){
+      bar.classList.add('single');
+      q('statusDetails').classList.add('hidden');
+      q('statusDetails').innerHTML = '';
+    } else {
+      q('statusDetails').innerHTML = alerts.map(a => `<div class="alert alert-${a.type}">${a.text}</div>`).join('');
+      q('statusDetails').classList.add('hidden');
+    }
+  },
+
+  badge(id, text){
+    const el = q(id);
+    if (text){ el.textContent = text; el.classList.remove('hidden'); }
+    else el.classList.add('hidden');
+  },
+  mini(cardId, show, valId, val){
+    q(cardId).classList.toggle('hidden', !show);
+    if (show) q(valId).textContent = val;
+  },
+
+  buildRefTable(){
+    const rows = SOLID_PITCH_TABLE.map(r =>
+      `<tr><td>${r.max === Infinity ? 'более ' + r.min : r.min + '–' + r.max}</td><td>${r.pitch}</td></tr>`).join('');
+    q('refCard').innerHTML =
+      `<table class="ref"><thead><tr><th>Размер сплошного сечения (мм)</th><th>Шаг TPI</th></tr></thead><tbody>${rows}</tbody></table>`
+      + `<div style="font-size:11px;color:var(--text3);margin-top:10px;line-height:1.5">Для дисковых пил: 3 режима по числу зубьев в резе (3 / 4 / 5) + оптимальный. Для тонкостенных труб (HSS) — шаг по таблице D×S, Z = ROUNDUP(π·D/T;10).</div>`;
+  }
+};
+
+document.addEventListener('DOMContentLoaded', () => app.init());
+</script>
+</body>
+</html>
