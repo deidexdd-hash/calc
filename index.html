@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png"/>
 <meta name="mobile-web-app-capable" content="yes"/>
-<title>Bichamp Calc v10.4</title>
+<title>Bichamp Calc v10.5</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 *{-webkit-tap-highlight-color:transparent}
@@ -332,7 +332,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
       </div>
     </div>
     <div class="header-right">
-      <span class="ver-chip">v10.4</span>
+      <span class="ver-chip">v10.5</span>
       <button id="themeBtn" class="hdr-btn" title="Светлая / тёмная тема" aria-label="Тема">☀</button>
       <button id="resetBtn" title="Сброс">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
@@ -431,6 +431,12 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
               <button class="step-btn" id="bundlePlus" aria-label="Больше">+</button>
             </div>
           </div>
+        </div>
+
+        <div class="opt-card hidden" id="bandWidthCard">
+          <div class="opt-title">Ширина полотна станка</div>
+          <div class="opt-sub">Шаг и серия подбираются только из тех, что Bichamp выпускает в этой ширине</div>
+          <select id="bandWidthSelect" class="pitch-select" aria-label="Ширина полотна станка"></select>
         </div>
 
         <div class="opt-card hidden" id="customPitchCard">
@@ -622,7 +628,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
 </div>
 
 <script>
-/* ═══ Bichamp Calc v10.4 ═══ */
+/* ═══ Bichamp Calc v10.5 ═══ */
 
 const materialList = [
 {name:"А12",group:"Автоматная",key:"LowCarbon"},{name:"А20",group:"Автоматная",key:"LowCarbon"},{name:"А30",group:"Автоматная",key:"LowCarbon"},{name:"А40Г",group:"Автоматная",key:"LowCarbon"},{name:"АС11",group:"Автоматная",key:"LowCarbon"},{name:"АС14",group:"Автоматная",key:"LowCarbon"},{name:"АС35Г2",group:"Автоматная",key:"LowCarbon"},{name:"АС40",group:"Автоматная",key:"LowCarbon"},{name:"АЦ40Х",group:"Автоматная",key:"LowCarbon"},
@@ -829,10 +835,23 @@ function catalogPitches(series){
   const set = new Set(); Object.values(s.widths).forEach(a => a.forEach(p => set.add(p)));
   return [...set].sort((a, b) => parsePitchToken(a).avg_tpi - parsePitchToken(b).avg_tpi);
 }
+/* выпускает ли серия шаг (в ширине bw, если она задана) */
+function seriesMakes(series, pitch, bw){
+  const s = BAND_CATALOG[series]; if (!s) return false;
+  return bw ? !!(s.widths[bw] && s.widths[bw].includes(pitch)) : catalogPitches(series).includes(pitch);
+}
+function seriesPitchesAt(series, bw){
+  const s = BAND_CATALOG[series]; if (!s) return [];
+  return bw ? (s.widths[bw] || []) : catalogPitches(series);
+}
+const fmtWidth = w => w.replace('x', '×').replace(/0$/, '');
+/* все ширины из каталога, от узкой к широкой */
+const BAND_WIDTHS = [...new Set(Object.values(BAND_CATALOG).flatMap(s => Object.keys(s.widths)))]
+  .sort((a, b) => parseFloat(a) - parseFloat(b) || parseFloat(a.split('x')[1]) - parseFloat(b.split('x')[1]));
 /* «M42 · полотно 27×0.9, 34×1.1 мм» — для карточки результата и отчёта */
-function bladeInfo(series, pitch){
+function bladeInfo(series, pitch, bw){
   const s = BAND_CATALOG[series]; if (!s) return '';
-  const w = catalogWidths(series, pitch).map(x => x.replace('x', '×').replace(/0$/, ''));
+  const w = (bw ? (seriesMakes(series, pitch, bw) ? [bw] : []) : catalogWidths(series, pitch)).map(fmtWidth);
   /* TANCUT/DTCUT: шаг 4/6 и мельче — зуб из B2000 */
   const steel = s.steelFine && parsePitchToken(pitch).avg_tpi >= 5 ? s.steelFine : s.steel;
   return [steel, w.length ? `полотно ${w.join(', ')} мм` : ''].filter(Boolean).join(' · ');
@@ -950,8 +969,8 @@ function shiftPitchForStainless(cur){
   }
   return next ? next.label : cur;
 }
-function pickBimetalSeries(group, tpi, size, isPipe, wall){
-  const supports = (s,p)=>(BIMETAL_SERIES_TPI_MAP[s]||[]).includes(p);
+function pickBimetalSeries(group, tpi, size, isPipe, wall, bw){
+  const supports = (s,p)=>seriesMakes(s,p,bw);
   let cand = BIMETAL_SERIES_MAP[group] ? [...BIMETAL_SERIES_MAP[group]] : ["FICUT"];
   /* PROCUT — только для труб и профиля */
   if (!isPipe) cand = cand.filter(s=>s!=="PROCUT");
@@ -977,13 +996,13 @@ function pickBimetalSeries(group, tpi, size, isPipe, wall){
   }
   return { series: chosen, supported: supports(chosen,tpi), candidates: cand };
 }
-function pickCarbideSeries(group, tpiLabel, teethInCut){
+function pickCarbideSeries(group, tpiLabel, teethInCut, bw){
   const applicable = CARBIDE_APPLICABILITY[group] || CARBIDE_PRIORITY;
   const prio = CARBIDE_PRIORITY.filter(s=>applicable.includes(s));
-  const exact = prio.find(s=>(CARBIDE_SERIES[s]||[]).includes(tpiLabel));
-  const chosen = exact || prio[0] || "CB-MP";
+  const exact = prio.find(s=>seriesMakes(s,tpiLabel,bw));
+  const chosen = exact || prio.find(s=>seriesPitchesAt(s,bw).length) || prio[0] || "CB-MP";
   const minTeeth = carbideMinTeeth(group);
-  return { series: chosen, minTeeth, enoughTeeth: teethInCut >= minTeeth, pitchSupported: !!exact, availablePitches: CARBIDE_SERIES[chosen] || [] };
+  return { series: chosen, minTeeth, enoughTeeth: teethInCut >= minTeeth, pitchSupported: !!exact, availablePitches: seriesPitchesAt(chosen,bw) };
 }
 function toolFamily(effKey, sawType){
   if (sawType==='bimetal'){
@@ -1052,18 +1071,26 @@ function calcBand(ctx){
     }
   }
   /* Шаг, который не выпускается ни одной подходящей серией, → ближайший из каталога */
+  /* С заданной шириной полотна — только шаги, которые выпускаются в этой ширине */
+  const bw = ctx.bandWidth || '';
+  const sawSeries = sawType === 'carbide'
+    ? CARBIDE_PRIORITY.filter(s => (CARBIDE_APPLICABILITY[group] || CARBIDE_PRIORITY).includes(s))
+    : Object.keys(BIMETAL_SERIES_TPI_MAP).filter(s => isPipe || s !== 'PROCUT');
+  const made = new Set(); sawSeries.forEach(s => seriesPitchesAt(s, bw).forEach(l => made.add(l)));
+  if (bw && !made.size){
+    const ok = BAND_WIDTHS.filter(w => sawSeries.some(s => seriesPitchesAt(s, w).length)).map(fmtWidth);
+    return { error:true, tech: sawType === 'carbide' ? "Ленточная Carbide" : "Ленточная Bi-Metal", series:"Нет полотна",
+      desc:`Полотно ${fmtWidth(bw)} мм`, family:'', toolParamVal:'—', toolParamLbl:'TPI / шаг', toolParamSub:'ширина не выпускается',
+      vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null, chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+      alerts:[{type:'danger', text:`${sawType === 'carbide' ? 'Карбидные' : 'Биметаллические'} пилы Bichamp${sawType === 'carbide' ? ` для «${group}»` : ''} в ширине ${fmtWidth(bw)} мм не выпускаются. Есть ширины: ${ok.join(', ')} мм.`}],
+      rationale:'', bandLike:false, variants:null, fz:null };
+  }
   let pitchSnappedFrom = null;
-  {
-    const series = sawType === 'carbide'
-      ? CARBIDE_PRIORITY.filter(s => (CARBIDE_APPLICABILITY[group] || CARBIDE_PRIORITY).includes(s))
-      : Object.keys(BIMETAL_SERIES_TPI_MAP);
-    const made = new Set(); series.forEach(s => (sawType === 'carbide' ? CARBIDE_SERIES : BIMETAL_SERIES_TPI_MAP)[s].forEach(l => made.add(l)));
-    if (!made.has(pitchAutoLabel)){
-      const t0 = parsePitchToken(pitchAutoLabel).avg_tpi;
-      let best = null, bd = Infinity;
-      made.forEach(l => { if (!l.includes('/')) return; const dd = Math.abs(parsePitchToken(l).avg_tpi - t0); if (dd < bd){ bd = dd; best = l; } });
-      if (best && allPitches.some(p => p.label === best)){ pitchSnappedFrom = pitchAutoLabel; pitchAutoLabel = best; }
-    }
+  if (!made.has(pitchAutoLabel)){
+    const t0 = parsePitchToken(pitchAutoLabel).avg_tpi;
+    let best = null, bd = Infinity;
+    made.forEach(l => { if (!allPitches.some(p => p.label === l)) return; const dd = Math.abs(parsePitchToken(l).avg_tpi - t0); if (dd < bd){ bd = dd; best = l; } });
+    if (best){ pitchSnappedFrom = pitchAutoLabel; pitchAutoLabel = best; }
   }
   const pitchAutoObj = allPitches.find(p => p.label === pitchAutoLabel) || allPitches.find(p => p.label === '3/4');
   const recommendedPitch = pitchAutoObj.label;
@@ -1176,16 +1203,17 @@ function calcBand(ctx){
 
   let seriesName, tech, rationale = '';
   if (sawType === 'bimetal'){
-    const bs = pickBimetalSeries(group, tpiLabel, size, isPipe, wallVal || wall);
+    const bs = pickBimetalSeries(group, tpiLabel, size, isPipe, wallVal || wall, bw);
     tech = "Ленточная Bi-Metal";
     if (bs.supported){ seriesName = bs.series; rationale = `Кандидаты: ${bs.candidates.join(', ')} → ${bs.series}`; }
+    else if (bw) { seriesName = "—"; rationale = `Шаг ${tpiLabel} не выпускается в ширине ${fmtWidth(bw)} мм`; }
     else { seriesName = "CB-PRO (карбид)"; alerts.push({type:'warning', text:`Шаг ${tpiLabel} не поддерживается биметаллическими сериями — рекомендуется Carbide (CB-PRO).`}); rationale = `Шаг ${tpiLabel} вне биметаллических серий`; }
   } else {
-    const cs = pickCarbideSeries(group, tpiLabel, teethInCut);
+    const cs = pickCarbideSeries(group, tpiLabel, teethInCut, bw);
     tech = "Ленточная Carbide";
     seriesName = cs.series;
     if (!cs.pitchSupported && cs.availablePitches.length){
-      alerts.push({type:'warning', text:`Серия «${cs.series}» не производится с шагом ${tpiLabel}. Доступные шаги: ${cs.availablePitches.join(', ')}.`});
+      alerts.push({type:'warning', text:`Серия «${cs.series}» не производится с шагом ${tpiLabel}${bw ? ' в ширине ' + fmtWidth(bw) + ' мм' : ''}. Доступные шаги: ${cs.availablePitches.join(', ')}.`});
     }
     if (!cs.enoughTeeth) alerts.push({type:'warning', text:`${teethInCut.toFixed(1)} зуб. в резе — ниже нормы ≥${cs.minTeeth} для «${group}». Снизьте подачу на 10–15%.`});
     else alerts.push({type:'success', text:`${teethInCut.toFixed(1)} зуб. в резе — норма ≥${cs.minTeeth} соблюдена.`});
@@ -1201,7 +1229,8 @@ function calcBand(ctx){
     alerts.unshift({ type: isMatch ? 'warning' : 'danger', text: base });
   }
   if (carbideAutoClamped) alerts.push({type:'info', text:`Шаг поднят до 3/4 — карбидные ленточные пилы не выпускаются мельче 3/4 TPI.`});
-  if (pitchSnappedFrom) alerts.push({type:'info', text:`Шаг ${pitchSnappedFrom} не выпускается ${sawType === 'carbide' ? 'в карбидных' : 'в биметаллических'} сериях Bichamp — взят ближайший выпускаемый ${pitchAutoLabel}.`});
+  if (pitchSnappedFrom) alerts.push({type:'info', text:`Шаг ${pitchSnappedFrom} не выпускается ${sawType === 'carbide' ? 'в карбидных' : 'в биметаллических'} сериях Bichamp${bw ? ' в ширине ' + fmtWidth(bw) + ' мм' : ''} — взят ближайший выпускаемый ${pitchAutoLabel}.`});
+  if (bw && customPitchUsed && !made.has(tpiLabel)) alerts.push({type:'danger', text:`Шаг ${tpiLabel} в ширине ${fmtWidth(bw)} мм не выпускается. Есть: ${[...made].sort((a, b) => parsePitchToken(a).avg_tpi - parsePitchToken(b).avg_tpi).join(', ')}.`});
   if (stainlessShift) alerts.push({type:'info', text:`Шаг увеличен для нержавейки/дуплекса → ${tpiLabel}.`});
   if (ctx.runIn) alerts.push({type:'secondary', text:`Режим обкатки: ${sawType==='bimetal'?'скорость 80% / подача 60%':'скорость 70% / подача 40%'}.`});
   if (feedLimited) alerts.push({type:'warning', text:`Подача ограничена лимитом ${isPipe?'трубы (60':'сплошн. (50'} мм/мин) для защиты зуба.`});
@@ -1212,7 +1241,7 @@ function calcBand(ctx){
 
   return {
     mode: sawType, tech, series: seriesName, family: toolFamily(effKey, sawType), desc,
-    blade: bladeInfo(seriesName.replace(' (карбид)', ''), tpiLabel),
+    blade: bladeInfo(seriesName.replace(' (карбид)', ''), tpiLabel, bw),
     toolParamVal: tpiLabel, toolParamLbl: 'TPI / шаг',
     toolParamSub: customPitchUsed
       ? `рекомендуем ${recommendedPitch} · шаг ${pitchMm.toFixed(2)} мм`
@@ -1480,7 +1509,7 @@ function buildKnowledge(){
     + `<li>Дробные размеры можно вводить и через запятую, и через точку.</li></ul>`;
 }
 
-const APP_VERSION = 'v10.4';
+const APP_VERSION = 'v10.5';
 /* ═══════════════ ОТЧЁТ НА БЛАНКЕ АО «Р-СТАЛЬ» (A4, PNG / PDF) ═══════════════ */
 const RPT = { W: 1654, H: 2339, blue: '#054DA2', ink: '#111827', ink2: '#374151', ink3: '#6B7280', line: '#C9D3E3', head: '#EAF1FB',
   F: 'Arial, "Helvetica Neue", -apple-system, "Segoe UI", Roboto, sans-serif' };
@@ -1566,6 +1595,7 @@ async function renderReport(a){
     if (rpm) inRows.push(['Обороты станка', `${rpm} об/мин (заданы)`]);
   }
   if (!isDisk && a.customPitchEnabled && a.customPitch) inRows.push(['Шаг зуба', `${a.customPitch} — задан вручную`]);
+  if (!isDisk && q('bandWidthSelect').value) inRows.push(['Полотно станка', `${fmtWidth(q('bandWidthSelect').value)} мм`]);
   inRows.push(['Коррекции', corrs.length ? corrs.join('; ') : 'нет']);
   y = rptSection(x, M, y, 'Исходные данные', CW);
   y = rptTable(x, M, y, [Math.round(CW * 0.3), CW - Math.round(CW * 0.3)], inRows, {zebra: true});
@@ -1715,6 +1745,8 @@ const app = {
     materialList.forEach(m => { m._n = normSearch(m.name); m._g = normSearch(m.group); });
     q('matCountHint').textContent = `· ${materialList.length} марок, вкл. AISI / EN / DIN`;
     this.applyTheme(store.get().theme || 'dark');
+    q('bandWidthSelect').innerHTML = '<option value="">Не задана — любая</option>'
+      + BAND_WIDTHS.map(w => `<option value="${w}">${fmtWidth(w)} мм</option>`).join('');
     this.buildMatList(materialList); this.buildPitchSelect(); this.attachEvents(); this.applyModeUI(); this.buildRefTable();
     buildKnowledge(); this.renderHistory(); this.restore();
   },
@@ -1729,7 +1761,7 @@ const app = {
     return { mode:this.mode, mat:this.selectedMat ? this.selectedMat.name : null, isPipe:this.isPipe,
       size:q('sizeInput').value, wall:q('wallInput').value, dia:q('bladeDiaInput').value,
       z:q('zManualInput').value, rpm:q('rpmManualInput').value, corr:q('corrRange').value,
-      runIn:this.runIn, bundle:this.bundle, bn:q('bundleCount').value, cpOn:this.customPitchEnabled, cp:this.customPitch };
+      runIn:this.runIn, bundle:this.bundle, bn:q('bundleCount').value, cpOn:this.customPitchEnabled, cp:this.customPitch, bw:q('bandWidthSelect').value };
   },
   applySnapshot(st){
     if (!st) return;
@@ -1744,6 +1776,7 @@ const app = {
     this.customPitchEnabled = !!st.cpOn; this.customPitch = st.cp || '';
     q('customPitchInput').value = '';
     if (st.bn) q('bundleCount').value = st.bn;
+    q('bandWidthSelect').value = BAND_WIDTHS.includes(st.bw) ? st.bw : '';
     this.syncPitchUI();
     if (['bimetal','carbide','circular','hss'].indexOf(st.mode) >= 0) this.mode = st.mode;
     document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.mode === this.mode));
@@ -1759,8 +1792,8 @@ const app = {
   /* список шагов: от крупного к мелкому, с шагом в мм */
   buildPitchSelect(){
     /* только шаги, которые реально выпускаются для выбранного типа пилы */
-    const labels = new Set();
-    Object.values(this.mode === 'carbide' ? CARBIDE_SERIES : BIMETAL_SERIES_TPI_MAP).forEach(a => a.forEach(l => labels.add(l)));
+    const labels = new Set(), bw = q('bandWidthSelect').value;
+    Object.keys(this.mode === 'carbide' ? CARBIDE_SERIES : BIMETAL_SERIES_TPI_MAP).forEach(s => seriesPitchesAt(s, bw).forEach(l => labels.add(l)));
     const avg = l => { const t = parsePitchToken(l); return t.avg_tpi; };
     const list = [...labels].sort((a, b) => avg(a) - avg(b));
     const sel = q('customPitchSelect');
@@ -1930,6 +1963,7 @@ const app = {
     q('runInCard').classList.toggle('hidden', isDisk);
     this.syncBundleUI();
     q('customPitchCard').classList.toggle('hidden', isDisk);
+    q('bandWidthCard').classList.toggle('hidden', isDisk);
     if (!isDisk){ this.buildPitchSelect(); this.syncPitchUI(); }
     q('kbPitch').classList.toggle('hidden', isDisk);
     q('runInSub').textContent = this.mode === 'carbide' ? 'Carbide: скорость 70%, подача 40%' : 'Bi-Metal: скорость 80%, подача 60%';
@@ -1988,6 +2022,7 @@ const app = {
       this.syncPitchUI();
       this.queueCalc();
     });
+    q('bandWidthSelect').addEventListener('change', () => { this.buildPitchSelect(); this.syncPitchUI(); this.queueCalc(); });
     q('customPitchSelect').addEventListener('change', e => {
       const v = e.target.value;
       if (v === '__other'){ this.customPitch = q('customPitchInput').value.replace(/,/g,'.'); q('customPitchInput').classList.remove('hidden'); }
@@ -2061,6 +2096,8 @@ const app = {
     this.customPitch=''; q('customPitchInput').value='';
     this.customPitchEnabled=false;
     q('bundleCount').value = '3';
+    q('bandWidthSelect').value = '';
+    this.buildPitchSelect();
     this.syncPitchUI();
     this._statusExpanded=false;
     q('sizeInput').value='100'; q('wallInput').value='10'; q('bladeDiaInput').value='350';
@@ -2095,7 +2132,8 @@ const app = {
         mat: this.selectedMat, sawType: this.mode, isPipe, size, wall,
         bundle: this.isPipe && this.bundle, runIn: this.runIn,
         corrPercent: parseInt(q('corrRange').value, 10) || 0,
-        customPitch: this.customPitchEnabled ? this.customPitch : ''
+        customPitch: this.customPitchEnabled ? this.customPitch : '',
+        bandWidth: q('bandWidthSelect').value
       });
       if (!isPipe && this.bundle && data) data = solidBundle(data, size, this.bundleN());
     }
