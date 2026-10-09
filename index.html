@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png"/>
 <meta name="mobile-web-app-capable" content="yes"/>
-<title>Bichamp Calc v10.5</title>
+<title>Bichamp Calc v10.6</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 *{-webkit-tap-highlight-color:transparent}
@@ -332,7 +332,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
       </div>
     </div>
     <div class="header-right">
-      <span class="ver-chip">v10.5</span>
+      <span class="ver-chip">v10.6</span>
       <button id="themeBtn" class="hdr-btn" title="Светлая / тёмная тема" aria-label="Тема">☀</button>
       <button id="resetBtn" title="Сброс">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
@@ -628,7 +628,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
 </div>
 
 <script>
-/* ═══ Bichamp Calc v10.5 ═══ */
+/* ═══ Bichamp Calc v10.6 ═══ */
 
 const materialList = [
 {name:"А12",group:"Автоматная",key:"LowCarbon"},{name:"А20",group:"Автоматная",key:"LowCarbon"},{name:"А30",group:"Автоматная",key:"LowCarbon"},{name:"А40Г",group:"Автоматная",key:"LowCarbon"},{name:"АС11",group:"Автоматная",key:"LowCarbon"},{name:"АС14",group:"Автоматная",key:"LowCarbon"},{name:"АС35Г2",group:"Автоматная",key:"LowCarbon"},{name:"АС40",group:"Автоматная",key:"LowCarbon"},{name:"АЦ40Х",group:"Автоматная",key:"LowCarbon"},
@@ -1071,26 +1071,58 @@ function calcBand(ctx){
     }
   }
   /* Шаг, который не выпускается ни одной подходящей серией, → ближайший из каталога */
-  /* С заданной шириной полотна — только шаги, которые выпускаются в этой ширине */
+  /* Шаг, который не выпускается ни одной подходящей серией, → ближайший из каталога.
+     С заданной шириной полотна — затем ближайший из выпускаемых в этой ширине. */
   const bw = ctx.bandWidth || '';
   const sawSeries = sawType === 'carbide'
     ? CARBIDE_PRIORITY.filter(s => (CARBIDE_APPLICABILITY[group] || CARBIDE_PRIORITY).includes(s))
     : Object.keys(BIMETAL_SERIES_TPI_MAP).filter(s => isPipe || s !== 'PROCUT');
-  const made = new Set(); sawSeries.forEach(s => seriesPitchesAt(s, bw).forEach(l => made.add(l)));
+  const madeIn = w => { const m = new Set(); sawSeries.forEach(s => seriesPitchesAt(s, w).forEach(l => m.add(l))); return m; };
+  const nearest = (set, label) => {
+    const t0 = parsePitchToken(label).avg_tpi; let best = null, bd = Infinity;
+    set.forEach(l => { if (!allPitches.some(p => p.label === l)) return; const dd = Math.abs(parsePitchToken(l).avg_tpi - t0); if (dd < bd){ bd = dd; best = l; } });
+    return best;
+  };
+  let pitchSnappedFrom = null, widthSnappedFrom = null;
+  const madeAll = madeIn('');
+  if (!madeAll.has(pitchAutoLabel)){
+    const best = nearest(madeAll, pitchAutoLabel);
+    if (best){ pitchSnappedFrom = pitchAutoLabel; pitchAutoLabel = best; }
+  }
+  const made = bw ? madeIn(bw) : madeAll;
   if (bw && !made.size){
-    const ok = BAND_WIDTHS.filter(w => sawSeries.some(s => seriesPitchesAt(s, w).length)).map(fmtWidth);
+    const ok = BAND_WIDTHS.filter(w => madeIn(w).size).map(fmtWidth);
     return { error:true, tech: sawType === 'carbide' ? "Ленточная Carbide" : "Ленточная Bi-Metal", series:"Нет полотна",
       desc:`Полотно ${fmtWidth(bw)} мм`, family:'', toolParamVal:'—', toolParamLbl:'TPI / шаг', toolParamSub:'ширина не выпускается',
       vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null, chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
       alerts:[{type:'danger', text:`${sawType === 'carbide' ? 'Карбидные' : 'Биметаллические'} пилы Bichamp${sawType === 'carbide' ? ` для «${group}»` : ''} в ширине ${fmtWidth(bw)} мм не выпускаются. Есть ширины: ${ok.join(', ')} мм.`}],
       rationale:'', bandLike:false, variants:null, fz:null };
   }
-  let pitchSnappedFrom = null;
-  if (!made.has(pitchAutoLabel)){
-    const t0 = parsePitchToken(pitchAutoLabel).avg_tpi;
-    let best = null, bd = Infinity;
-    made.forEach(l => { if (!allPitches.some(p => p.label === l)) return; const dd = Math.abs(parsePitchToken(l).avg_tpi - t0); if (dd < bd){ bd = dd; best = l; } });
-    if (best){ pitchSnappedFrom = pitchAutoLabel; pitchAutoLabel = best; }
+  if (bw && !made.has(pitchAutoLabel)){
+    /* нужного шага в этой ширине нет: ближайший годится, только если он соседний по ряду
+       шагов каталога и (для сплошного) даёт 3–40 зубьев в резе. Иначе — на этом полотне не режем. */
+    const req = pitchAutoLabel;
+    const ladder = [...madeAll].filter(l => l.includes('/')).sort((x, y) => parsePitchToken(x).avg_tpi - parsePitchToken(y).avg_tpi);
+    const fits = l => {
+      if (!l || !allPitches.some(p => p.label === l)) return false;
+      const i = ladder.indexOf(l), j = ladder.indexOf(req);
+      if (i < 0 || j < 0 || Math.abs(i - j) > 1) return false;
+      if (isPipe) return true;
+      const zi = size / (25.4 / parsePitchToken(l).avg_tpi);
+      return zi >= CUSTOM_PITCH_CONST.ZI_MIN && zi <= CUSTOM_PITCH_CONST.ZI_MAX;
+    };
+    const best = nearest(made, req);
+    if (!fits(best)){
+      const okW = BAND_WIDTHS.filter(w => { const m = madeIn(w); return m.has(req) || [...m].some(fits); }).map(fmtWidth);
+      const wp = isPipe ? `трубы Ø${size}×${wall} мм` : `заготовки ${size} мм`;
+      return { error:true, tech: sawType === 'carbide' ? "Ленточная Carbide" : "Ленточная Bi-Metal", series:"Полотно не подходит",
+        desc:`Полотно ${fmtWidth(bw)} мм · ${isPipe ? `труба Ø${size}×${wall}` : `заготовка ${size}`} мм`, family:'', toolParamVal: req, toolParamLbl:'нужен шаг',
+        toolParamSub:`в ширине ${fmtWidth(bw)} мм нет`,
+        vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null, chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+        alerts:[{type:'danger', text:`Для ${wp} нужен шаг ${req}. ${sawType === 'carbide' ? 'Карбидные' : 'Биметаллические'} полотна ${fmtWidth(bw)} мм с подходящим шагом не выпускаются${best ? ` (ближайший — ${best}, он здесь не годится)` : ''}. ${okW.length ? `Подойдёт полотно ${okW.join(', ')} мм.` : 'Подходящего полотна в каталоге нет.'}`}],
+        rationale:'', bandLike:false, variants:null, fz:null };
+    }
+    widthSnappedFrom = req; pitchAutoLabel = best;
   }
   const pitchAutoObj = allPitches.find(p => p.label === pitchAutoLabel) || allPitches.find(p => p.label === '3/4');
   const recommendedPitch = pitchAutoObj.label;
@@ -1229,7 +1261,8 @@ function calcBand(ctx){
     alerts.unshift({ type: isMatch ? 'warning' : 'danger', text: base });
   }
   if (carbideAutoClamped) alerts.push({type:'info', text:`Шаг поднят до 3/4 — карбидные ленточные пилы не выпускаются мельче 3/4 TPI.`});
-  if (pitchSnappedFrom) alerts.push({type:'info', text:`Шаг ${pitchSnappedFrom} не выпускается ${sawType === 'carbide' ? 'в карбидных' : 'в биметаллических'} сериях Bichamp${bw ? ' в ширине ' + fmtWidth(bw) + ' мм' : ''} — взят ближайший выпускаемый ${pitchAutoLabel}.`});
+  if (pitchSnappedFrom) alerts.push({type:'info', text:`Шаг ${pitchSnappedFrom} не выпускается ${sawType === 'carbide' ? 'в карбидных' : 'в биметаллических'} сериях Bichamp — взят ближайший выпускаемый ${widthSnappedFrom || pitchAutoLabel}.`});
+  if (widthSnappedFrom) alerts.push({type:'info', text:`Шаг ${widthSnappedFrom} в ширине ${fmtWidth(bw)} мм не выпускается — взят ближайший ${pitchAutoLabel}.`});
   if (bw && customPitchUsed && !made.has(tpiLabel)) alerts.push({type:'danger', text:`Шаг ${tpiLabel} в ширине ${fmtWidth(bw)} мм не выпускается. Есть: ${[...made].sort((a, b) => parsePitchToken(a).avg_tpi - parsePitchToken(b).avg_tpi).join(', ')}.`});
   if (stainlessShift) alerts.push({type:'info', text:`Шаг увеличен для нержавейки/дуплекса → ${tpiLabel}.`});
   if (ctx.runIn) alerts.push({type:'secondary', text:`Режим обкатки: ${sawType==='bimetal'?'скорость 80% / подача 60%':'скорость 70% / подача 40%'}.`});
@@ -1509,7 +1542,7 @@ function buildKnowledge(){
     + `<li>Дробные размеры можно вводить и через запятую, и через точку.</li></ul>`;
 }
 
-const APP_VERSION = 'v10.5';
+const APP_VERSION = 'v10.6';
 /* ═══════════════ ОТЧЁТ НА БЛАНКЕ АО «Р-СТАЛЬ» (A4, PNG / PDF) ═══════════════ */
 const RPT = { W: 1654, H: 2339, blue: '#054DA2', ink: '#111827', ink2: '#374151', ink3: '#6B7280', line: '#C9D3E3', head: '#EAF1FB',
   F: 'Arial, "Helvetica Neue", -apple-system, "Segoe UI", Roboto, sans-serif' };
