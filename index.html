@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png"/>
 <meta name="mobile-web-app-capable" content="yes"/>
-<title>Bichamp Calc v10.8</title>
+<title>Bichamp Calc v10.9</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 *{-webkit-tap-highlight-color:transparent}
@@ -332,7 +332,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
       </div>
     </div>
     <div class="header-right">
-      <span class="ver-chip">v10.8</span>
+      <span class="ver-chip">v10.9</span>
       <button id="themeBtn" class="hdr-btn" title="Светлая / тёмная тема" aria-label="Тема">☀</button>
       <button id="resetBtn" title="Сброс">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
@@ -567,7 +567,6 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
               <thead>
                 <tr>
                   <th>Зубьев<br>в резе</th>
-                  <th>Шаг зуба,<br>мм</th>
                   <th>Зубьев<br>на диске</th>
                   <th>Подача,<br>мм/мин</th>
                   <th>Время,<br>сек</th>
@@ -628,7 +627,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
 </div>
 
 <script>
-/* ═══ Bichamp Calc v10.8 ═══ */
+/* ═══ Bichamp Calc v10.9 ═══ */
 
 const materialList = [
 {name:"А12",group:"Автоматная",key:"LowCarbon"},{name:"А20",group:"Автоматная",key:"LowCarbon"},{name:"А30",group:"Автоматная",key:"LowCarbon"},{name:"А40Г",group:"Автоматная",key:"LowCarbon"},{name:"АС11",group:"Автоматная",key:"LowCarbon"},{name:"АС14",group:"Автоматная",key:"LowCarbon"},{name:"АС35Г2",group:"Автоматная",key:"LowCarbon"},{name:"АС40",group:"Автоматная",key:"LowCarbon"},{name:"АЦ40Х",group:"Автоматная",key:"LowCarbon"},
@@ -1382,12 +1381,12 @@ function calcDisk(kind, group, size, isPipe, wall, diskDia, corrPercent, opts){
     const teethInCut = chord / actualPitch;
     const zBad = zCheck(Z, Zrec, teethInCut, chord / (Math.PI * diskDia / Zrec), true);
     if (zBad) return zBad;
-    alerts.push({type:'info', text:`Тонкостенная труба: шаг по таблице D×S = ${T} мм, Z изгот. = ${Z}`});
+    alerts.push({type:'info', text:`Тонкостенная труба: число зубьев по таблице D×S — Z = ${Z}`});
     if (corrPercent) alerts.push({type:'secondary', text:`Коррекция ${corrPercent>0?'+':''}${corrPercent}%`});
     return { mode:kind, tech:"Дисковая пила HSS", series:"HSS DMo5",
       family:"HSS (быстрорежущий диск)", desc:`Диск Ø${diskDia} мм · труба ${size}×${wall} мм`,
       toolParamVal: Z, toolParamLbl:'зубьев Z',
-      toolParamSub:`шаг ≈ ${actualPitch.toFixed(2)} мм · зубьев в стенке ≈ ${teethInCut.toFixed(1)}`,
+      toolParamSub:`зубьев в стенке ≈ ${teethInCut.toFixed(1)}`,
       vc:Math.round(vc), vf, rpm, fz:+fz.toFixed(4), timeMin, teethInCut, teethWall:teethInCut,
       chip_um:null, prod:null, kv:null, coating:params.coat, carbideClass:null,
       alerts, rationale:`fz ${fz.toFixed(3)} мм/зуб · n ${rpm} об/мин · Vc ${Math.round(vc)} м/мин${rangeTxt}`,
@@ -1440,7 +1439,7 @@ function calcDisk(kind, group, size, isPipe, wall, diskDia, corrPercent, opts){
     family: isHSS?"HSS (быстрорежущий диск)":"TCT (твердосплавные напайки)",
     desc:`Диск Ø${diskDia} мм · ${isPipe?`труба ${size}×${wall} мм`:`пруток ${size} мм`}`,
     toolParamVal: Zopt, toolParamLbl:'зубьев Z',
-    toolParamSub:`шаг ≈ ${actualPitch.toFixed(2)} мм · зубьев в резе ≈ ${teethInCut.toFixed(1)}`,
+    toolParamSub:`зубьев в резе ≈ ${teethInCut.toFixed(1)}`,
     vc:Math.round(vc), vf:vfOpt, rpm, fz:+fz.toFixed(4),
     timeMin:tOpt/60, teethInCut, teethWall,
     chip_um:null, prod:null, kv:null,
@@ -1542,7 +1541,7 @@ function buildKnowledge(){
     + `<li>Дробные размеры можно вводить и через запятую, и через точку.</li></ul>`;
 }
 
-const APP_VERSION = 'v10.8';
+const APP_VERSION = 'v10.9';
 /* ═══════════════ ОТЧЁТ НА БЛАНКЕ АО «Р-СТАЛЬ» (A4, PNG / PDF) ═══════════════ */
 const RPT = { W: 1654, H: 2339, blue: '#054DA2', ink: '#111827', ink2: '#374151', ink3: '#6B7280', line: '#C9D3E3', head: '#EAF1FB',
   F: 'Arial, "Helvetica Neue", -apple-system, "Segoe UI", Roboto, sans-serif' };
@@ -1662,11 +1661,11 @@ async function renderReport(a){
   /* варианты для дисков */
   if (d.variants && d.variants.list && d.variants.list.length){
     y += 50; y = rptSection(x, M, y, 'Варианты по числу зубьев', CW);
-    const vr = [['Зубьев в резе', 'Шаг зуба, мм', 'Зубьев на диске', 'Подача, мм/мин', 'Время, с']];
-    d.variants.list.forEach(v => vr.push([String(v.zi), v.T.toFixed(1), String(v.Z), String(v.vf), v.tSec.toFixed(0)]));
-    vr.push(['Оптимально', d.variants.opt.T.toFixed(1), String(d.variants.opt.Z), String(d.variants.opt.vf), d.variants.opt.tSec.toFixed(0)]);
-    const w5 = Array(5).fill(Math.floor(CW / 5)); w5[4] = CW - w5[0] * 4;
-    y = rptTable(x, M, y, w5, vr, {head: true, align: ['left', 'right', 'right', 'right', 'right'], hl: ri => ri === vr.length - 1, fs: 25});
+    const vr = [['Зубьев в резе', 'Зубьев на диске', 'Подача, мм/мин', 'Время, с']];
+    d.variants.list.forEach(v => vr.push([String(v.zi), String(v.Z), String(v.vf), v.tSec.toFixed(0)]));
+    vr.push(['Оптимально', String(d.variants.opt.Z), String(d.variants.opt.vf), d.variants.opt.tSec.toFixed(0)]);
+    const w4 = Array(4).fill(Math.floor(CW / 4)); w4[3] = CW - w4[0] * 3;
+    y = rptTable(x, M, y, w4, vr, {head: true, align: ['left', 'right', 'right', 'right'], hl: ri => ri === vr.length - 1, fs: 25});
   }
   /* примечания */
   const notes = (d.alerts || []).filter(al => al.type === 'danger' || al.type === 'warning' || al.type === 'info').map(al => String(al.text).replace(/<[^>]+>/g, ''));
@@ -2213,10 +2212,10 @@ const app = {
     if (d.variants && d.variants.list && d.variants.list.length){
       vw.classList.remove('hidden');
       const rows = d.variants.list.map(v => `<tr>
-        <td>${v.zi}</td><td>${v.T.toFixed(1)}</td><td>${v.Z}</td><td>${v.vf}</td><td>${v.tSec.toFixed(0)}</td>
+        <td>${v.zi}</td><td>${v.Z}</td><td>${v.vf}</td><td>${v.tSec.toFixed(0)}</td>
       </tr>`).join('');
       const optRow = `<tr class="opt">
-        <td>Оптимально</td><td>${d.variants.opt.T.toFixed(1)}</td><td>${d.variants.opt.Z}</td><td>${d.variants.opt.vf}</td><td>${d.variants.opt.tSec.toFixed(0)}</td>
+        <td>Оптимально</td><td>${d.variants.opt.Z}</td><td>${d.variants.opt.vf}</td><td>${d.variants.opt.tSec.toFixed(0)}</td>
       </tr>`;
       vb.innerHTML = rows + optRow;
     } else { vw.classList.add('hidden'); vb.innerHTML=''; }

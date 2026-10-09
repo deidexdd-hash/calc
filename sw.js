@@ -1,6 +1,6 @@
 /* Bichamp Calc — service worker.
    При выпуске новой версии поменяйте VERSION — старый кеш удалится сам. */
-const VERSION = 'v10.8';
+const VERSION = 'v10.9';
 const CACHE = 'bichamp-calc-' + VERSION;
 const ASSETS = [
   './',
