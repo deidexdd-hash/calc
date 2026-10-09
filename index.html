@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png"/>
 <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png"/>
 <meta name="mobile-web-app-capable" content="yes"/>
-<title>Bichamp Calc v10.7</title>
+<title>Bichamp Calc v10.8</title>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 *{-webkit-tap-highlight-color:transparent}
@@ -332,7 +332,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
       </div>
     </div>
     <div class="header-right">
-      <span class="ver-chip">v10.7</span>
+      <span class="ver-chip">v10.8</span>
       <button id="themeBtn" class="hdr-btn" title="Светлая / тёмная тема" aria-label="Тема">☀</button>
       <button id="resetBtn" title="Сброс">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
@@ -628,7 +628,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
 </div>
 
 <script>
-/* ═══ Bichamp Calc v10.7 ═══ */
+/* ═══ Bichamp Calc v10.8 ═══ */
 
 const materialList = [
 {name:"А12",group:"Автоматная",key:"LowCarbon"},{name:"А20",group:"Автоматная",key:"LowCarbon"},{name:"А30",group:"Автоматная",key:"LowCarbon"},{name:"А40Г",group:"Автоматная",key:"LowCarbon"},{name:"АС11",group:"Автоматная",key:"LowCarbon"},{name:"АС14",group:"Автоматная",key:"LowCarbon"},{name:"АС35Г2",group:"Автоматная",key:"LowCarbon"},{name:"АС40",group:"Автоматная",key:"LowCarbon"},{name:"АЦ40Х",group:"Автоматная",key:"LowCarbon"},
@@ -1277,8 +1277,8 @@ function calcBand(ctx){
     blade: bladeInfo(seriesName.replace(' (карбид)', ''), tpiLabel, bw),
     toolParamVal: tpiLabel, toolParamLbl: 'TPI / шаг',
     toolParamSub: customPitchUsed
-      ? `рекомендуем ${recommendedPitch} · шаг ${pitchMm.toFixed(2)} мм`
-      : `шаг ${pitchMm.toFixed(2)} мм · Z_м ${Math.round(Z_metr)}`,
+      ? `рекомендуем ${recommendedPitch}`
+      : '',
     vc: Math.round(V), vf: Math.round(F), timeMin,
     teethInCut, teethWall, chip_um, prod, kv,
     coating: null, carbideClass: sawType === 'carbide' ? seriesName : null,
@@ -1542,7 +1542,7 @@ function buildKnowledge(){
     + `<li>Дробные размеры можно вводить и через запятую, и через точку.</li></ul>`;
 }
 
-const APP_VERSION = 'v10.7';
+const APP_VERSION = 'v10.8';
 /* ═══════════════ ОТЧЁТ НА БЛАНКЕ АО «Р-СТАЛЬ» (A4, PNG / PDF) ═══════════════ */
 const RPT = { W: 1654, H: 2339, blue: '#054DA2', ink: '#111827', ink2: '#374151', ink3: '#6B7280', line: '#C9D3E3', head: '#EAF1FB',
   F: 'Arial, "Helvetica Neue", -apple-system, "Segoe UI", Roboto, sans-serif' };
@@ -1833,7 +1833,7 @@ const app = {
     const list = [...labels].sort((a, b) => avg(a) - avg(b));
     const sel = q('customPitchSelect');
     sel.innerHTML = '<option value="">— выберите шаг —</option>'
-      + list.map(l => `<option value="${l}">${l} TPI · шаг ${(25.4 / avg(l)).toFixed(1)} мм</option>`).join('')
+      + list.map(l => `<option value="${l}">${l} TPI</option>`).join('')
       + '<option value="__other">Другой — ввести вручную…</option>';
   },
   syncPitchUI(){
