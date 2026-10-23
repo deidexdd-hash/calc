@@ -1,16 +1,16 @@
-/* Bichamp Calc — service worker.
+/* Р-сталь калькулятор — service worker.
    При выпуске новой версии поменяйте VERSION — старый кеш удалится сам. */
-const VERSION = 'v10.11';
+const VERSION = 'v10.12';
 const CACHE = 'bichamp-calc-' + VERSION;
 const ASSETS = [
   './',
   './index.html',
-  './manifest.webmanifest',
-  './icons/apple-touch-icon.png',
-  './icons/icon-192.png',
-  './icons/icon-512.png',
-  './icons/icon-maskable-512.png',
-  './icons/favicon-32.png'
+  './manifest.webmanifest?v=2',
+  './icons/apple-touch-icon.png?v=2',
+  './icons/icon-192.png?v=2',
+  './icons/icon-512.png?v=2',
+  './icons/icon-maskable-512.png?v=2',
+  './icons/favicon-32.png?v=2'
 ];
 
 self.addEventListener('install', e => {
