@@ -1,6 +1,6 @@
 /* Р-сталь калькулятор — service worker.
    При выпуске новой версии поменяйте VERSION — старый кеш удалится сам. */
-const VERSION = 'v10.13';
+const VERSION = 'v10.14';
 const CACHE = 'bichamp-calc-' + VERSION;
 const ASSETS = [
   './',
