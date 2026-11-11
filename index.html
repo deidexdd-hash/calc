@@ -375,7 +375,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
       </div>
     </div>
     <div class="header-right">
-      <span class="ver-chip">v10.13</span>
+      <span class="ver-chip">v10.14</span>
       <button id="themeBtn" class="hdr-btn" title="Светлая / тёмная тема" aria-label="Тема">☀</button>
       <button id="resetBtn" title="Сброс">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
@@ -670,7 +670,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
 </div>
 
 <script>
-/* ═══ Р-сталь калькулятор v10.13 ═══ */
+/* ═══ Р-сталь калькулятор v10.14 ═══ */
 
 const materialList = [
 {name:"А12",group:"Автоматная",key:"LowCarbon"},{name:"А20",group:"Автоматная",key:"LowCarbon"},{name:"А30",group:"Автоматная",key:"LowCarbon"},{name:"А40Г",group:"Автоматная",key:"LowCarbon"},{name:"АС11",group:"Автоматная",key:"LowCarbon"},{name:"АС14",group:"Автоматная",key:"LowCarbon"},{name:"АС35Г2",group:"Автоматная",key:"LowCarbon"},{name:"АС40",group:"Автоматная",key:"LowCarbon"},{name:"АЦ40Х",group:"Автоматная",key:"LowCarbon"},
@@ -1220,10 +1220,11 @@ function calcBand(ctx){
   if (isPipe){ if (F > 60){ F = 60; feedLimited = true; } }
   else if (!(effKey === 'AlHard' || effKey === 'AlSoft' || effKey === 'Copper')){ if (F > 50){ F = 50; feedLimited = true; } }
 
-  /* Правило 15 %: стружка не должна занимать больше 15 % впадины зуба — и для авто-, и для ручного шага */
+  /* Правило 15 % — защита при ручном вводе неподходящего шага: стружка не должна занимать больше
+     15 % впадины зуба. К автоподбору и к ручному шагу, совпавшему с рекомендуемым, не применяется. */
   let gulletLimited = false;
   let fillPct = null;
-  {
+  if (customPitchUsed && recommendedPitch !== tpiLabel){
     const K = CUSTOM_PITCH_CONST.K_RIP;
     const LIM = CUSTOM_PITCH_CONST.FILL_LIMIT;
     const hG = getGulletDepth(pitchObj.label);
@@ -1288,8 +1289,6 @@ function calcBand(ctx){
   if (stainlessShift) alerts.push({type:'info', text:`Шаг увеличен для нержавейки/дуплекса → ${tpiLabel}.`});
   if (ctx.runIn) alerts.push({type:'secondary', text:`Режим обкатки: ${sawType==='bimetal'?'скорость 80% / подача 60%':'скорость 70% / подача 40%'}.`});
   if (gulletLimited) alerts.push({type:'warning', text:`Подача снижена до ${Math.round(F)} мм/мин: при большей стружка не помещается во впадине зуба (лимит 15 %).`});
-  /* ── 4. меньше 3 зубьев в резе на сплошном сечении */
-  if (!isPipe && !customPitchUsed && teethInCut < 3) alerts.unshift({type:'danger', text:`В резе всего ${teethInCut.toFixed(1)} зуба — меньше 3. Высокий риск выкрашивания и срыва зубьев: режьте пакетом, в оправке или более мелким шагом.`});
   if (feedLimited && !gulletLimited) alerts.push({type:'warning', text:`Подача ограничена лимитом ${isPipe?'трубы (60':'сплошн. (50'} мм/мин) для защиты зуба.`});
 
   const desc = isPipe
@@ -1566,7 +1565,7 @@ function buildKnowledge(){
     + `<li>Дробные размеры можно вводить и через запятую, и через точку.</li></ul>`;
 }
 
-const APP_VERSION = 'v10.13';
+const APP_VERSION = 'v10.14';
 /* ═══════════════ ОТЧЁТ НА БЛАНКЕ АО «Р-СТАЛЬ» (A4, PNG / PDF) ═══════════════ */
 const RPT = { W: 1654, H: 2339, blue: '#054DA2', ink: '#111827', ink2: '#374151', ink3: '#6B7280', line: '#C9D3E3', head: '#EAF1FB',
   F: 'Arial, "Helvetica Neue", -apple-system, "Segoe UI", Roboto, sans-serif' };
