@@ -25,11 +25,12 @@ body{font-family:-apple-system,'SF Pro Text','Segoe UI',Roboto,system-ui,sans-se
 .app-header{flex-shrink:0;height:calc(var(--header-h) + var(--safe-top));padding-top:var(--safe-top);background:var(--bg2);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding-left:18px;padding-right:14px;position:sticky;top:0;z-index:80}
 .app-header .logo{display:flex;align-items:center;gap:10px}
 .logo-mark{position:relative;width:34px;height:34px;flex-shrink:0}.logo-img{position:absolute;inset:0;z-index:2;background:var(--logo);-webkit-mask:var(--logo-mask) center/contain no-repeat;mask:var(--logo-mask) center/contain no-repeat}#mascot{position:absolute;z-index:1;left:-25px;top:-48px;width:130px;height:164px;pointer-events:none;opacity:0;transform:scale(.2);transform-origin:42px 65px;overflow:visible;filter:drop-shadow(0 0 1.2px rgba(255,255,255,.7)) drop-shadow(0 6px 10px rgba(0,0,0,.4))}html[data-theme=light] #mascot{filter:drop-shadow(0 6px 10px rgba(0,0,0,.3))}#logoText{cursor:pointer}.app-header.mascot-on{z-index:2000}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.opt-row:focus-visible,#logoText:focus-visible{border-radius:8px}
 .logo-text{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
 #modeLabel{font-size:15px;font-weight:700;color:var(--accent);letter-spacing:.02em}
 .header-right{display:flex;align-items:center;gap:8px}
 .ver-chip{font-size:10px;font-weight:700;color:var(--green);border:1px solid rgba(34,197,94,.35);background:rgba(34,197,94,.1);border-radius:20px;padding:3px 9px;letter-spacing:.04em}
-#resetBtn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
+#resetBtn{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s}
 #resetBtn:active{background:var(--border);transform:scale(.92)}
 .app-main{flex:1;padding:16px 16px calc(var(--tab-h) + var(--safe-bot) + 20px);scroll-behavior:smooth}
 .cols{display:flex;flex-direction:column;gap:0}
@@ -48,7 +49,7 @@ body{font-family:-apple-system,'SF Pro Text','Segoe UI',Roboto,system-ui,sans-se
 .mat-trigger-group{font-size:12px;color:var(--text3);margin-top:2px}
 .mat-trigger-chevron{color:var(--text3);flex-shrink:0}
 .seg-wrap{display:grid;grid-template-columns:1fr 1fr;background:var(--bg3);border-radius:var(--radius-sm);padding:3px;gap:3px}
-.seg-btn{border:none;background:transparent;border-radius:6px;color:var(--text2);font-family:inherit;font-size:14px;font-weight:600;padding:9px 10px;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px}
+.seg-btn{border:none;background:transparent;border-radius:6px;color:var(--text2);font-family:inherit;font-size:14px;font-weight:600;padding:9px 10px;min-height:44px;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px}
 .seg-btn.active{background:var(--accent);color:#fff;box-shadow:0 2px 8px rgba(249,115,22,.35)}
 .seg-btn:active{opacity:.8;transform:scale(.97)}
 .seg-btn:disabled{cursor:not-allowed}
@@ -88,14 +89,14 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .series-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:12px;position:relative;overflow:hidden}
 .series-card::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:var(--accent);border-radius:2px 0 0 2px}
 .series-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:6px}
-.series-tech{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.series-tech{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
 .series-name{font-size:20px;font-weight:800;color:var(--text);line-height:1.15}
 .series-desc{font-size:13px;color:var(--text2);margin-top:3px}
 .series-family{font-size:12px;color:var(--text3);margin-top:6px}
 .series-family b{color:var(--text2);font-weight:600}
 .tpi-badge{flex-shrink:0;text-align:center;background:var(--accent-dim);border:1px solid var(--accent-mid);border-radius:10px;padding:8px 12px;min-width:76px}
 .tpi-val{font-family:var(--mono);font-size:19px;font-weight:700;color:var(--accent);line-height:1;display:block}
-.tpi-lbl{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-top:3px;display:block}
+.tpi-lbl{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-top:3px;display:block}
 .coating-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
 .badge-pill{font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;border:1px solid var(--border);color:var(--text2);background:var(--bg3)}
 .metrics-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
@@ -104,17 +105,17 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .metric-card.time-card{border-color:rgba(34,197,94,.3);background:rgba(34,197,94,.05)}
 .metric-card.fz-card{border-color:rgba(34,211,238,.35);background:rgba(34,211,238,.05)}
 .metric-card.fz-card .metric-val{color:var(--cyan)}
-.metric-label{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
+.metric-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text3);margin-bottom:6px}
 .metric-val{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--text);line-height:1;display:block}
 .time-card .metric-val{color:var(--green)}
-.metric-unit{font-size:10px;color:var(--text3);margin-top:3px}
+.metric-unit{font-size:11px;color:var(--text3);margin-top:3px}
 .metric-sub{font-size:10px;color:var(--text3);margin-top:4px}
 .mini-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin-bottom:12px}
 .mini-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:10px 8px;text-align:center}
 .mini-card.hidden{display:none}
-.mini-label{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
+.mini-label{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);margin-bottom:4px}
 .mini-val{font-family:var(--mono);font-size:16px;font-weight:700;color:var(--cyan);line-height:1;display:block}
-.mini-unit{font-size:9px;color:var(--text3);margin-top:2px}
+.mini-unit{font-size:10.5px;color:var(--text3);margin-top:2px}
 .status-bar{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);margin-bottom:8px;overflow:hidden}
 .status-main{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
 .status-main:active{opacity:.85}
@@ -171,7 +172,7 @@ table.ref tr:last-child td{border-bottom:none}
 .tab:active{opacity:.7}
 .tab svg{transition:transform .15s}
 .tab.active svg{transform:scale(1.1)}
-.tab-label{font-size:9px;line-height:1}
+.tab-label{font-size:10.5px;line-height:1}
 .brand-footer{flex-shrink:0;background:var(--bg2);border-top:2px solid var(--accent);padding:16px 18px calc(16px + var(--tab-h) + var(--safe-bot));display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
 .brand-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;color:var(--text)}
 .brand-mark{width:28px;height:28px;flex-shrink:0;background:var(--logo);-webkit-mask:var(--logo-mask) center/contain no-repeat;mask:var(--logo-mask) center/contain no-repeat}
@@ -245,7 +246,7 @@ html[data-theme=light] .alert-danger,html[data-theme=light] .status-bar.level-da
 html[data-theme=light] .alert-info,html[data-theme=light] .status-bar.level-info .status-icon{color:#1D4ED8}
 html[data-theme=light] .ver-chip{color:#166534}
 html[data-theme=light] input[type=range]::-webkit-slider-thumb{box-shadow:0 1px 4px rgba(0,0,0,.3)}
-.hdr-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+.hdr-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--border);background:var(--bg3);color:var(--text2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;touch-action:manipulation;-webkit-user-select:none;user-select:none}
 .hdr-btn:active{background:var(--border);transform:scale(.92)}
 .input-box input::placeholder{color:var(--text3);opacity:.55;font-weight:500}
 .input-box .ib-hint{font-size:10px;color:var(--text3);margin-top:4px;line-height:1.3}
@@ -315,7 +316,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
     <h3>Выбор материала</h3>
     <div class="sheet-search">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-      <input id="matSearchInput" type="search" inputmode="search" enterkeyhint="search" autocapitalize="off" placeholder="Марка, аналог (AISI/EN) или группа…" autocomplete="off" autocorrect="off" spellcheck="false"/>
+      <input id="matSearchInput" aria-label="Поиск марки материала" type="search" inputmode="search" enterkeyhint="search" autocapitalize="off" placeholder="Марка, аналог (AISI/EN) или группа…" autocomplete="off" autocorrect="off" spellcheck="false"/>
     </div>
   </div>
   <div id="matListContainer"></div>
@@ -374,7 +375,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
       </div>
     </div>
     <div class="header-right">
-      <span class="ver-chip">v10.12</span>
+      <span class="ver-chip">v10.13</span>
       <button id="themeBtn" class="hdr-btn" title="Светлая / тёмная тема" aria-label="Тема">☀</button>
       <button id="resetBtn" title="Сброс">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
@@ -408,17 +409,17 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
         <div id="bladeDiaSection" class="hidden">
           <div class="section-label">Диаметр диска</div>
           <div class="input-box">
-            <label>ДИАМЕТР ДИСКА (мм)</label>
+            <label for="bladeDiaInput">ДИАМЕТР ДИСКА (мм)</label>
             <input id="bladeDiaInput" type="text" inputmode="numeric" pattern="[0-9]*" enterkeyhint="done" value="350" autocomplete="off"/>
           </div>
           <div class="inputs-row" style="margin-top:10px">
             <div class="input-box">
-              <label>ЗУБЬЕВ Z</label>
+              <label for="zManualInput">ЗУБЬЕВ Z</label>
               <input id="zManualInput" type="text" inputmode="numeric" pattern="[0-9]*" enterkeyhint="done" placeholder="авто" autocomplete="off"/>
               <div class="ib-hint">если диск уже есть</div>
             </div>
             <div class="input-box">
-              <label>ОБОРОТЫ, об/мин</label>
+              <label for="rpmManualInput">ОБОРОТЫ, об/мин</label>
               <input id="rpmManualInput" type="text" inputmode="decimal" enterkeyhint="done" placeholder="авто" autocomplete="off"/>
               <div class="ib-hint">если у станка фикс. скорость</div>
             </div>
@@ -426,7 +427,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
         </div>
 
         <div class="section-label">Материал <span class="hint" id="matCountHint">· AISI / EN / DIN</span></div>
-        <div id="matTrigger">
+        <div id="matTrigger" role="button" tabindex="0" aria-label="Выбрать материал">
           <div class="mat-icon">⚙</div>
           <div class="mat-trigger-text">
             <div class="mat-trigger-name placeholder" id="matTriggerName">Выберите материал…</div>
@@ -448,11 +449,11 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
         <div class="section-label" id="sizeSectionLabel">Размеры (мм)</div>
         <div class="inputs-row single" id="sizeRow">
           <div class="input-box">
-            <label id="sizeInputLabel">РАЗМЕР СЕЧЕНИЯ</label>
+            <label for="sizeInput" id="sizeInputLabel">РАЗМЕР СЕЧЕНИЯ</label>
             <input id="sizeInput" type="text" inputmode="decimal" enterkeyhint="done" value="100" autocomplete="off"/>
           </div>
           <div class="input-box hidden" id="wallContainer">
-            <label class="warn">СТЕНКА</label>
+            <label for="wallInput" class="warn">СТЕНКА</label>
             <input id="wallInput" type="text" inputmode="decimal" enterkeyhint="done" value="10" autocomplete="off"/>
           </div>
         </div>
@@ -469,7 +470,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
             <span class="lbl">Заготовок в ряду</span>
             <div class="stepper">
               <button class="step-btn" id="bundleMinus" aria-label="Меньше">−</button>
-              <input id="bundleCount" type="text" inputmode="numeric" pattern="[0-9]*" enterkeyhint="done" value="3" autocomplete="off"/>
+              <input id="bundleCount" aria-label="Заготовок в ряду" type="text" inputmode="numeric" pattern="[0-9]*" enterkeyhint="done" value="3" autocomplete="off"/>
               <button class="step-btn" id="bundlePlus" aria-label="Больше">+</button>
             </div>
           </div>
@@ -490,7 +491,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
             </div>
           </div>
           <select id="customPitchSelect" class="pitch-select hidden" aria-label="Шаг зуба"></select>
-          <input id="customPitchInput" class="hidden" type="text" placeholder="свой шаг: 3/4 или шаг в мм" autocomplete="off" autocorrect="off" autocapitalize="off" enterkeyhint="done" spellcheck="false" style="width:100%;margin-top:10px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-family:var(--mono);font-size:16px;font-weight:600;color:var(--text);outline:none"/>
+          <input id="customPitchInput" class="hidden" type="text" aria-label="Свой шаг зуба" placeholder="свой шаг: 3/4 или шаг в мм" autocomplete="off" autocorrect="off" autocapitalize="off" enterkeyhint="done" spellcheck="false" style="width:100%;margin-top:10px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:12px 14px;font-family:var(--mono);font-size:16px;font-weight:600;color:var(--text);outline:none"/>
         </div>
 
         <div class="section-label" id="corrSectionLabel">Коррекции режимов</div>
@@ -512,7 +513,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
           </div>
           <div class="corr-ctrl">
             <button class="step-btn" id="corrMinus" aria-label="Минус 1%">−</button>
-            <input type="range" id="corrRange" min="-20" max="20" value="0" step="1"/>
+            <input type="range" id="corrRange" aria-label="Ручная корректировка, %" min="-20" max="20" value="0" step="1"/>
             <button class="step-btn" id="corrPlus" aria-label="Плюс 1%">+</button>
           </div>
           <div class="range-ends inset"><span>−20%</span><span>+20%</span></div>
@@ -669,7 +670,7 @@ table.ref td.num,table.ref th.num{text-align:right;font-family:var(--mono);white
 </div>
 
 <script>
-/* ═══ Р-сталь калькулятор v10.12 ═══ */
+/* ═══ Р-сталь калькулятор v10.13 ═══ */
 
 const materialList = [
 {name:"А12",group:"Автоматная",key:"LowCarbon"},{name:"А20",group:"Автоматная",key:"LowCarbon"},{name:"А30",group:"Автоматная",key:"LowCarbon"},{name:"А40Г",group:"Автоматная",key:"LowCarbon"},{name:"АС11",group:"Автоматная",key:"LowCarbon"},{name:"АС14",group:"Автоматная",key:"LowCarbon"},{name:"АС35Г2",group:"Автоматная",key:"LowCarbon"},{name:"АС40",group:"Автоматная",key:"LowCarbon"},{name:"АЦ40Х",group:"Автоматная",key:"LowCarbon"},
@@ -732,7 +733,7 @@ const KV_COEFF = {
 "LowCarbon":{bimetal:1.1,carbide:1.0},"Carbon":{bimetal:1.0,carbide:1.0},"LowAlloyTool":{bimetal:0.85,carbide:0.9},"BearingTool":{bimetal:0.8,carbide:0.85},"HSS":{bimetal:0.7,carbide:0.75},"ToolAlloy":{bimetal:0.55,carbide:0.6},"HeatResistant":{bimetal:0.5,carbide:0.55},"CorrosionResistant":{bimetal:0.5,carbide:0.6},"HighAlloy":{bimetal:0.4,carbide:0.45},"CastIron":{bimetal:0.9,carbide:1.0},"TitaniumBronze":{bimetal:0.5,carbide:0.55},"AlHard":{bimetal:2.5,carbide:3.0},"AlSoft":{bimetal:4.0,carbide:5.0},"MagnesiumZinc":{bimetal:2.0,carbide:2.5},"Hardened":{bimetal:0.4,carbide:0.5}
 };
 
-const Z_PER_METER = {"24":945,"18":709,"14":551,"10":394,"8":315,"6":236,"4":157,"3":118,"2":79,"1.1":43,"1":39,"0.78":31,"14/18":630,"10/14":472,"8/12":394,"6/10":315,"6/8":276,"5/8":256,"4/6":197,"3/4":138,"2.5/3.4":116,"2/3":98,"1.8/2.0":75,"1.5/2.3":75,"1.5/2.0":69,"1.4/2.0":67};
+const Z_PER_METER = {"24":945,"18":709,"14":551,"10":394,"8":315,"6":236,"4":157,"3":118,"2":79,"1.1":43,"1":39,"0.78":31,"14/18":630,"10/14":472,"8/12":394,"6/10":315,"6/8":276,"5/8":256,"4/6":197,"3/4":138,"2.5/3.4":116,"2/3":98,"1.8/2.0":75,"1.5/2.3":75,"1.5/2.0":69,"1.4/2.0":67,"1.0/1.5":49,"1.0/1.25":44,"0.75/1.25":39,"0.75/1.0":34};
 
 const CHIP_RANGE = {"LowCarbon":{min:6,max:8},"Carbon":{min:5,max:6},"LowAlloyTool":{min:4.5,max:5},"BearingTool":{min:3.5,max:4},"HSS":{min:3.5,max:4},"ToolAlloy":{min:3,max:3.5},"HeatResistant":{min:2.5,max:3},"CorrosionResistant":{min:2.5,max:3},"HighAlloy":{min:2,max:3},"CastIron":{min:2,max:3.5},"TitaniumBronze":{min:2,max:3},"AlHard":{min:10,max:12},"AlSoft":{min:8,max:10},"MagnesiumZinc":{min:6,max:8},"Hardened":{min:1,max:2}};
 
@@ -762,7 +763,7 @@ const pipePitchMatrix = {
 300:{15:'0.75/1.0',20:'0.75/1.0',40:'0.75/1.0',60:'0.75/1.0',80:'0.75/1.0',100:'0.75/1.0',120:'0.75/1.0',150:'0.75/1.0',200:'0.75/1.0',300:'0.75/1.0',400:'0.75/1.0',500:'0.75/1.0',600:'0.75/1.0',700:'0.75/1.0'}
 };
 
-const SOLID_PITCH_TABLE = [{min:0,max:15,pitch:"14/18"},{min:15,max:30,pitch:"8/12"},{min:20,max:40,pitch:"6/10"},{min:40,max:60,pitch:"5/8"},{min:60,max:80,pitch:"4/6"},{min:80,max:150,pitch:"3/4"},{min:150,max:300,pitch:"2/3"},{min:300,max:600,pitch:"1.4/2.0"},{min:500,max:1000,pitch:"1.0/1.5"},{min:1000,max:Infinity,pitch:"0.75/1.0"}];
+const SOLID_PITCH_TABLE = [{min:0,max:15,pitch:"14/18"},{min:15,max:30,pitch:"8/12"},{min:30,max:40,pitch:"6/10"},{min:40,max:60,pitch:"5/8"},{min:60,max:80,pitch:"4/6"},{min:80,max:150,pitch:"3/4"},{min:150,max:300,pitch:"2/3"},{min:300,max:600,pitch:"1.4/2.0"},{min:600,max:1000,pitch:"1.0/1.5"},{min:1000,max:Infinity,pitch:"0.75/1.0"}];
 
 const allPitches = [{label:'14/18',tpi:16,zMetr:Z_PER_METER['14/18']},{label:'10/14',tpi:12,zMetr:Z_PER_METER['10/14']},{label:'8/12',tpi:10,zMetr:Z_PER_METER['8/12']},{label:'6/10',tpi:8,zMetr:Z_PER_METER['6/10']},{label:'5/8',tpi:6.5,zMetr:Z_PER_METER['5/8']},{label:'4/6',tpi:5,zMetr:Z_PER_METER['4/6']},{label:'3/4',tpi:3.5,zMetr:Z_PER_METER['3/4']},{label:'2/3',tpi:2.5,zMetr:Z_PER_METER['2/3']},{label:'1.4/2.0',tpi:1.7,zMetr:Z_PER_METER['1.4/2.0']},{label:'1.0/1.5',tpi:1.25,zMetr:Z_PER_METER['1.0/1.5']||69},{label:'1.0/1.25',tpi:1.125,zMetr:Z_PER_METER['1.0/1.25']||79},{label:'0.75/1.25',tpi:0.9,zMetr:Z_PER_METER['0.75/1.25']||67},{label:'0.75/1.0',tpi:0.875,zMetr:Z_PER_METER['0.75/1.0']||67},{label:'3',tpi:3,zMetr:Z_PER_METER['3']}];
 
@@ -819,7 +820,7 @@ const BIMETAL_SERIES_MAP = {
 "Низкоуглеродистая":["FICUT","AA"],"Углеродистая":["FICUT","PROCUT","AA"],
 "Легированная":["PROCUT","TANCUT","AA"],"Конструкционная":["FICUT","PROCUT","AA"],
 "Нержавейка":["TANCUT","DTCUT","AA","FICUT"],"Жаропрочная":["TANCUT","DTCUT","FICUT"],
-"Титан":["TANCUT","DTCUT","FICUT"],"Алюминий":["AA"],"Медь/Латунь":["AA","FICUT"],"Чугун":["FICUT","AA"]
+"Титан":["TANCUT","DTCUT","FICUT"],"Инструментальная":["TANCUT","DTCUT","AA","FICUT"],"Алюминий":["AA"],"Медь/Латунь":["AA","FICUT"],"Чугун":["FICUT","AA"]
 };
 /* ═══ Каталог Bichamp: какие шаги реально выпускаются в каждой ширине полотна ═══
    Источник — таблицы размеров Bichamp (rosmark.ru, en.bichamp.com), 2026.
@@ -951,11 +952,11 @@ function parseCustomPitch(str){
   let found = allPitches.find(p => normPitchLabel(p.label) === norm);
   if (found) return found;
   const parts = s.split('/').map(x => parseFloat(x.trim()));
-  if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])){
+  if (parts.length === 2 && parts[0] > 0 && parts[1] > 0){
     const tpi = (parts[0] + parts[1]) / 2;
     return { label: s, tpi, zMetr: tpi * 39.37, custom: true };
   }
-  const mm = parseFloat(s);
+  const mm = /^\d+(\.\d+)?$/.test(s) ? parseFloat(s) : NaN;
   if (!isNaN(mm) && mm > 0){
     const tpi = 25.4 / mm;
     return { label: mm.toFixed(2) + ' мм', tpi, zMetr: tpi * 39.37, custom: true };
@@ -1045,36 +1046,6 @@ function pickCarbideSeries(group, tpiLabel, teethInCut, bw){
   const minTeeth = carbideMinTeeth(group);
   return { series: chosen, minTeeth, enoughTeeth: teethInCut >= minTeeth, pitchSupported: !!exact, availablePitches: seriesPitchesAt(chosen,bw) };
 }
-function toolFamily(effKey, sawType){
-  if (sawType==='bimetal'){
-    switch(effKey){
-      case 'LowCarbon': case 'Carbon': case 'LowAlloyTool': return 'FICUT / AA';
-      case 'BearingTool': case 'ToolAlloy': return 'FICUT / AA / TANCUT';
-      case 'HSS': case 'HighAlloy': return 'TANCUT / DTCUT';
-      case 'HeatResistant': case 'CorrosionResistant': return 'TANCUT';
-      case 'Titan': return 'TANCUT / DTCUT';
-      case 'Copper': return 'AA / FICUT';
-      case 'CastIron': return 'FICUT / AA';
-      case 'AlHard': case 'AlSoft': case 'MagnesiumZinc': return 'AA';
-      case 'Hardened': return 'TANCUT / DTCUT';
-      default: return 'FICUT';
-    }
-  } else {
-    switch(effKey){
-      case 'LowCarbon': case 'Carbon': return 'CB-MP / CB-PRO';
-      case 'LowAlloyTool': case 'BearingTool': case 'ToolAlloy': return 'CB-PRO';
-      case 'HSS': case 'HighAlloy': return 'CB-PRO / CB-X925';
-      case 'HeatResistant': case 'CorrosionResistant': return 'CB-PRO / CB-X925';
-      case 'Titan': return 'CB-PRO';
-      case 'Copper': return 'CB-MP / TCB-PRO AL';
-      case 'CastIron': return 'CB-MP / CB-PRO';
-      case 'AlHard': case 'AlSoft': case 'MagnesiumZinc': return 'TCB-PRO AL';
-      case 'Hardened': return 'CB-X925';
-      default: return 'CB-PRO';
-    }
-  }
-}
-
 /* ═════════ ЛЕНТОЧНАЯ ═════════ */
 function calcBand(ctx){
   const { mat, sawType, isPipe, size } = ctx;
@@ -1174,6 +1145,11 @@ function calcBand(ctx){
   if (ctx.customPitch && String(ctx.customPitch).trim()){
     const cp = parseCustomPitch(ctx.customPitch);
     if (cp){ pitchObj = cp; customPitchUsed = true; }
+    else return { error:true, tech:"Шаг не распознан", series:"—", desc:`Введено: «${String(ctx.customPitch).replace(/[<>&]/g, '')}»`, family:'',
+      toolParamVal:'?', toolParamLbl:'TPI / шаг', toolParamSub:`рекомендуем ${recommendedPitch}`,
+      vc:null, vf:null, timeMin:0, teethInCut:null, teethWall:null, chip_um:null, prod:null, kv:null, coating:null, carbideClass:null,
+      alerts:[{type:'danger', text:`Шаг не распознан. Введите его как «3/4» (TPI) или числом в миллиметрах, например «7.3». Рекомендуемый шаг: ${recommendedPitch}.`}],
+      rationale:'', bandLike:false, variants:null, fz:null };
   }
 
   const tpi = pitchObj.tpi, tpiLabel = pitchObj.label;
@@ -1244,16 +1220,17 @@ function calcBand(ctx){
   if (isPipe){ if (F > 60){ F = 60; feedLimited = true; } }
   else if (!(effKey === 'AlHard' || effKey === 'AlSoft' || effKey === 'Copper')){ if (F > 50){ F = 50; feedLimited = true; } }
 
-  /* Правило 15% для ручного шага */
+  /* Правило 15 %: стружка не должна занимать больше 15 % впадины зуба — и для авто-, и для ручного шага */
   let gulletLimited = false;
   let fillPct = null;
-  if (customPitchUsed){
+  {
     const K = CUSTOM_PITCH_CONST.K_RIP;
     const LIM = CUSTOM_PITCH_CONST.FILL_LIMIT;
     const hG = getGulletDepth(pitchObj.label);
     const t_mm = 25.4 / tpi;
     const S_g = 0.5 * t_mm * hG;
-    const B = size;
+    /* длина сплошного контакта: пруток — сечение, труба — хорда по стенке */
+    const B = isPipe ? Math.min(size, 2 * Math.sqrt(Math.max(0, wallVal * (size - wallVal)))) : size;
     const hMax = LIM * S_g / (B * K);
     const hNow = F / (V * Z_metr);
     fillPct = hNow * K / (S_g / B) * 100;
@@ -1274,17 +1251,20 @@ function calcBand(ctx){
   const area = Math.PI*(Rout*Rout - Rin*Rin);
   const prod = area / timeMin;
 
-  let seriesName, tech, rationale = '';
+  let seriesName, tech, rationale = '', altSeries = [];
   if (sawType === 'bimetal'){
     const bs = pickBimetalSeries(group, tpiLabel, size, isPipe, wallVal || wall, bw);
     tech = "Ленточная Bi-Metal";
+    altSeries = bs.candidates.filter(x => x !== bs.series && seriesMakes(x, tpiLabel, bw));
     if (bs.supported){ seriesName = bs.series; rationale = `Кандидаты: ${bs.candidates.join(', ')} → ${bs.series}`; }
+    else if (customPitchUsed && pitchObj.custom) { seriesName = "—"; alerts.push({type:'warning', text:`Шаг ${tpiLabel} — нестандартный, в каталоге Bichamp такого нет. Режимы посчитаны для него, серию подберите по своей пиле.`}); rationale = `Шаг ${tpiLabel} вне каталога`; }
     else if (bw) { seriesName = "—"; rationale = `Шаг ${tpiLabel} не выпускается в ширине ${fmtWidth(bw)} мм`; }
     else { seriesName = "CB-PRO (карбид)"; alerts.push({type:'warning', text:`Шаг ${tpiLabel} не поддерживается биметаллическими сериями — рекомендуется Carbide (CB-PRO).`}); rationale = `Шаг ${tpiLabel} вне биметаллических серий`; }
   } else {
     const cs = pickCarbideSeries(group, tpiLabel, teethInCut, bw);
     tech = "Ленточная Carbide";
     seriesName = cs.series;
+    altSeries = CARBIDE_PRIORITY.filter(x => (CARBIDE_APPLICABILITY[group] || CARBIDE_PRIORITY).includes(x) && x !== cs.series && seriesMakes(x, tpiLabel, bw));
     if (!cs.pitchSupported && cs.availablePitches.length){
       alerts.push({type:'warning', text:`Серия «${cs.series}» не производится с шагом ${tpiLabel}${bw ? ' в ширине ' + fmtWidth(bw) + ' мм' : ''}. Доступные шаги: ${cs.availablePitches.join(', ')}.`});
     }
@@ -1307,21 +1287,24 @@ function calcBand(ctx){
   if (bw && customPitchUsed && !made.has(tpiLabel)) alerts.push({type:'danger', text:`Шаг ${tpiLabel} в ширине ${fmtWidth(bw)} мм не выпускается. Есть: ${[...made].sort((a, b) => parsePitchToken(a).avg_tpi - parsePitchToken(b).avg_tpi).join(', ')}.`});
   if (stainlessShift) alerts.push({type:'info', text:`Шаг увеличен для нержавейки/дуплекса → ${tpiLabel}.`});
   if (ctx.runIn) alerts.push({type:'secondary', text:`Режим обкатки: ${sawType==='bimetal'?'скорость 80% / подача 60%':'скорость 70% / подача 40%'}.`});
-  if (feedLimited) alerts.push({type:'warning', text:`Подача ограничена лимитом ${isPipe?'трубы (60':'сплошн. (50'} мм/мин) для защиты зуба.`});
+  if (gulletLimited) alerts.push({type:'warning', text:`Подача снижена до ${Math.round(F)} мм/мин: при большей стружка не помещается во впадине зуба (лимит 15 %).`});
+  /* ── 4. меньше 3 зубьев в резе на сплошном сечении */
+  if (!isPipe && !customPitchUsed && teethInCut < 3) alerts.unshift({type:'danger', text:`В резе всего ${teethInCut.toFixed(1)} зуба — меньше 3. Высокий риск выкрашивания и срыва зубьев: режьте пакетом, в оправке или более мелким шагом.`});
+  if (feedLimited && !gulletLimited) alerts.push({type:'warning', text:`Подача ограничена лимитом ${isPipe?'трубы (60':'сплошн. (50'} мм/мин) для защиты зуба.`});
 
   const desc = isPipe
     ? (ctx.bundle ? `Пакет ${size} мм · стенка 2×${(wallVal/2).toFixed(1)} мм` : `Труба Ø${size}×${wall} мм`)
     : `Пруток ${size} мм`;
 
   return {
-    mode: sawType, tech, series: seriesName, family: toolFamily(effKey, sawType), desc,
+    mode: sawType, tech, series: seriesName, family: '', alt: altSeries.join(', '), desc,
     blade: bladeInfo(seriesName.replace(' (карбид)', ''), tpiLabel, bw),
     toolParamVal: tpiLabel, toolParamLbl: 'TPI / шаг',
     toolParamSub: customPitchUsed
       ? `рекомендуем ${recommendedPitch}`
       : '',
     vc: Math.round(V), vf: Math.round(F), timeMin,
-    teethInCut, teethWall, chip_um, prod, kv,
+    teethInCut: isPipe ? null : teethInCut, teethWall, chip_um, prod, kv,
     coating: null, carbideClass: sawType === 'carbide' ? seriesName : null,
     alerts, rationale, bandLike: true, variants: null, fz: (F/(V*Z_metr))
   };
@@ -1583,7 +1566,7 @@ function buildKnowledge(){
     + `<li>Дробные размеры можно вводить и через запятую, и через точку.</li></ul>`;
 }
 
-const APP_VERSION = 'v10.12';
+const APP_VERSION = 'v10.13';
 /* ═══════════════ ОТЧЁТ НА БЛАНКЕ АО «Р-СТАЛЬ» (A4, PNG / PDF) ═══════════════ */
 const RPT = { W: 1654, H: 2339, blue: '#054DA2', ink: '#111827', ink2: '#374151', ink3: '#6B7280', line: '#C9D3E3', head: '#EAF1FB',
   F: 'Arial, "Helvetica Neue", -apple-system, "Segoe UI", Roboto, sans-serif' };
@@ -1679,7 +1662,8 @@ async function renderReport(a){
   const toolRows = [];
   toolRows.push(['Серия', d.series || '—']);
   if (d.blade) toolRows.push(['Материал зуба и полотно', d.blade]);
-  if (d.family && d.family !== d.series) toolRows.push(['Семейство', d.family]);
+  if (d.alt) toolRows.push(['Также подходят', d.alt]);
+  else if (d.family && d.family !== d.series) toolRows.push(['Семейство', d.family]);
   toolRows.push([isDisk ? 'Число зубьев Z' : 'Шаг зуба', `${d.toolParamVal}${isDisk ? '' : ' TPI'}${d.toolParamSub ? '  (' + d.toolParamSub + ')' : ''}`]);
   if (d.coating) toolRows.push(['Покрытие', d.coating]);
   y = rptTable(x, M, y, [Math.round(CW * 0.3), CW - Math.round(CW * 0.3)], toolRows, {zebra: true});
@@ -1691,7 +1675,7 @@ async function renderReport(a){
   rRows.push(['Скорость резания Vc', fmt(d.vc), 'м/мин']);
   if (d.rpm) rRows.push(['Частота вращения диска n', fmt(d.rpm), 'об/мин']);
   rRows.push(['Минутная подача Vf', fmt(d.vf), 'мм/мин']);
-  rRows.push(['Подача на зуб fz', d.fz ? Number(d.fz).toFixed(3) : '—', 'мм/зуб']);
+  rRows.push(['Подача на зуб fz', d.fz ? Number(d.fz).toFixed(d.chip_um != null ? 4 : 3) : '—', 'мм/зуб']);
   rRows.push([d.timePiece ? 'Время реза пакета' : 'Время реза', formatTime(d.timeMin), 'мин : сек']);
   if (d.timePiece) rRows.push(['Время на одну заготовку', formatTime(d.timePiece), 'мин : сек']);
   if (d.teethInCut != null) rRows.push(['Зубьев в резе', fmt(d.teethInCut, 1), 'шт']);
@@ -1850,6 +1834,7 @@ const app = {
     this.applyTheme(store.get().theme || 'dark');
     q('bandWidthSelect').innerHTML = '<option value="">Не задана — любая</option>'
       + BAND_WIDTHS.map(w => `<option value="${w}">${fmtWidth(w)} мм</option>`).join('');
+    q('matSheet').inert = true;
     this.buildMatList(materialList); this.buildPitchSelect(); this.attachEvents(); this.applyModeUI(); this.buildRefTable();
     buildKnowledge(); this.renderHistory(); this.restore();
   },
@@ -1888,6 +1873,7 @@ const app = {
     const m = st.mat && materialList.find(x => x.name === st.mat);
     if (m) this.selectMat(m, true);
     this._restoring = false;
+    (this._syncChecks || []).forEach(f => f());
     this.queueCalc();
   },
   restore(){ const d = store.get(); if (d.state) this.applySnapshot(d.state); },
@@ -1946,7 +1932,7 @@ const app = {
     L.push(`${d.toolParamLbl}: ${d.toolParamVal}${d.toolParamSub ? ' (' + d.toolParamSub + ')' : ''}`);
     if (d.vc != null) L.push(`Скорость Vc: ${d.vc} м/мин${d.rpm ? ' · ' + d.rpm + ' об/мин' : ''}`);
     if (d.vf != null) L.push(`Подача Vf: ${d.vf} мм/мин`);
-    if (d.fz) L.push(`Подача на зуб fz: ${Number(d.fz).toFixed(3)} мм`);
+    if (d.fz) L.push(`Подача на зуб fz: ${Number(d.fz).toFixed(d.chip_um != null ? 4 : 3)} мм`);
     L.push(`Время реза: ${formatTime(d.timeMin)}${d.timePiece ? ' (≈ ' + formatTime(d.timePiece) + ' на 1 шт)' : ''}`);
     (d.alerts || []).filter(a => a.type === 'danger' || a.type === 'warning').forEach(a => L.push('! ' + String(a.text).replace(/<[^>]+>/g,'')));
     L.push('— Р-сталь калькулятор · rosmark.ru');
@@ -2005,8 +1991,8 @@ const app = {
   },
 
 
-  openSheet(){ q('matSheet').classList.add('open'); q('sheetOverlay').classList.add('visible'); document.body.classList.add('sheet-open'); if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); if (!IS_TOUCH) setTimeout(()=>q('matSearchInput').focus(), 350); },
-  closeSheet(){ q('matSheet').classList.remove('open'); q('sheetOverlay').classList.remove('visible'); document.body.classList.remove('sheet-open'); q('matSearchInput').blur(); q('matSearchInput').value=''; this.buildMatList(materialList); },
+  openSheet(){ q('matSheet').inert = false; q('matSheet').classList.add('open'); q('sheetOverlay').classList.add('visible'); document.body.classList.add('sheet-open'); if (document.activeElement && document.activeElement.blur) document.activeElement.blur(); if (!IS_TOUCH) setTimeout(()=>q('matSearchInput').focus(), 350); },
+  closeSheet(){ q('matSheet').inert = true; q('matSheet').classList.remove('open'); q('sheetOverlay').classList.remove('visible'); document.body.classList.remove('sheet-open'); q('matSearchInput').blur(); q('matSearchInput').value=''; this.buildMatList(materialList); },
   buildMatList(mats){
     const c = q('matListContainer'); c.innerHTML='';
     if (!mats.length){ c.innerHTML='<div class="mat-empty">Ничего не найдено</div>'; return; }
@@ -2050,11 +2036,14 @@ const app = {
   },
 
   setMode(mode){
+    if (mode === 'hss' && this.mode !== 'hss') this._shapeBeforeHSS = this.isPipe;
+    const leftHSS = this.mode === 'hss' && mode !== 'hss';
     this.mode = mode;
-    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.mode === mode));
+    document.querySelectorAll('.tab').forEach(t => { t.classList.toggle('active', t.dataset.mode === mode); t.setAttribute('aria-pressed', t.dataset.mode === mode); });
     const names = {bimetal:'Bi-Metal', carbide:'Carbide', circular:'TCT диск', hss:'HSS диск'};
     q('modeLabel').textContent = names[mode] || mode;
     this.applyModeUI();
+    if (leftHSS && this._shapeBeforeHSS === false) this.setShape(false);
     this.queueCalc();
   },
   applyModeUI(){
@@ -2182,11 +2171,22 @@ const app = {
       };
       vv.addEventListener('resize', onVV); vv.addEventListener('scroll', onVV);
     }
-    q('resetBtn').addEventListener('click', () => this.reset());
+    q('resetBtn').addEventListener('click', () => { if (!this.selectedMat || confirm('Сбросить все поля и материал?')) this.reset(); });
     q('calcBtn').addEventListener('click', () => this.calculate(true));
     q('themeBtn').addEventListener('click', () => { const th = this.theme === 'light' ? 'dark' : 'light'; this.applyTheme(th); store.set({theme: th}); });
     q('shareBtn').addEventListener('click', () => this.share());
     q('logoText').addEventListener('click', () => mascot.play());
+    [['bundleRow', () => this.bundle], ['customPitchToggle', () => this.customPitchEnabled], ['runInRow', () => this.runIn]].forEach(([id, on]) => {
+      const el = q(id); el.setAttribute('role', 'checkbox'); el.tabIndex = 0;
+      const sync = () => el.setAttribute('aria-checked', on() ? 'true' : 'false'); sync();
+      el.addEventListener('click', () => setTimeout(sync, 0));
+      el.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); el.click(); } });
+      (this._syncChecks = this._syncChecks || []).push(sync);
+    });
+    const lt = q('logoText'); lt.setAttribute('role', 'button'); lt.tabIndex = 0;
+    lt.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter'){ e.preventDefault(); mascot.play(); } });
+    q('matTrigger').addEventListener('keydown', e => { if ((e.key === ' ' || e.key === 'Enter') && e.target === q('matTrigger')){ e.preventDefault(); this.openSheet(); } });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && q('matSheet').classList.contains('open')) this.closeSheet(); });
     q('pdfBtn').addEventListener('click', () => this.exportReport('pdf'));
     q('pngBtn').addEventListener('click', () => this.exportReport('png'));
     loadLetterhead();
@@ -2212,25 +2212,36 @@ const app = {
     t.querySelector('.mat-icon').textContent='⚙';
     q('matTriggerName').textContent='Выберите материал…'; q('matTriggerName').classList.add('placeholder');
     q('matTriggerGroup').textContent='';
-    q('results').classList.remove('visible'); q('emptyState').classList.remove('hidden');
+    this.showEmpty(); (this._syncChecks || []).forEach(f => f());
     this.setShape(false); this.applyModeUI(); this.save();
   },
 
   calculate(scroll){
     const size = numVal('sizeInput');
-    let wall = numVal('wallInput');
-    if (!this.selectedMat || !(size > 0)) return;
-    const isPipe = this.isPipe;
-    if (isPipe && (isNaN(wall) || wall <= 0)){ wall = 3; q('wallInput').value = '3'; }
+    const wall = numVal('wallInput');
+    const isPipe = this.isPipe, isDisk = this.mode === 'circular' || this.mode === 'hss';
+    if (!this.selectedMat){
+      if (scroll){ toast('Сначала выберите материал'); this.openSheet(); }
+      return;
+    }
+    /* неверный ввод: старый результат убираем и пишем, что исправить */
+    const filled = id => String(q(id).value).trim() !== '';
+    let bad = '';
+    if (!(size > 0)) bad = isPipe ? 'Введите наружный диаметр, мм' : 'Введите размер сечения, мм';
+    else if (isPipe && !(wall > 0)) bad = 'Введите толщину стенки, мм';
+    const diskDia = numVal('bladeDiaInput');
+    const zM = Math.round(numVal('zManualInput')), rpmM = numVal('rpmManualInput');
+    if (!bad && isDisk){
+      if (!(diskDia >= 100 && diskDia <= 1500)) bad = 'Диаметр диска — от 100 до 1500 мм';
+      else if (filled('zManualInput') && !(zM >= 4 && zM <= 2000)) bad = 'Число зубьев Z — от 4 до 2000 (или оставьте поле пустым)';
+      else if (filled('rpmManualInput') && !(rpmM > 0 && rpmM <= 20000)) bad = 'Обороты — от 1 до 20000 об/мин (или оставьте поле пустым)';
+    }
+    if (bad){ this.showEmpty(bad); if (scroll) toast(bad); return; }
     let data;
-    if (this.mode === 'circular' || this.mode === 'hss'){
-      let diskDia = numVal('bladeDiaInput') || 350;
-      if (diskDia < 100) diskDia = 100;
-      if (diskDia > 1500) diskDia = 1500;
+    if (isDisk){
       const corrPercent = parseInt(q('corrRange').value, 10) || 0;
-      const zM = Math.round(numVal('zManualInput')), rpmM = numVal('rpmManualInput');
       data = calcDisk(this.mode, engineGroupFor(this.selectedMat), size, isPipe, isPipe ? wall : 0, diskDia, corrPercent,
-        { z: zM >= 4 && zM <= 2000 ? zM : 0, rpm: rpmM > 0 && rpmM <= 20000 ? rpmM : 0 });
+        { z: filled('zManualInput') ? zM : 0, rpm: filled('rpmManualInput') ? rpmM : 0 });
     } else {
       data = calcBand({
         mat: this.selectedMat, sawType: this.mode, isPipe, size, wall,
@@ -2251,6 +2262,12 @@ const app = {
     }
   },
 
+  showEmpty(msg){
+    this._last = null;
+    q('results').classList.remove('visible'); q('emptyState').classList.remove('hidden');
+    q('emptyState').querySelector('h5').textContent = msg || 'Выберите материал и параметры';
+  },
+
   render(d){
     q('emptyState').classList.add('hidden');
     q('results').classList.add('visible');
@@ -2260,14 +2277,14 @@ const app = {
     q('resTpiVal').textContent = d.toolParamVal != null ? d.toolParamVal : '—';
     q('resTpiLbl').textContent = d.toolParamLbl || 'Z / шаг';
     q('resTpiSub').textContent = d.toolParamSub || '';
-    q('resFamily').innerHTML = [d.blade ? `<b>${d.blade}</b>` : '', d.family ? `Семейство: <b>${d.family}</b>` : ''].filter(Boolean).join('<br>');
+    q('resFamily').innerHTML = [d.blade ? `<b>${d.blade}</b>` : '', d.alt ? `Также подходят: <b>${d.alt}</b>` : (d.family ? `Семейство: <b>${d.family}</b>` : '')].filter(Boolean).join('<br>');
     this.badge('resCoating', d.coating ? '● ' + d.coating : null);
     this.badge('resCarbideClass', d.carbideClass || null);
     q('resSpeed').textContent = d.vc != null ? d.vc : '—';
     q('resFeed').textContent = d.vf != null ? d.vf : '—';
     q('resTime').textContent = d.error ? '—' : formatTime(d.timeMin);
     q('resRPM').textContent = d.rpm ? d.rpm + ' об/мин' : (d.timePiece ? '≈ ' + formatTime(d.timePiece) + ' на 1 шт' : '');
-    q('resFz').textContent = d.fz ? Number(d.fz).toFixed(3) : '—';
+    q('resFz').textContent = d.fz ? Number(d.fz).toFixed(d.chip_um != null ? 4 : 3) : '—';
 
     const showMini = !!d.bandLike;
     document.querySelector('.mini-grid').style.display = showMini ? '' : 'none';
